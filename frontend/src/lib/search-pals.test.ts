@@ -28,11 +28,20 @@ describe("isChatIntent", () => {
     expect(isChatIntent("猫")).toBe(false);
   });
 
-  it("routes long text and questions to chat", () => {
+  it("keeps long Latin pal names on search, not chat", () => {
+    expect(isChatIntent("Bellanoir")).toBe(false);
+    expect(isChatIntent("Frostallion")).toBe(false);
+    expect(isChatIntent("Cattiva Noct")).toBe(false);
+    expect(isChatIntent("Bellanoir Libero")).toBe(false);
+  });
+
+  it("routes questions and long non-name prose to chat", () => {
     expect(isChatIntent("怎么打暗系BOSS")).toBe(true);
     expect(isChatIntent("前期抓什么好")).toBe(true);
     expect(isChatIntent("how to beat dark boss")).toBe(true);
-    expect(isChatIntent("abcdefghij")).toBe(true);
+    expect(isChatIntent("给我一套火队配法建议")).toBe(true);
+    // Pure Latin tokens stay on search path (long pal names); empty hits can still Enter→AI
+    expect(isChatIntent("abcdefghij")).toBe(false);
   });
 });
 

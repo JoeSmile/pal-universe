@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Bot, Flame, Map, Package, Split, Star } from "lucide-react";
+import { Flame, LayoutGrid, Map, Package, Split, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export interface QuickLinkItem {
@@ -29,10 +29,10 @@ export const QUICK_LINKS: QuickLinkItem[] = [
     icon: Map,
   },
   {
-    href: "/chat",
-    label: "AI 助手",
-    description: "攻略问答",
-    icon: Bot,
+    href: "/pals",
+    label: "帕鲁列表",
+    description: "浏览全部帕鲁",
+    icon: LayoutGrid,
   },
   {
     href: "/tier",

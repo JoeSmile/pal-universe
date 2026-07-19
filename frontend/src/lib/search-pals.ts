@@ -19,6 +19,9 @@ const CJK_PATTERN = /[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff]/;
 const QUESTION_PATTERN =
   /怎么|如何|什么|哪些|哪|吗|呢|？|\?|\bhow\b|\bwhat\b|\bwhy\b|\bwhich\b/i;
 
+/** Latin pal names / variants: Anubis, Cattiva Noct, Bellanoir Libero */
+const LATIN_PAL_NAME_PATTERN = /^[A-Za-z][A-Za-z0-9]*(?:[ '-][A-Za-z0-9]+)*$/;
+
 function normalize(value: string): string {
   return value.trim().toLowerCase();
 }
@@ -37,10 +40,18 @@ export function isChatIntent(query: string): boolean {
   if (trimmed.length === 0) {
     return false;
   }
-  if (trimmed.length > 8) {
+
+  if (QUESTION_PATTERN.test(trimmed)) {
     return true;
   }
-  return QUESTION_PATTERN.test(trimmed);
+
+  // Long English pal names must stay on local search (Bellanoir, Frostallion, …)
+  if (LATIN_PAL_NAME_PATTERN.test(trimmed)) {
+    return false;
+  }
+
+  // Long Chinese / mixed prose without question words still goes to chat
+  return trimmed.length > 8;
 }
 
 export function formatPalLabel(pal: PalName): string {
