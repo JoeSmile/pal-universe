@@ -1,0 +1,140 @@
+version: '3.8'
+
+# ============================================================
+# Pal Universe — 生产部署配置
+# 目标: 一台 2GB RAM 云服务器跑全部服务
+# 前置: Docker + Docker Compose 已安装
+# 用法: docker compose -f infra/docker-compose.prod.yml up -d
+# ============================================================
+
+services:
+  # ─── 数据库 ──────────────────────────────────────
+  db:
+    container_name: paluniverse-db
+    image: pgvector/pgvector:pg16
+    platform: linux/amd64
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-paluniverse}
+      - POSTGRES_USER=${POSTGRES_USER:-paluniverse}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-paluniverse_prod}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-paluniverse}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: always
+    networks:
+      - paluniverse
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  # ─── 后端 API ────────────────────────────────────
+  backend:
+    container_name: paluniverse-api
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    env_file:
+      - ../backend/.env.production
+    environment:
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+      - VALKEY_HOST=valkey
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: always
+    networks:
+      - paluniverse
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  # ─── 前端 ────────────────────────────────────────
+  frontend:
+    container_name: paluniverse-web
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_API_URL=http://localhost:8000
+        - NEXT_PUBLIC_SITE_URL=https://${DOMAIN:-paluniverse.cn}
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - backend
+    restart: always
+    networks:
+      - paluniverse
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+
+  # ─── 缓存（可选）─────────────────────────────────
+  valkey:
+    container_name: paluniverse-cache
+    image: valkey/valkey:8.1.6-alpine
+    volumes:
+      - valkey-data:/data
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    restart: always
+    profiles:
+      - with-cache
+    networks:
+      - paluniverse
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+
+  # ─── Nginx 反向代理 ──────────────────────────────
+  nginx:
+    container_name: paluniverse-nginx
+    image: nginx:1.27-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+      - next-static:/app/.next:ro
+    depends_on:
+      - frontend
+      - backend
+    restart: always
+    networks:
+      - paluniverse
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+
+networks:
+  paluniverse:
+    driver: bridge
+
+volumes:
+  pgdata:
+  valkey-data:
+  next-static:
+
+# ⚠️ 4GB 服务器建议配置（覆盖上方 512M 限制）
+# 在 docker compose 命令行覆盖:
+# docker compose -f... run --memory=1G db
+# 或直接编辑上方 deploy.resources.limits.memory

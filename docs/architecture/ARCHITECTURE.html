@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pal Universe — 系统架构总览</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a10;font-family:'Inter',system-ui,sans-serif;color:#e2e8f0;padding:24px}
+h1{font-size:22px;font-weight:700;color:#f8fafc;text-align:center}
+.sub{text-align:center;font-size:11px;color:#64748b;margin:2px 0 16px}
+.meta{display:flex;gap:20px;justify-content:center;font-size:9px;color:#475569;margin-bottom:16px}
+.legend{display:flex;gap:12px;justify-content:center;margin-bottom:14px;font-size:9px}
+.li{display:flex;align-items:center;gap:4px;color:#64748b}
+.ld{width:5px;height:5px;border-radius:50%}
+.s1{background:#22c55e;box-shadow:0 0 4px rgba(34,197,94,.4)}
+.s2{background:#f59e0b;box-shadow:0 0 4px rgba(245,158,11,.4)}
+.s3{background:#64748b}
+.s4{background:#3b3f6b}
+.b2{border-color:#f59e0b44}
+.b4{opacity:.55}.b4:hover{opacity:.8}
+
+/* 层 */
+.w{display:flex;flex-direction:column;gap:1px}
+.tr{display:flex;gap:3px}
+.tl{width:48px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:600;writing-mode:vertical-rl;letter-spacing:1px;border-radius:3px;flex-shrink:0;min-height:40px;padding:2px}
+.tc{display:flex;gap:3px;flex-wrap:wrap;flex:1;padding:2px 0}
+.m{background:#13141f;border:1px solid #1e2030;border-radius:4px;padding:5px 7px;min-width:95px;max-width:150px}
+.m .nm{font-size:9px;font-weight:600;display:flex;align-items:center;gap:3px}
+.m .ds{font-size:7px;color:#64748b;margin-top:1px}
+.sq{width:4px;height:4px;border-radius:50%;flex-shrink:0}
+
+.c1{background:rgba(16,185,129,.1);color:#34d399;border:1px solid #10b98122}
+.c2{background:rgba(59,130,246,.1);color:#60a5fa;border:1px solid #3b82f622}
+.c3{background:rgba(245,158,11,.08);color:#fbbf24;border:1px solid #f59e0b22}
+.c4{background:rgba(251,191,36,.06);color:#fbbf24;border:1px solid #fbbf2422}
+.c5{background:rgba(139,92,246,.1);color:#a78bfa;border:1px solid #8b5cf622}
+.c6{background:rgba(100,116,139,.1);color:#94a3b8;border:1px solid #64748b22}
+.c7{background:rgba(244,63,94,.08);color:#fb7185;border:1px solid #f43f5e22}
+
+.sep{height:16px;position:relative;margin:0}.sep svg{width:100%;height:16px;position:absolute;top:0;left:0}
+.sl{position:absolute;font-size:6px;color:#475569;text-align:center;width:100%;top:4px;letter-spacing:1px}
+
+.bx{background:#13141f;border:1px solid #1e2030;border-radius:6px;padding:12px;margin-top:12px}
+.bx h3{font-size:10px;font-weight:600;color:#f8fafc;margin-bottom:6px}
+.gr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.cd{background:#0f0f1a;border:1px solid #1e2030;border-radius:4px;padding:8px}
+.cd h4{font-size:9px;font-weight:600;margin-bottom:3px}
+.cd li{font-size:7px;color:#94a3b8;padding:1px 0;list-style:none}
+.bn{background:#f59e0b22;color:#fbbf24;font-size:6px;padding:1px 3px;border-radius:2px;font-weight:600}
+.bl{background:#64748b33;color:#94a3b8;font-size:6px;padding:1px 3px;border-radius:2px}
+</style>
+</head>
+<body>
+
+<h1>Pal Universe · 系统架构</h1>
+<p class="sub">腾讯 TAM 框架 · 6 层设计 · 从单机到分布式的演进路径</p>
+<div class="meta">
+  <span>现状: 单机 Docker</span>
+  <span>演进目标: 读写分离 → 微服务</span>
+  <span>成本红线: ¥100/月</span>
+</div>
+
+<div class="legend">
+  <span class="li"><span class="ld" style="background:#22c55e"></span>已完成</span>
+  <span class="li"><span class="ld" style="background:#f59e0b"></span>进行中</span>
+  <span class="li"><span class="ld" style="background:#64748b"></span>已规划</span>
+  <span class="li"><span class="ld" style="background:#3b3f6b"></span>演进目标</span>
+</div>
+
+<div class="w">
+
+<!-- 1. 接入层 -->
+<div class="tr"><div class="tl c1">接入</div><div class="tc">
+  <div class="m b2"><div class="nm"><span class="sq s2"></span>PC Web</div><div class="ds">Next.js 15 · 桌面端</div></div>
+  <div class="m"><div class="nm"><span class="sq s3"></span>Mobile Web</div><div class="ds">响应式 · PWA</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>微信小程序</div><div class="ds">微信生态分发</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>CDN 加速</div><div class="ds">腾讯云 CDN · 动静分离</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>WAF</div><div class="ds">Web 防火墙 · CC 防护</div></div>
+</div></div>
+
+<!-- 2. 网关层 -->
+<div class="tr"><div class="tl c2">网关</div><div class="tc">
+  <div class="m"><div class="nm"><span class="sq s1"></span>Nginx 反向代理</div><div class="ds">SSL · 路由 · 负载均衡</div></div>
+  <div class="m"><div class="nm"><span class="sq s3"></span>Schema 校验</div><div class="ds">请求/响应结构强制</div></div>
+  <div class="m"><div class="nm"><span class="sq s3"></span>审计日志</div><div class="ds">全量 API 流水 · IP/路径/耗时</div></div>
+  <div class="m"><div class="nm"><span class="sq s3"></span>成本计量</div><div class="ds">Token 消耗 · 分账单</div></div>
+  <div class="m"><div class="nm"><span class="sq s1"></span>Rate Limit</div><div class="ds">IP/会话/接口 三级限流</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>熔断降级</div><div class="ds">预算超限 · 自动降级到本地</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>灰度发布</div><div class="ds">按 IP/用户灰度新版本</div></div>
+</div></div>
+
+<!-- 3. 业务编排层 -->
+<div class="tr"><div class="tl c3">编排</div><div class="tc">
+  <div class="m"><div class="nm"><span class="sq s3"></span>LangGraph</div><div class="ds">StateGraph · 多步推理</div></div>
+  <div class="m"><div class="nm"><span class="sq s3"></span>Agent 工具链</div><div class="ds">6 工具 · 链式调用</div></div>
+  <div class="m"><div class="nm"><span class="sq s3"></span>RAG 引擎</div><div class="ds">向量检索 · 三层兜底</div></div>
+  <div class="m"><div class="nm"><span class="sq s3"></span>LLM 网关</div><div class="ds">DeepSeek · fallback 链</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>模型路由</div><div class="ds">简单问题→本地·复杂→LLM</div></div>
+</div></div>
+
+<!-- 4. 缓存层 -->
+<div class="tr"><div class="tl c4">缓存</div><div class="tc">
+  <div class="m"><div class="nm"><span class="sq s3"></span>Redis Stack</div><div class="ds">语意缓存 · 会话 · 限流计数</div></div>
+  <div class="m"><div class="nm"><span class="sq s4"></span>RediSearch</div><div class="ds">向量索引 · 相似问匹配</div></div>
+  <div class="m"><div class="nm"><span class="sq s3"></span>本地 LRU</div><div class="ds">进程内 · 200 条热点</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>缓存预热</div><div class="ds">Top 100 问题启动预加载</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>穿透防护</div><div class="ds">布隆过滤器 · 空值缓存</div></div>
+</div></div>
+
+<!-- 5. 数据层 -->
+<div class="tr"><div class="tl c5">数据</div><div class="tc">
+  <div class="m"><div class="nm"><span class="sq s1"></span>pgvector</div><div class="ds">PostgreSQL 16 · 主数据</div></div>
+  <div class="m"><div class="nm"><span class="sq s1"></span>帕鲁图片</div><div class="ds">WebP · CDN 分发</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>只读副本</div><div class="ds">读压力大时扩展</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>CDC</div><div class="ds">数据变更 → 缓存失效</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>冷热分离</div><div class="ds">旧日志 → 对象存储</div></div>
+</div></div>
+
+<!-- 6. 基础设施 -->
+<div class="tr"><div class="tl c7">基础</div><div class="tc">
+  <div class="m"><div class="nm"><span class="sq s1"></span>Docker</div><div class="ds">Compose · 资源限制</div></div>
+  <div class="m"><div class="nm"><span class="sq s1"></span>CI/CD</div><div class="ds">GitHub Actions</div></div>
+  <div class="m"><div class="nm"><span class="sq s3"></span>国内服务器</div><div class="ds">4G → 8G · ¥100-200/月</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>K8s</div><div class="ds">多机时再上</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>日志中心</div><div class="ds">Loki · 集中检索</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>全链路追踪</div><div class="ds">OpenTelemetry</div></div>
+  <div class="m b4"><div class="nm"><span class="sq s4"></span>自动备份</div><div class="ds">pg_dump · 每日</div></div>
+</div></div>
+
+</div>
+
+<!-- 演变路径 -->
+<div class="bx">
+<h3>架构演进路径</h3>
+<div class="gr">
+  <div class="cd">
+    <h4><span class="bn">Stage 1</span> 单机上线</h4>
+    <li>Docker Compose · 6 容器</li>
+    <li>Nginx + Next.js + FastAPI + pgvector + Redis + 监控</li>
+    <li>腾讯云 4G (CVM/Lighthouse) · ¥100-150/月</li>
+  </div>
+  <div class="cd">
+    <h4><span class="bn">Stage 2</span> 读写分离</h4>
+    <li>pgvector 主从 · 查询走只读节点</li>
+    <li>CDN 全量静态资源</li>
+    <li>审计日志 → 对象存储归档</li>
+    <li>Redis 集群 · 缓存预热</li>
+  </div>
+  <div class="cd">
+    <h4><span class="bl">Stage 3</span> 微服务拆分</h4>
+    <li>K8s 编排 · 水平扩缩</li>
+    <li>服务拆分: API/Agent/Data 独立部署</li>
+    <li>全链路追踪 · 日志中心</li>
+    <li>灰度发布 · 熔断降级</li>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

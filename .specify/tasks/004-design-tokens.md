@@ -14,14 +14,14 @@
 - Create: `docs/design/TOKENS.md`
 
 ## Acceptance Criteria
-- [ ] 颜色体系包含：背景色阶、文字色阶、强调色、属性色（9种元素）、状态色
-- [ ] 字体体系包含：标题/正文/代码的字号、行高、字重
-- [ ] 间距体系包含：4px 基准的间距 scale（4/8/12/16/20/24/32/48/64）
-- [ ] 圆角体系包含：sm/md/lg/xl/full
-- [ ] 阴影体系包含：低/中/高 elevation
-- [ ] 动画时长包含：fast/normal/slow 对应的 ms 值
-- [ ] 提供 Tailwind CSS v4 的 CSS 变量定义格式
-- [ ] 提供 CSS 自定义属性和 `oklch` 颜色值
+- [x] 颜色体系包含：背景色阶、文字色阶、强调色、属性色（9种元素）、状态色
+- [x] 字体体系包含：标题/正文/代码的字号、行高、字重
+- [x] 间距体系包含：4px 基准的间距 scale（4/8/12/16/20/24/32/48/64）
+- [x] 圆角体系包含：sm/md/lg/xl/full
+- [x] 阴影体系包含：低/中/高 elevation
+- [x] 动画时长包含：fast/normal/slow 对应的 ms 值
+- [x] 提供 Tailwind CSS v4 的 CSS 变量定义格式
+- [x] 提供 CSS 自定义属性和 `oklch` 颜色值
 
 ## Design Direction
 

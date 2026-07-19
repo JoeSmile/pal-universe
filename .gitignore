@@ -54,5 +54,8 @@ data/
 !frontend/src/data/
 !frontend/src/data/**
 
+# Images (downloaded at build time)
+frontend/public/images/
+
 # Backend is a separate repo
 backend/.git/

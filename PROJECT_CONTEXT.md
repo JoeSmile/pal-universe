@@ -21,8 +21,12 @@ pal-universe/
 │   └── tasks/                    ← 🎯 任务队列
 │
 ├── .github/
-│   └── workflows/
-│       └── ci.yml                ← 🔄 CI (type-check/lint/test/build + 数据验证)
+│   ├── workflows/
+│   │   └── ci.yml                ← 🔄 CI (type-check/lint/test/build + 数据验证)
+│   ├── PULL_REQUEST_TEMPLATE.md  ← PR 模板
+│   └── ISSUE_TEMPLATE/
+│       ├── bug-report.md         ← Bug 报告模板
+│       └── feature-request.md    ← 功能需求模板
 │
 ├── .cursor/
 │   └── rules/
@@ -54,6 +58,7 @@ pal-universe/
 │   ├── validate_data.py          ← 🔄 CI 中调用的数据校验
 │   └── sync-tasks.sh              ← 🔄 任务调度脚本
 │
+├── CONTRIBUTING.md                 ← 📖 贡献指南（团队+Agent 入口）
 ├── AGENTS.md                      ← 协作手册
 ├── PROJECT_CONTEXT.md             ← ← 你正在看的这个文件
 ├── README.md                      ← 项目首页

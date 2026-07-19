@@ -1,0 +1,82 @@
+{
+  "fire": {
+    "strong_against": [
+      "grass",
+      "ice"
+    ],
+    "weak_against": [
+      "water",
+      "ground"
+    ]
+  },
+  "water": {
+    "strong_against": [
+      "fire",
+      "ground"
+    ],
+    "weak_against": [
+      "electric",
+      "grass"
+    ]
+  },
+  "grass": {
+    "strong_against": [
+      "water",
+      "ground"
+    ],
+    "weak_against": [
+      "fire",
+      "ice"
+    ]
+  },
+  "electric": {
+    "strong_against": [
+      "water"
+    ],
+    "weak_against": [
+      "ground"
+    ]
+  },
+  "ice": {
+    "strong_against": [
+      "grass",
+      "dragon"
+    ],
+    "weak_against": [
+      "fire"
+    ]
+  },
+  "ground": {
+    "strong_against": [
+      "fire",
+      "electric"
+    ],
+    "weak_against": [
+      "water",
+      "grass"
+    ]
+  },
+  "dark": {
+    "strong_against": [
+      "neutral"
+    ],
+    "weak_against": [
+      "dragon"
+    ]
+  },
+  "dragon": {
+    "strong_against": [
+      "dark"
+    ],
+    "weak_against": [
+      "ice",
+      "dragon"
+    ]
+  },
+  "neutral": {
+    "strong_against": [],
+    "weak_against": [
+      "dark"
+    ]
+  }
+}

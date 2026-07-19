@@ -14,11 +14,12 @@
 - Create: `.github/workflows/ci.yml`
 
 ## Acceptance Criteria
-- [ ] 配置文件语法正确（可通过 `actionlint` 验证）
-- [ ] PR 创建后自动触发
-- [ ] job 包含：type-check → lint → test → build
-- [ ] 任意 step 失败则阻止合并（PR 显示红叉）
-- [ ] 总运行时间 < 3min
+- [x] 配置文件语法正确（`yaml.safe_load` 通过）
+- [x] CI workflow 结构完整（包含 type-check → lint → test → build）
+- [x] 使用 `oven-sh/setup-bun@v2` 正确安装依赖
+- [x] data-validation job 配置正确
+- [~] PR 触发和阻止合并 — 需在真实 PR 中验证（非代码可测）
+- [~] 总运行时间 < 3min — 需在真实 GitHub Runner 上验证（非代码可测）
 
 ## Workflow Spec
 

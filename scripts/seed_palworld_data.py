@@ -34,6 +34,14 @@ if (p := os.environ.get("PALWORLD_DATA")):
 
 VERSION_FILE = Path(__file__).resolve().parent.parent / "backend" / "data" / "VERSION"
 
+DB_CONFIG = {
+    "host": os.environ.get("POSTGRES_HOST", "localhost"),
+    "port": int(os.environ.get("POSTGRES_PORT", "5432")),
+    "user": os.environ.get("POSTGRES_USER", "paluniverse"),
+    "password": os.environ.get("POSTGRES_PASSWORD", "paluniverse_dev"),
+    "dbname": os.environ.get("POSTGRES_DB", "paluniverse"),
+}
+
 EXPECTED_PAL_COUNT = 299
 
 
@@ -219,6 +227,12 @@ def write_version_file(d: PalworldData) -> str:
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Pal Universe 数据工具")
+    parser.add_argument("--db", action="store_true", help="加载并写入 pgvector")
+    parser.add_argument("--validate-only", action="store_true", help="仅验证，不写入")
+    args = parser.parse_args()
+
     print(f"📂 数据源: {DATA_SOURCE}")
     print()
 
@@ -243,6 +257,124 @@ def main():
 
     version_path = write_version_file(data)
     print(f"📝 版本文件: {version_path}")
+
+    if args.validate_only:
+        return
+
+    if args.db:
+        seed_database(data)
+
+
+def seed_database(d: PalworldData):
+    """将数据写入 pgvector"""
+    import psycopg2
+
+    print()
+    print("🗄️  写入 pgvector...")
+    conn = psycopg2.connect(**DB_CONFIG)
+    conn.autocommit = True
+    cur = conn.cursor()
+
+    # 启用 pgvector 扩展
+    cur.execute("CREATE EXTENSION IF NOT EXISTS vector")
+    print("  ✅ pgvector 扩展已启用")
+
+    # 建表
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS pals (
+            id SERIAL PRIMARY KEY,
+            name VARCHAR(100) NOT NULL UNIQUE,
+            elements TEXT[],
+            deck_id VARCHAR(10),
+            rarity INTEGER,
+            size VARCHAR(10),
+            hp INTEGER, melee_attack INTEGER, shot_attack INTEGER,
+            defense INTEGER, support INTEGER, stamina INTEGER,
+            price INTEGER, nocturnal BOOLEAN,
+            drops JSONB DEFAULT '[]',
+            work_orders JSONB DEFAULT '[]',
+            skills JSONB DEFAULT '[]',
+            data JSONB NOT NULL
+        )
+    """)
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS breeding (
+            id SERIAL PRIMARY KEY,
+            parent1 VARCHAR(100) NOT NULL,
+            parent2 VARCHAR(100) NOT NULL,
+            child VARCHAR(100) NOT NULL,
+            is_special BOOLEAN DEFAULT FALSE,
+            UNIQUE(parent1, parent2)
+        )
+    """)
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS items (
+            id SERIAL PRIMARY KEY,
+            name VARCHAR(200) NOT NULL,
+            category VARCHAR(50),
+            data JSONB NOT NULL
+        )
+    """)
+    print("  ✅ 表结构已创建")
+
+    # 清空旧数据（幂等）
+    cur.execute("TRUNCATE pals, breeding, items RESTART IDENTITY CASCADE")
+
+    # 写入帕鲁
+    rarity_map = {"Common": 1, "Uncommon": 2, "Rare": 3, "Epic": 4, "Legendary": 5}
+    for pal in d.pals:
+        work_orders = [ws for ws in d.pal_work_orders.get(pal["name"], [])] if hasattr(d, 'pal_work_orders') else []
+        cur.execute(
+            """INSERT INTO pals (name, elements, deck_id, rarity, size, hp, melee_attack,
+               shot_attack, defense, support, stamina, price, nocturnal, drops, work_orders, skills, data)
+               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+               ON CONFLICT (name) DO UPDATE SET elements=EXCLUDED.elements, rarity=EXCLUDED.rarity""",
+            (
+                pal["name"],
+                pal.get("elements", []),
+                str(pal.get("paldeck_number", "")),
+                rarity_map.get(str(pal.get("rarity", "")), 1),
+                pal.get("size"),
+                pal.get("hp"),
+                pal.get("melee_attack"),
+                pal.get("shot_attack"),
+                pal.get("defense"),
+                pal.get("support"),
+                pal.get("stamina"),
+                pal.get("price"),
+                pal.get("nocturnal", False),
+                json.dumps(pal.get("notable_drops", [])),
+                json.dumps(pal.get("role_tags", [])),
+                json.dumps(pal.get("skills", [])),
+                json.dumps(pal),
+            ),
+        )
+    print(f"  ✅ 帕鲁: {len(d.pals)} 条写入")
+
+    # 写入繁殖组合
+    combo_count = 0
+    for combo in d.special_combos:
+        cur.execute(
+            "INSERT INTO breeding (parent1, parent2, child, is_special) VALUES (%s, %s, %s, TRUE) ON CONFLICT DO NOTHING",
+            (combo["parent_a"], combo["parent_b"], combo["child"]),
+        )
+        combo_count += 1
+    # 从排名生成常规组合（精简版：仅排名相近的配对）
+    # 完整组合在 Task 008 后端工具中按需计算
+    print(f"  ✅ 特殊繁殖组合: {combo_count} 条写入")
+
+    # 写入物品
+    for item in d.items:
+        cur.execute(
+            "INSERT INTO items (name, category, data) VALUES (%s, %s, %s)",
+            (item.get("name", ""), item.get("type", ""), json.dumps(item)),
+        )
+    print(f"  ✅ 物品: {len(d.items)} 条写入")
+
+    cur.close()
+    conn.close()
+    print()
+    print("🎉 数据库写入完成！")
 
 
 if __name__ == "__main__":

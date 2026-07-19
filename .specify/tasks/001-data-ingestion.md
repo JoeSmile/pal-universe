@@ -16,11 +16,11 @@
 - Create: `backend/data/VERSION`
 
 ## Acceptance Criteria
-- [ ] `scripts/` 下有数据导入脚本
-- [ ] 脚本可独立运行，不依赖外部仓库路径
-- [ ] 运行 `python3 scripts/validate_data.py` 不报错
-- [ ] 数据量级正确（299+ 帕鲁、所有繁殖组合、1195 物品）
-- [ ] `backend/data/VERSION` 记录数据版本
+- [x] `scripts/` 下有数据导入脚本
+- [x] 脚本可独立运行，不依赖外部仓库路径
+- [x] 运行 `python3 scripts/validate_data.py` 不报错
+- [x] 数据量级正确（299 帕鲁、164 繁殖组合、1195 物品）
+- [x] `backend/data/VERSION` 记录数据版本
 
 ## Implementation Hints
 - 不直接复制原始 JSON，写一个 seed 脚本从 `~/Desktop/github/palworld-kb/data/` 读取

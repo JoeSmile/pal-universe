@@ -127,17 +127,55 @@ data: 数据更新
 
 ## 五、质量门禁
 
-每次提交必须通过：
+### CI 自动门禁（每次 PR 必须通过）
 
-1. ✅ `tsc --noEmit`（TypeScript 类型检查）
-2. ✅ `eslint .`（代码规范）
-3. ✅ `prettier --check .`（格式）
-4. ✅ `vitest run`（单元测试）
-5. ✅ `bun run build`（构建）
+| 序号 | 门禁 | 工具 | 责任方 |
+|------|------|------|--------|
+| 1 | TypeScript 类型检查 | `tsc --noEmit` | CI |
+| 2 | 代码规范 | `eslint .` | CI |
+| 3 | 格式检查 | `prettier --check .` | CI |
+| 4 | 单元测试 | `vitest run` | CI |
+| 5 | 构建 | `bun run build` | CI |
+| 6 | **AC 完整性门禁** | `scripts/check-ac-gate.sh` | CI |
+| 7 | **自定义安全扫描** | Semgrep（`.semgrep/rules/`） | CI |
+| 8 | **死代码检测** | Knip | CI |
+| 9 | **PR 模板检查** | `pr-template-check` job | CI |
+| 10 | **性能审计** | Lighthouse CI（≥80 分） | CI |
+| 11 | **数据完整性** | `python3 scripts/validate_data.py` | CI |
 
 后端的 Python 代码额外通过：
-6. ✅ `ruff check .`
-7. ✅ `pyright`（类型检查）
+12. ✅ `ruff check .`
+13. ✅ `pyright`（类型检查）
+
+### 本地验证（Cursor 提交前必须）
+
+每次 task 完成后，Cursor 必须运行：
+
+```bash
+# 前端
+cd frontend
+bun run type-check     # 类型检查
+bun run lint           # lint 检查
+bun run test           # 测试
+bun run build          # 构建
+
+# 安全扫描（半门禁
+pip install semgrep && semgrep --config=.semgrep/rules/ frontend/src/ backend/
+
+# 数据
+cd ..
+python3 scripts/validate_data.py
+```
+
+### 工具介绍
+
+| 工具 | 是什么 | 装什么B |
+|------|--------|--------|
+| **SDD AC 门禁** | CI 检查 task 文件的 AC 是否全部勾选，没勾不让合并 | 📋 强制验收标准落地 |
+| **Semgrep** | 自定义安全规则引擎，我们写了 4 条守门规则 | 🕵️ 代码安全零容忍 |
+| **Knip** | 检测未使用的文件、导出、依赖 | 🗑️ 代码库零冗余 |
+| **Lighthouse CI** | 自动性能/无障碍/SEO 评分，PR 评论展示 | 📊 100/100/100 就是最好的广告 |
+| **Renovate** | 自动依赖更新 PR + 安全告警 | 🤖 依赖永远新鲜 |
 
 ## 六、安全约束
 

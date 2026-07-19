@@ -1,0 +1,8671 @@
+[
+  {
+    "name": "Lamball",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "1",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 70,
+      "shot_attack": 70,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 421,
+    "drops": [
+      "Wool",
+      "Lamball Mutton"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming",
+      "transport"
+    ]
+  },
+  {
+    "name": "Herbil",
+    "elements": [
+      "Grass",
+      "Neutral"
+    ],
+    "deck_id": "10",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 75,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 541,
+    "drops": [
+      "Leather",
+      "Wheat Seeds"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Needoll",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "100",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 702,
+    "drops": [
+      "Fiber"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Needoll Noct",
+    "elements": [
+      "Dark",
+      "Grass"
+    ],
+    "deck_id": "100B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 749,
+    "drops": [
+      "Fiber",
+      "Venom Gland"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Reindrix",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "101",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 80,
+      "shot_attack": 85,
+      "defense": 110,
+      "support": 100,
+      "stamina": 140
+    },
+    "price": 1464,
+    "drops": [
+      "Reindrix Venison",
+      "Leather",
+      "Horn",
+      "Ice Organ",
+      "Ice Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Mossanda",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "102",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 90,
+      "support": 100,
+      "stamina": 130
+    },
+    "price": 1475,
+    "drops": [
+      "Hardwood",
+      "Leather",
+      "Carrot Seeds",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Mossanda Lux",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "102B",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 100,
+      "support": 100,
+      "stamina": 130
+    },
+    "price": 1806,
+    "drops": [
+      "Hardwood",
+      "Electric Organ",
+      "Leather",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "transport",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Chillet",
+    "elements": [
+      "Ice",
+      "Dragon"
+    ],
+    "deck_id": "103",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1270,
+    "drops": [
+      "Leather",
+      "Ice Organ",
+      "Ice Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Chillet Ignis",
+    "elements": [
+      "Fire",
+      "Dragon"
+    ],
+    "deck_id": "103B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1670,
+    "drops": [
+      "Leather",
+      "Flame Organ",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Ragnahawk",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "104",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 120,
+      "support": 100,
+      "stamina": 150
+    },
+    "price": 2263,
+    "drops": [
+      "Flame Organ",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Moldron",
+    "elements": [
+      "Fire",
+      "Ground"
+    ],
+    "deck_id": "105",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 125,
+      "defense": 115,
+      "support": 100,
+      "stamina": 270
+    },
+    "price": 2911,
+    "drops": [
+      "Flame Organ",
+      "Leather",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "mining",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Moldron Cryst",
+    "elements": [
+      "Ice",
+      "Ground"
+    ],
+    "deck_id": "105B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 125,
+      "defense": 120,
+      "support": 100,
+      "stamina": 270
+    },
+    "price": 3328,
+    "drops": [
+      "Ice Organ",
+      "Leather"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "mining",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Palumba",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "106",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 115,
+      "support": 100,
+      "stamina": 180
+    },
+    "price": 2529,
+    "drops": [
+      "Hardwood",
+      "Onion Seeds",
+      "Carrot Seeds"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining"
+    ]
+  },
+  {
+    "name": "Digtoise",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "107",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 80,
+      "shot_attack": 95,
+      "defense": 120,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1577,
+    "drops": [
+      "Ore",
+      "High Quality Pal Oil"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining"
+    ]
+  },
+  {
+    "name": "Broncherry",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "108",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 80,
+      "shot_attack": 90,
+      "defense": 100,
+      "support": 120,
+      "stamina": 150
+    },
+    "price": 2014,
+    "drops": [
+      "Broncherry Meat",
+      "Onion Seeds",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Broncherry Aqua",
+    "elements": [
+      "Grass",
+      "Water"
+    ],
+    "deck_id": "108B",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 80,
+      "shot_attack": 95,
+      "defense": 100,
+      "support": 120,
+      "stamina": 150
+    },
+    "price": 2259,
+    "drops": [
+      "Broncherry Meat",
+      "Onion Seeds",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "watering"
+    ]
+  },
+  {
+    "name": "Dumud",
+    "elements": [
+      "Ground",
+      "Water"
+    ],
+    "deck_id": "109",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 95,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 995,
+    "drops": [
+      "Raw Dumud",
+      "High Quality Pal Oil"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "farming",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Dumud Gild",
+    "elements": [
+      "Ground",
+      "Water"
+    ],
+    "deck_id": "109B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 19900,
+    "drops": [
+      "Raw Dumud",
+      "High Quality Pal Oil",
+      "Gold Coin"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "farming",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Teafant",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "11",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 70,
+      "shot_attack": 60,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 355,
+    "drops": [
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "watering"
+    ]
+  },
+  {
+    "name": "Braloha",
+    "elements": [
+      "Grass",
+      "Ground"
+    ],
+    "deck_id": "110",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 130,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 120,
+      "support": 100,
+      "stamina": 270
+    },
+    "price": 2862,
+    "drops": [
+      "Leather",
+      "Red Berries",
+      "Lettuce Seeds",
+      "Tomato Seeds",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining"
+    ]
+  },
+  {
+    "name": "Kitsun",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "111",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 70,
+      "shot_attack": 115,
+      "defense": 100,
+      "support": 110,
+      "stamina": 140
+    },
+    "price": 1744,
+    "drops": [
+      "Flame Organ",
+      "Leather"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Kitsun Noct",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "111B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 70,
+      "shot_attack": 115,
+      "defense": 105,
+      "support": 110,
+      "stamina": 140
+    },
+    "price": 2014,
+    "drops": [
+      "Flame Organ",
+      "Leather",
+      "Dark Fragment"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Blazehowl",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "112",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 80,
+      "support": 100,
+      "stamina": 150
+    },
+    "price": 1794,
+    "drops": [
+      "Flame Organ",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Blazehowl Noct",
+    "elements": [
+      "Fire",
+      "Dark"
+    ],
+    "deck_id": "112B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 80,
+      "support": 100,
+      "stamina": 150
+    },
+    "price": 1882,
+    "drops": [
+      "Flame Organ",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Warsect",
+    "elements": [
+      "Ground",
+      "Grass"
+    ],
+    "deck_id": "113",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 120,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2913,
+    "drops": [
+      "Honey",
+      "Ground Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Warsect Terra",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "113B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 120,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 10000,
+    "drops": [
+      "Honey"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Frostplume",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "114",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2382,
+    "drops": [
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Majex",
+    "elements": [
+      "Dark",
+      "Fire"
+    ],
+    "deck_id": "115",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2347,
+    "drops": [
+      "Leather",
+      "Flame Organ",
+      "World Tree Holy Water",
+      "Dark Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "kindling",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Sibelyx",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "116",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 90,
+      "shot_attack": 90,
+      "defense": 100,
+      "support": 90,
+      "stamina": 100
+    },
+    "price": 1589,
+    "drops": [
+      "High Quality Cloth",
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming",
+      "cooling",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Sibelyx Primo",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "116B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 115,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 100,
+      "support": 90,
+      "stamina": 100
+    },
+    "price": 2094,
+    "drops": [
+      "High Quality Cloth",
+      "High Quality Pal Oil",
+      "World Tree Holy Water",
+      "Neutral Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Maraith",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "117",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 50,
+      "shot_attack": 105,
+      "defense": 80,
+      "support": 100,
+      "stamina": 130
+    },
+    "price": 1110,
+    "drops": [
+      "Bone",
+      "Small Pal Soul",
+      "Crude Oil"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining"
+    ]
+  },
+  {
+    "name": "Shroomer",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "118",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 90,
+      "support": 100,
+      "stamina": 220
+    },
+    "price": 1367,
+    "drops": [
+      "Mushroom",
+      "Red Berries",
+      "World Tree Holy Water",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "farming"
+    ]
+  },
+  {
+    "name": "Shroomer Noct",
+    "elements": [
+      "Grass",
+      "Dark"
+    ],
+    "deck_id": "118B",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 90,
+      "support": 100,
+      "stamina": 220
+    },
+    "price": 1399,
+    "drops": [
+      "Venom Gland",
+      "Mysterious Mushroom"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Icelyn",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "119",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 105,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2277,
+    "drops": [
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "cooling",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Gumoss",
+    "elements": [
+      "Grass",
+      "Ground"
+    ],
+    "deck_id": "12",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 394,
+    "drops": [
+      "Berry Seeds",
+      "Gumoss Leaf"
+    ],
+    "work_orders": [
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Gildra",
+    "elements": [
+      "Dark",
+      "Ground"
+    ],
+    "deck_id": "120",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 120,
+      "defense": 105,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2529,
+    "drops": [
+      "Cloth",
+      "Leather"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Jormuntide",
+    "elements": [
+      "Dragon",
+      "Water"
+    ],
+    "deck_id": "121",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 130,
+      "melee_attack": 150,
+      "shot_attack": 120,
+      "defense": 100,
+      "support": 100,
+      "stamina": 150
+    },
+    "price": 3723,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "swimmer",
+      "fighter",
+      "base_worker",
+      "watering"
+    ]
+  },
+  {
+    "name": "Jormuntide Ignis",
+    "elements": [
+      "Dragon",
+      "Fire"
+    ],
+    "deck_id": "121B",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 130,
+      "melee_attack": 150,
+      "shot_attack": 130,
+      "defense": 100,
+      "support": 100,
+      "stamina": 150
+    },
+    "price": 3577,
+    "drops": [
+      "High Quality Pal Oil",
+      "Flame Organ",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Suzaku",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "122",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 105,
+      "support": 100,
+      "stamina": 350
+    },
+    "price": 2409,
+    "drops": [
+      "Flame Organ",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Suzaku Aqua",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "122B",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 125,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 105,
+      "support": 100,
+      "stamina": 350
+    },
+    "price": 2732,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Water Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "watering"
+    ]
+  },
+  {
+    "name": "Dazemu",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "123",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 896,
+    "drops": [
+      "Bone"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Quivern",
+    "elements": [
+      "Dragon"
+    ],
+    "deck_id": "124",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 100,
+      "support": 100,
+      "stamina": 220
+    },
+    "price": 2081,
+    "drops": [
+      "High Quality Pal Oil",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Quivern Botan",
+    "elements": [
+      "Dragon",
+      "Grass"
+    ],
+    "deck_id": "124B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 100,
+      "support": 100,
+      "stamina": 220
+    },
+    "price": 2235,
+    "drops": [
+      "High Quality Pal Oil",
+      "Beautiful Flower",
+      "Red Berries",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Lullu",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "125",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1261,
+    "drops": [
+      "Beautiful Flower",
+      "Red Berries"
+    ],
+    "work_orders": [
+      "base_worker",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Kikit",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "126",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1152,
+    "drops": [
+      "Leather",
+      "Bone",
+      "Crude Oil"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining"
+    ]
+  },
+  {
+    "name": "Yakumo",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "127",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 85,
+      "melee_attack": 80,
+      "shot_attack": 85,
+      "defense": 85,
+      "support": 110,
+      "stamina": 140
+    },
+    "price": 1238,
+    "drops": [
+      "Leather"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Skutlass",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "128",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1342,
+    "drops": [
+      "Skutlass Sashimi",
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "watering"
+    ]
+  },
+  {
+    "name": "Skutlass Ignis",
+    "elements": [
+      "Water",
+      "Fire"
+    ],
+    "deck_id": "128B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1442,
+    "drops": [
+      "Skutlass Sashimi",
+      "Flame Organ",
+      "World Tree Holy Water",
+      "Water Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "kindling",
+      "watering"
+    ]
+  },
+  {
+    "name": "Reptyro",
+    "elements": [
+      "Fire",
+      "Ground"
+    ],
+    "deck_id": "129",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 120,
+      "support": 100,
+      "stamina": 220
+    },
+    "price": 2576,
+    "drops": [
+      "Flame Organ"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Reptyro Cryst",
+    "elements": [
+      "Ice",
+      "Ground"
+    ],
+    "deck_id": "129B",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 130,
+      "support": 100,
+      "stamina": 220
+    },
+    "price": 2797,
+    "drops": [
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Pupperai",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "13",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 476,
+    "drops": [
+      "Bone"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Starryon",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "130",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 100,
+      "support": 100,
+      "stamina": 230
+    },
+    "price": 2014,
+    "drops": [
+      "Leather",
+      "Dark Fragment",
+      "Dark Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Starryon Primo",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "130B",
+    "rarity": 4,
+    "size": "M",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 100,
+      "support": 100,
+      "stamina": 230
+    },
+    "price": 2514,
+    "drops": [
+      "Leather",
+      "Nightstar Sand",
+      "World Tree Holy Water",
+      "Neutral Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Pierdon",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "131",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 120,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2306,
+    "drops": [
+      "Ore",
+      "Coal",
+      "Sulfur"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining"
+    ]
+  },
+  {
+    "name": "Pierdon Cryst",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "131B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 120,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2685,
+    "drops": [
+      "Soralite",
+      "Ice Organ",
+      "Pure Quartz",
+      "World Tree Holy Water",
+      "Ice Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Cryolinx",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "132",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 140,
+      "shot_attack": 100,
+      "defense": 110,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1987,
+    "drops": [
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "lumbering",
+      "transport",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Cryolinx Terra",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "132B",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 140,
+      "shot_attack": 105,
+      "defense": 110,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2484,
+    "drops": [
+      "Ore"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "mining",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Snugloo",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "133",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 85,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 927,
+    "drops": [
+      "Leather",
+      "Wool",
+      "World Tree Holy Water",
+      "Ice Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Wumpo",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "134",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 140,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 100,
+      "support": 100,
+      "stamina": 240
+    },
+    "price": 2591,
+    "drops": [
+      "Ice Organ",
+      "Beautiful Flower",
+      "Ice Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "transport",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Wumpo Botan",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "134B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 140,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 110,
+      "support": 100,
+      "stamina": 240
+    },
+    "price": 2743,
+    "drops": [
+      "Hardwood",
+      "Beautiful Flower",
+      "Carrot Seeds",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Sootseer",
+    "elements": [
+      "Dark",
+      "Fire"
+    ],
+    "deck_id": "135",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 125,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2041,
+    "drops": [
+      "Medium Pal Soul",
+      "Bone",
+      "Crude Oil"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "mining",
+      "farming",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Carnibora",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "136",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 85,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 85,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1875,
+    "drops": [
+      "Venom Gland",
+      "Fiber",
+      "World Tree Holy Water",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Blazamut",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "137",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 150,
+      "shot_attack": 125,
+      "defense": 120,
+      "support": 50,
+      "stamina": 190
+    },
+    "price": 3470,
+    "drops": [
+      "Coal",
+      "Flame Organ",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "mining",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Blazamut Ryu",
+    "elements": [
+      "Dragon",
+      "Fire"
+    ],
+    "deck_id": "137B",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 150,
+      "shot_attack": 130,
+      "defense": 125,
+      "support": 50,
+      "stamina": 190
+    },
+    "price": 3651,
+    "drops": [
+      "Coal",
+      "Medium Pal Soul",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "mining",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Dualith",
+    "elements": [
+      "Ground",
+      "Grass"
+    ],
+    "deck_id": "138",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 125,
+      "support": 100,
+      "stamina": 210
+    },
+    "price": 3113,
+    "drops": [
+      "Beautiful Flower",
+      "Large Pal Soul",
+      "World Tree Holy Water",
+      "Ground Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Dualith Noct",
+    "elements": [
+      "Ground",
+      "Dark"
+    ],
+    "deck_id": "138B",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 125,
+      "support": 100,
+      "stamina": 210
+    },
+    "price": 3234,
+    "drops": [
+      "Mysterious Mushroom",
+      "Large Pal Soul",
+      "World Tree Holy Water",
+      "Dark Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Anubis",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "139",
+    "rarity": 4,
+    "size": "M",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 130,
+      "shot_attack": 130,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3217,
+    "drops": [
+      "Bone",
+      "Large Pal Soul",
+      "Innovative Technical Manual",
+      "Ground Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Clovee",
+    "elements": [
+      "Grass",
+      "Neutral"
+    ],
+    "deck_id": "14",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 65,
+      "defense": 65,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 407,
+    "drops": [
+      "Berry Seeds"
+    ],
+    "work_orders": [
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Sekhmet",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "140",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2638,
+    "drops": [
+      "Leather",
+      "Large Pal Soul",
+      "Ground Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Prixter",
+    "elements": [
+      "Dark",
+      "Ground"
+    ],
+    "deck_id": "141",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1649,
+    "drops": [
+      "Venom Gland"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Prixter Lux",
+    "elements": [
+      "Electric",
+      "Ground"
+    ],
+    "deck_id": "141B",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1773,
+    "drops": [
+      "Electric Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "electricity",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Tetroise",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "142",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 135,
+      "support": 100,
+      "stamina": 200
+    },
+    "price": 2436,
+    "drops": [
+      "Ruby",
+      "Large Pal Soul",
+      "Ground Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining"
+    ]
+  },
+  {
+    "name": "Tetroise Primo",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "142B",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 140,
+      "support": 100,
+      "stamina": 200
+    },
+    "price": 2945,
+    "drops": [
+      "Emerald",
+      "Large Pal Soul",
+      "World Tree Holy Water",
+      "Neutral Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining"
+    ]
+  },
+  {
+    "name": "Nyafia",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "143",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2182,
+    "drops": [
+      "Leather"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Mimog",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "144",
+    "rarity": 3,
+    "size": "XS",
+    "stats": {
+      "hp": 60,
+      "melee_attack": 100,
+      "shot_attack": 60,
+      "defense": 130,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3500,
+    "drops": [
+      "Gold Coin",
+      "Dog Coin",
+      "Training Manual (XL)"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Xenovader",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "145",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 125,
+      "defense": 85,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1543,
+    "drops": [
+      "Meteorite Fragment"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Xenogard",
+    "elements": [
+      "Dragon"
+    ],
+    "deck_id": "146",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 120,
+      "defense": 130,
+      "support": 100,
+      "stamina": 250
+    },
+    "price": 2845,
+    "drops": [
+      "Meteorite Fragment",
+      "High Quality Pal Oil"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "mining"
+    ]
+  },
+  {
+    "name": "Prunelia",
+    "elements": [
+      "Grass",
+      "Dark"
+    ],
+    "deck_id": "147",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2063,
+    "drops": [
+      "Low Grade Medical Supplies",
+      "Beautiful Flower",
+      "Carrot Seeds"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Nitemary",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "148",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 105,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2594,
+    "drops": [
+      "Small Pal Soul"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Nitemary Botan",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "148B",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 105,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2134,
+    "drops": [
+      "Medium Pal Soul",
+      "World Tree Holy Water",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Smokie",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "149",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 85,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 85,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1842,
+    "drops": [
+      "Chromite"
+    ],
+    "work_orders": [
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Smokie Cryst",
+    "elements": [
+      "Dark",
+      "Ice"
+    ],
+    "deck_id": "149B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 85,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1628,
+    "drops": [
+      "Ice Organ",
+      "Medium Pal Soul",
+      "World Tree Holy Water",
+      "Dark Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Jolthog",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "15",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 70,
+      "shot_attack": 75,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 417,
+    "drops": [
+      "Electric Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Omascul",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "150",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2431,
+    "drops": [
+      "Dark Fragment"
+    ],
+    "work_orders": [
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Whalaska",
+    "elements": [
+      "Ice",
+      "Water"
+    ],
+    "deck_id": "151",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 110,
+      "support": 100,
+      "stamina": 200
+    },
+    "price": 2685,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Coralum Ore",
+      "Ice Organ",
+      "Large Pal Soul",
+      "Ice Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "fishing",
+      "watering",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Whalaska Ignis",
+    "elements": [
+      "Ice",
+      "Fire"
+    ],
+    "deck_id": "151B",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 120,
+      "defense": 110,
+      "support": 100,
+      "stamina": 200
+    },
+    "price": 3097,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Coralum Ore",
+      "Flame Organ",
+      "Large Pal Soul",
+      "World Tree Holy Water",
+      "Fire Radiant Gem"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "fishing",
+      "kindling",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Verdash",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "152",
+    "rarity": 4,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1947,
+    "drops": [
+      "Leather",
+      "Bone"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Splatterina",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "153",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 105,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2484,
+    "drops": [
+      "Dark Fragment",
+      "Dark Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Gildane",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "154",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 110,
+      "support": 100,
+      "stamina": 200
+    },
+    "price": 2622,
+    "drops": [
+      "Leather"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Dogen",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "155",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1683,
+    "drops": [
+      "Bone"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Bulldosu",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "156",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 115,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 100,
+      "support": 100,
+      "stamina": 110
+    },
+    "price": 1812,
+    "drops": [
+      "Bone",
+      "Fiber"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Celesdir",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "157",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 100,
+      "support": 100,
+      "stamina": 260
+    },
+    "price": 2911,
+    "drops": [
+      "Leather",
+      "Horn",
+      "Hexolite Quartz",
+      "Neutral Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Celesdir Noct",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "157B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 100,
+      "support": 100,
+      "stamina": 260
+    },
+    "price": 3528,
+    "drops": [
+      "Leather",
+      "Horn",
+      "Dark Fragment",
+      "World Tree Holy Water",
+      "Dark Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Astegon",
+    "elements": [
+      "Dragon",
+      "Dark"
+    ],
+    "deck_id": "158",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 125,
+      "defense": 125,
+      "support": 100,
+      "stamina": 300
+    },
+    "price": 3794,
+    "drops": [
+      "Plasteel",
+      "Large Pal Soul",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter",
+      "base_worker",
+      "mining"
+    ]
+  },
+  {
+    "name": "Knocklem",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "159",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 135,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3767,
+    "drops": [
+      "Ore",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Knocklem Ignis",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "159B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 135,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3895,
+    "drops": [
+      "Ore",
+      "Flame Organ",
+      "World Tree Holy Water",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Jolthog Cryst",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "15B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 70,
+      "shot_attack": 75,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 472,
+    "drops": [
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Depresso",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "16",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 70,
+      "shot_attack": 70,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 436,
+    "drops": [
+      "Venom Gland"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "farming",
+      "transport"
+    ]
+  },
+  {
+    "name": "Silvegis",
+    "elements": [
+      "Dragon"
+    ],
+    "deck_id": "160",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 115,
+      "support": 100,
+      "stamina": 280
+    },
+    "price": 3710,
+    "drops": [
+      "Chromite",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Azurmane",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "161",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 130,
+      "melee_attack": 100,
+      "shot_attack": 120,
+      "defense": 110,
+      "support": 100,
+      "stamina": 220
+    },
+    "price": 3079,
+    "drops": [
+      "Electric Organ",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Valentail",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "162",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1684,
+    "drops": [
+      "Leather"
+    ],
+    "work_orders": [
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Snock",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "163",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 65,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 75,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1523,
+    "drops": [
+      "Electric Organ",
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Snock Lux",
+    "elements": [
+      "Electric",
+      "Ground"
+    ],
+    "deck_id": "163B",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 65,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1623,
+    "drops": [
+      "Electric Organ",
+      "High Quality Pal Oil",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Souffline",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "164",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 60,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1610,
+    "drops": [
+      "Wheat Seeds"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Lapiron",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "165",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 777,
+    "drops": [
+      "Leather"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Hoodle",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "166",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1656,
+    "drops": [
+      "Small Pal Soul",
+      "Horn"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Slowatt",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "167",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1611,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Electric Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Bakemi",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "168",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1625,
+    "drops": [
+      "Cloth",
+      "Horn",
+      "Small Pal Soul"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Solmora",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "169",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 85,
+      "support": 100,
+      "stamina": 220
+    },
+    "price": 1636,
+    "drops": [
+      "High Quality Pal Oil",
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "mount",
+      "swimmer",
+      "base_worker",
+      "fishing",
+      "watering"
+    ]
+  },
+  {
+    "name": "Solmora Lux",
+    "elements": [
+      "Water",
+      "Electric"
+    ],
+    "deck_id": "169B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 85,
+      "support": 100,
+      "stamina": 220
+    },
+    "price": 1843,
+    "drops": [
+      "High Quality Pal Oil",
+      "Electric Organ",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "swimmer",
+      "base_worker",
+      "fishing",
+      "electricity",
+      "watering"
+    ]
+  },
+  {
+    "name": "Pengullet",
+    "elements": [
+      "Water",
+      "Ice"
+    ],
+    "deck_id": "17",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 70,
+      "shot_attack": 75,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 463,
+    "drops": [
+      "Ice Organ",
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Lapure",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "170",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2464,
+    "drops": [
+      "Leather"
+    ],
+    "work_orders": [
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Eidrolon",
+    "elements": [
+      "Dragon",
+      "Dark"
+    ],
+    "deck_id": "171",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 115,
+      "melee_attack": 100,
+      "shot_attack": 125,
+      "defense": 120,
+      "support": 100,
+      "stamina": 130
+    },
+    "price": 3323,
+    "drops": [
+      "Leather",
+      "High Quality Pal Oil",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter",
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Eidrolon Ignis",
+    "elements": [
+      "Dragon",
+      "Fire"
+    ],
+    "deck_id": "171B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 115,
+      "melee_attack": 100,
+      "shot_attack": 130,
+      "defense": 120,
+      "support": 100,
+      "stamina": 130
+    },
+    "price": 3521,
+    "drops": [
+      "Leather",
+      "High Quality Pal Oil",
+      "Flame Organ",
+      "World Tree Holy Water",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter",
+      "base_worker",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Dynamoff",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "172",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 80,
+      "support": 100,
+      "stamina": 140
+    },
+    "price": 1963,
+    "drops": [
+      "Electric Organ"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "transport",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Tropicaw",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "173",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 85,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1844,
+    "drops": [
+      "Beautiful Flower",
+      "Fiber"
+    ],
+    "work_orders": [
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Flaracle",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "174",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 125,
+      "defense": 105,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3217,
+    "drops": [
+      "Leather",
+      "Flame Organ",
+      "World Tree Holy Water",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Ophydia",
+    "elements": [
+      "Grass",
+      "Water"
+    ],
+    "deck_id": "175",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 130,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 120,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3884,
+    "drops": [
+      "High Quality Pal Oil",
+      "Large Pal Soul",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "watering"
+    ]
+  },
+  {
+    "name": "Dupin",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "176",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3191,
+    "drops": [
+      "Leather",
+      "Flame Organ",
+      "World Tree Holy Water",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "kindling",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Roujay",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "177",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 95,
+      "support": 100,
+      "stamina": 200
+    },
+    "price": 2263,
+    "drops": [
+      "Leather",
+      "Ruby",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Venusa",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "178",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2680,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Venom Gland",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Mycora",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "179",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3087,
+    "drops": [
+      "Mushroom",
+      "Mysterious Mushroom",
+      "World Tree Holy Water",
+      "Ground Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Pengullet Lux",
+    "elements": [
+      "Water",
+      "Electric"
+    ],
+    "deck_id": "17B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 561,
+    "drops": [
+      "Electric Organ",
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "electricity",
+      "watering"
+    ]
+  },
+  {
+    "name": "Penking",
+    "elements": [
+      "Water",
+      "Ice"
+    ],
+    "deck_id": "18",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 70,
+      "shot_attack": 95,
+      "defense": 95,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1442,
+    "drops": [
+      "Ice Organ",
+      "Penking Plume"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport",
+      "watering",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Loomen",
+    "elements": [
+      "Dark",
+      "Fire"
+    ],
+    "deck_id": "180",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 95,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2309,
+    "drops": [
+      "High Quality Pal Oil",
+      "Leather",
+      "Venom Gland",
+      "World Tree Holy Water",
+      "Dark Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "kindling",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Wistella",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "181",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 60,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2421,
+    "drops": [
+      "Nightstar Sand",
+      "Small Pal Soul",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Solenne",
+    "elements": [
+      "Dark",
+      "Neutral"
+    ],
+    "deck_id": "182",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 115,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3867,
+    "drops": [
+      "Dark Fragment",
+      "High Quality Recovery Meds",
+      "World Tree Holy Water",
+      "Neutral Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Renjishi",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "183",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 120,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 4028,
+    "drops": [
+      "Leather",
+      "Flame Organ",
+      "World Tree Holy Water",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Aegidron",
+    "elements": [
+      "Dragon",
+      "Ground"
+    ],
+    "deck_id": "184",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 125,
+      "defense": 140,
+      "support": 100,
+      "stamina": 300
+    },
+    "price": 4116,
+    "drops": [
+      "Thermal Core",
+      "Giant Pal Soul",
+      "World Tree Holy Water",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "mining"
+    ]
+  },
+  {
+    "name": "Grizzbolt",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "185",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 120,
+      "shot_attack": 105,
+      "defense": 105,
+      "support": 100,
+      "stamina": 180
+    },
+    "price": 3524,
+    "drops": [
+      "Electric Organ",
+      "Leather",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "lumbering",
+      "transport",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Lyleen",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "186",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 120,
+      "defense": 110,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3427,
+    "drops": [
+      "High Quality Recovery Meds",
+      "Beautiful Flower",
+      "Innovative Technical Manual",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Lyleen Noct",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "186B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 115,
+      "melee_attack": 100,
+      "shot_attack": 120,
+      "defense": 115,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3540,
+    "drops": [
+      "High Quality Recovery Meds",
+      "Beautiful Flower",
+      "Innovative Technical Manual",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Orserk",
+    "elements": [
+      "Dragon",
+      "Electric"
+    ],
+    "deck_id": "187",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 130,
+      "defense": 115,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 4136,
+    "drops": [
+      "Electric Organ",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "transport",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Faleris",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "188",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 115,
+      "support": 90,
+      "stamina": 230
+    },
+    "price": 2685,
+    "drops": [
+      "Flame Organ",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Faleris Aqua",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "188B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 115,
+      "support": 90,
+      "stamina": 230
+    },
+    "price": 2797,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Shadowbeak",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "189",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 130,
+      "shot_attack": 120,
+      "defense": 140,
+      "support": 90,
+      "stamina": 250
+    },
+    "price": 3245,
+    "drops": [
+      "Plasteel",
+      "Carbon Fiber",
+      "Innovative Technical Manual",
+      "Large Pal Soul",
+      "Dark Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Penking Lux",
+    "elements": [
+      "Water",
+      "Electric"
+    ],
+    "deck_id": "18B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1683,
+    "drops": [
+      "Electric Organ",
+      "Penking Plume"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport",
+      "electricity",
+      "watering"
+    ]
+  },
+  {
+    "name": "Hoocrates",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "19",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 70,
+      "shot_attack": 70,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 443,
+    "drops": [
+      "Fiber",
+      "Advanced Technical Manual"
+    ],
+    "work_orders": [
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Selyne",
+    "elements": [
+      "Dark",
+      "Neutral"
+    ],
+    "deck_id": "190",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 130,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 110,
+      "support": 100,
+      "stamina": 300
+    },
+    "price": 4095,
+    "drops": [
+      "High Quality Cloth",
+      "Sapphire",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Bastigor",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "191",
+    "rarity": 4,
+    "size": "M",
+    "stats": {
+      "hp": 140,
+      "melee_attack": 100,
+      "shot_attack": 130,
+      "defense": 120,
+      "support": 100,
+      "stamina": 270
+    },
+    "price": 4425,
+    "drops": [
+      "Leather",
+      "Ice Organ",
+      "World Tree Holy Water",
+      "Ice Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "mining",
+      "lumbering",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Shaolong",
+    "elements": [
+      "Dragon",
+      "Water"
+    ],
+    "deck_id": "192",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 140,
+      "melee_attack": 100,
+      "shot_attack": 135,
+      "defense": 120,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 4531,
+    "drops": [
+      "Horn",
+      "Leather",
+      "Large Pal Soul",
+      "World Tree Holy Water",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter",
+      "base_worker",
+      "watering"
+    ]
+  },
+  {
+    "name": "Silvance",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "193",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 140,
+      "melee_attack": 100,
+      "shot_attack": 120,
+      "defense": 110,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 4436,
+    "drops": [
+      "Giant Pal Soul",
+      "Ancient Civilization Core",
+      "World Tree Holy Water",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Dandilord",
+    "elements": [
+      "Grass",
+      "Dark"
+    ],
+    "deck_id": "194",
+    "rarity": 4,
+    "size": "M",
+    "stats": {
+      "hp": 125,
+      "melee_attack": 100,
+      "shot_attack": 135,
+      "defense": 110,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 4442,
+    "drops": [
+      "Giant Pal Soul",
+      "Ancient Civilization Core",
+      "Venom Gland",
+      "World Tree Holy Water",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Bellanoir",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "195",
+    "rarity": 5,
+    "size": "M",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 150,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3667,
+    "drops": [
+      "Dark Fragment"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Bellanoir Libero",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "195B",
+    "rarity": 5,
+    "size": "M",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 150,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3997,
+    "drops": [
+      "Dark Fragment",
+      "High Quality Recovery Meds"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Xenolord",
+    "elements": [
+      "Dark",
+      "Dragon"
+    ],
+    "deck_id": "196",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 130,
+      "melee_attack": 100,
+      "shot_attack": 120,
+      "defense": 120,
+      "support": 100,
+      "stamina": 300
+    },
+    "price": 3622,
+    "drops": [
+      "Meteorite Fragment"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Hartalis",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "197",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 135,
+      "melee_attack": 100,
+      "shot_attack": 130,
+      "defense": 110,
+      "support": 100,
+      "stamina": 400
+    },
+    "price": 4256,
+    "drops": [
+      "Horn",
+      "Leather",
+      "Large Pal Soul"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Paladius",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "198",
+    "rarity": 5,
+    "size": "L",
+    "stats": {
+      "hp": 130,
+      "melee_attack": 110,
+      "shot_attack": 120,
+      "defense": 145,
+      "support": 100,
+      "stamina": 400
+    },
+    "price": 4339,
+    "drops": [
+      "Hexolite",
+      "Diamond",
+      "Large Pal Soul"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "mining",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Necromus",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "199",
+    "rarity": 5,
+    "size": "L",
+    "stats": {
+      "hp": 130,
+      "melee_attack": 100,
+      "shot_attack": 145,
+      "defense": 120,
+      "support": 100,
+      "stamina": 350
+    },
+    "price": 4339,
+    "drops": [
+      "Hexolite",
+      "Diamond",
+      "Large Pal Soul"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "mining",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Cattiva",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "2",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 70,
+      "shot_attack": 70,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 436,
+    "drops": [
+      "Red Berries"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Melpaca",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "20",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 90,
+      "shot_attack": 75,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 791,
+    "drops": [
+      "Wool",
+      "Leather"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "farming"
+    ]
+  },
+  {
+    "name": "Frostallion",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "200",
+    "rarity": 5,
+    "size": "L",
+    "stats": {
+      "hp": 140,
+      "melee_attack": 100,
+      "shot_attack": 140,
+      "defense": 120,
+      "support": 70,
+      "stamina": 300
+    },
+    "price": 4695,
+    "drops": [
+      "Ice Organ",
+      "Diamond"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter",
+      "base_worker",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Frostallion Noct",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "200B",
+    "rarity": 5,
+    "size": "L",
+    "stats": {
+      "hp": 140,
+      "melee_attack": 100,
+      "shot_attack": 140,
+      "defense": 135,
+      "support": 70,
+      "stamina": 300
+    },
+    "price": 5000,
+    "drops": [
+      "Diamond",
+      "Large Pal Soul"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Neptilius",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "201",
+    "rarity": 5,
+    "size": "XL",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 145,
+      "defense": 125,
+      "support": 100,
+      "stamina": 410
+    },
+    "price": 4277,
+    "drops": [
+      "Coralum Ore",
+      "Hexolite",
+      "Diamond",
+      "Large Pal Soul"
+    ],
+    "work_orders": [
+      "mount",
+      "swimmer",
+      "fighter",
+      "base_worker",
+      "watering"
+    ]
+  },
+  {
+    "name": "Jetragon",
+    "elements": [
+      "Dragon"
+    ],
+    "deck_id": "202",
+    "rarity": 5,
+    "size": "XL",
+    "stats": {
+      "hp": 115,
+      "melee_attack": 100,
+      "shot_attack": 140,
+      "defense": 120,
+      "support": 100,
+      "stamina": 110
+    },
+    "price": 4452,
+    "drops": [
+      "Soralite",
+      "Thermal Core",
+      "Diamond",
+      "Large Pal Soul"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Panthalus",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "203",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 180,
+      "melee_attack": 100,
+      "shot_attack": 120,
+      "defense": 200,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 4913,
+    "drops": [
+      "Diamond",
+      "Giant Pal Soul"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter"
+    ]
+  },
+  {
+    "name": "Astralym",
+    "elements": [],
+    "deck_id": "204",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 200,
+      "melee_attack": 100,
+      "shot_attack": 200,
+      "defense": 200,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 10000,
+    "drops": [
+      "Leather",
+      "High Quality Pal Oil"
+    ],
+    "work_orders": [
+      "fighter"
+    ]
+  },
+  {
+    "name": "Kingpaca",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "21",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 90,
+      "support": 100,
+      "stamina": 170
+    },
+    "price": 1274,
+    "drops": [
+      "Wool",
+      "Neutral Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Kingpaca Cryst",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "21B",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 90,
+      "support": 100,
+      "stamina": 170
+    },
+    "price": 1624,
+    "drops": [
+      "Wool",
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Daedream",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "22",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 60,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 397,
+    "drops": [
+      "Venom Gland",
+      "Small Pal Soul"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Tanzee",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "23",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 512,
+    "drops": [
+      "Mushroom"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Tanzee Ignis",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "23B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 526,
+    "drops": [
+      "Mushroom",
+      "Flame Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Nox",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "24",
+    "rarity": 3,
+    "size": "XS",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 70,
+      "shot_attack": 85,
+      "defense": 70,
+      "support": 140,
+      "stamina": 100
+    },
+    "price": 502,
+    "drops": [
+      "Leather",
+      "Small Pal Soul"
+    ],
+    "work_orders": [
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Flambelle",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "25",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 60,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 436,
+    "drops": [
+      "Flame Organ",
+      "High Quality Pal Oil"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Rooby",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "26",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 75,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 459,
+    "drops": [
+      "Flame Organ",
+      "Leather"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Mau",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "27",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 70,
+      "shot_attack": 60,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 665,
+    "drops": [
+      "Gold Coin",
+      "Leather"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming"
+    ]
+  },
+  {
+    "name": "Mau Cryst",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "27B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 70,
+      "shot_attack": 65,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 385,
+    "drops": [
+      "Ice Organ",
+      "Sapphire"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Rushoar",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "28",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 443,
+    "drops": [
+      "Rushoar Pork",
+      "Leather",
+      "Bone"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining"
+    ]
+  },
+  {
+    "name": "Foxparks",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "29",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 65,
+      "melee_attack": 70,
+      "shot_attack": 75,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 394,
+    "drops": [
+      "Leather",
+      "Flame Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Foxparks Cryst",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "29B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 65,
+      "melee_attack": 70,
+      "shot_attack": 80,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 472,
+    "drops": [
+      "Leather",
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Chikipi",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "3",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 60,
+      "melee_attack": 70,
+      "shot_attack": 60,
+      "defense": 60,
+      "support": 70,
+      "stamina": 100
+    },
+    "price": 313,
+    "drops": [
+      "Egg",
+      "Chikipi Poultry"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming"
+    ]
+  },
+  {
+    "name": "Killamari",
+    "elements": [
+      "Dark",
+      "Water"
+    ],
+    "deck_id": "30",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 60,
+      "melee_attack": 100,
+      "shot_attack": 60,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 376,
+    "drops": [
+      "Venom Gland",
+      "Killamari Tentacle",
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Killamari Primo",
+    "elements": [
+      "Neutral",
+      "Water"
+    ],
+    "deck_id": "30B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 60,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 421,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Killamari Tentacle"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Fuddler",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "31",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 65,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 50,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 358,
+    "drops": [
+      "Leather"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Eikthyrdeer",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "32",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 70,
+      "shot_attack": 80,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 791,
+    "drops": [
+      "Eikthyrdeer Venison",
+      "Leather",
+      "Horn",
+      "Neutral Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Eikthyrdeer Terra",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "32B",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 70,
+      "shot_attack": 80,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 891,
+    "drops": [
+      "Eikthyrdeer Venison",
+      "Leather",
+      "Horn",
+      "Ground Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Direhowl",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "33",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 110,
+      "shot_attack": 90,
+      "defense": 75,
+      "support": 100,
+      "stamina": 70
+    },
+    "price": 611,
+    "drops": [
+      "Leather",
+      "Ruby",
+      "Gold Coin"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Caprity",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "34",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 70,
+      "shot_attack": 70,
+      "defense": 90,
+      "support": 120,
+      "stamina": 100
+    },
+    "price": 1643,
+    "drops": [
+      "Caprity Meat",
+      "Red Berries",
+      "Horn"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming"
+    ]
+  },
+  {
+    "name": "Caprity Noct",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "34B",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 70,
+      "shot_attack": 75,
+      "defense": 90,
+      "support": 120,
+      "stamina": 100
+    },
+    "price": 928,
+    "drops": [
+      "Caprity Meat",
+      "Red Berries",
+      "Horn",
+      "Venom Gland"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming"
+    ]
+  },
+  {
+    "name": "Swee",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "35",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 60,
+      "melee_attack": 100,
+      "shot_attack": 60,
+      "defense": 60,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 313,
+    "drops": [
+      "Wool",
+      "Swee Hair"
+    ],
+    "work_orders": [
+      "base_worker",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Sweepa",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "36",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 90,
+      "support": 100,
+      "stamina": 120
+    },
+    "price": 1244,
+    "drops": [
+      "Wool"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Turtacle",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "37",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 115,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 661,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Bone"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Turtacle Terra",
+    "elements": [
+      "Water",
+      "Ground"
+    ],
+    "deck_id": "37B",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 85,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 125,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 14950,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Bone"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Hangyu",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "38",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 70,
+      "shot_attack": 70,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 541,
+    "drops": [
+      "Fiber",
+      "Wheat Seeds"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Hangyu Cryst",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "38B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 70,
+      "shot_attack": 80,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 728,
+    "drops": [
+      "Fiber",
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Woolipop",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "39",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 70,
+      "shot_attack": 70,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 502,
+    "drops": [
+      "Cotton Candy",
+      "High Quality Pal Oil"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming"
+    ]
+  },
+  {
+    "name": "Woolipop Terra",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "39B",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 95,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 836,
+    "drops": [
+      "Caramel Cotton Candy",
+      "Wool"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming"
+    ]
+  },
+  {
+    "name": "Lifmunk",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "4",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 70,
+      "shot_attack": 70,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 480,
+    "drops": [
+      "Wheat Seeds",
+      "Low Grade Medical Supplies"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Mozzarina",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "40",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 50,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 502,
+    "drops": [
+      "Mozzarina Meat",
+      "Milk"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming"
+    ]
+  },
+  {
+    "name": "Azurobe",
+    "elements": [
+      "Water",
+      "Dragon"
+    ],
+    "deck_id": "41",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 70,
+      "shot_attack": 100,
+      "defense": 100,
+      "support": 100,
+      "stamina": 160
+    },
+    "price": 1831,
+    "drops": [
+      "Cloth",
+      "Aquatic Pal Fluids",
+      "Water Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "swimmer",
+      "base_worker",
+      "watering"
+    ]
+  },
+  {
+    "name": "Azurobe Cryst",
+    "elements": [
+      "Ice",
+      "Dragon"
+    ],
+    "deck_id": "41B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 115,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 105,
+      "support": 100,
+      "stamina": 160
+    },
+    "price": 2109,
+    "drops": [
+      "Cloth",
+      "Aquatic Pal Fluids",
+      "Ice Organ",
+      "Ice Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "swimmer",
+      "base_worker",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Sparkit",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "42",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 60,
+      "melee_attack": 60,
+      "shot_attack": 75,
+      "defense": 70,
+      "support": 80,
+      "stamina": 100
+    },
+    "price": 410,
+    "drops": [
+      "Electric Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming",
+      "transport",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Kelpsea",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "43",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 407,
+    "drops": [
+      "Raw Kelpsea",
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming",
+      "watering"
+    ]
+  },
+  {
+    "name": "Kelpsea Ignis",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "43B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 407,
+    "drops": [
+      "Raw Kelpsea",
+      "Flame Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Ribbuny",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "44",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 65,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 421,
+    "drops": [
+      "Leather",
+      "Beautiful Flower",
+      "Ribbuny Ribbon",
+      "Berry Seeds"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Ribbuny Botan",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "44B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 65,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 526,
+    "drops": [
+      "Leather",
+      "Ribbuny Ribbon",
+      "Carrot Seeds",
+      "Carrot"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Jelliette",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "45",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 658,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Jelliette Bell Flesh"
+    ],
+    "work_orders": [
+      "base_worker",
+      "fishing",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Jellroy",
+    "elements": [
+      "Water",
+      "Dark"
+    ],
+    "deck_id": "46",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 75,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1328,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Jellroy Bell Flesh"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Amione",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "47",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 65,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 65,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 421,
+    "drops": [
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Gloopie",
+    "elements": [
+      "Water",
+      "Dark"
+    ],
+    "deck_id": "48",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 577,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Gloopie Tentacle"
+    ],
+    "work_orders": [
+      "base_worker",
+      "fishing",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Gloopie Primo",
+    "elements": [
+      "Water",
+      "Neutral"
+    ],
+    "deck_id": "48B",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1612,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Gloopie Tentacle"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Galeclaw",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "49",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 120,
+      "shot_attack": 85,
+      "defense": 60,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 502,
+    "drops": [
+      "Galeclaw Poultry",
+      "Leather"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Fuack",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "5",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 60,
+      "melee_attack": 80,
+      "shot_attack": 80,
+      "defense": 60,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 376,
+    "drops": [
+      "Leather",
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Wispaw",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "50",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 85,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 827,
+    "drops": [
+      "Small Pal Soul",
+      "Leather",
+      "World Tree Holy Water",
+      "Ground Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Nitewing",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "51",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1012,
+    "drops": [
+      "Leather"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Tombat",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "52",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1147,
+    "drops": [
+      "Leather",
+      "Small Pal Soul"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Tocotoco",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "53",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 60,
+      "melee_attack": 80,
+      "shot_attack": 75,
+      "defense": 70,
+      "support": 70,
+      "stamina": 100
+    },
+    "price": 373,
+    "drops": [
+      "Gunpowder",
+      "Tocotoco Feather"
+    ],
+    "work_orders": [
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Univolt",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "54",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 110,
+      "shot_attack": 105,
+      "defense": 105,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1388,
+    "drops": [
+      "Leather",
+      "Electric Organ",
+      "Horn",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Univolt Cryst",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "54B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 110,
+      "shot_attack": 105,
+      "defense": 110,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1974,
+    "drops": [
+      "Leather",
+      "Horn",
+      "Ice Organ",
+      "World Tree Holy Water",
+      "Ice Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Gobfin",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "55",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 90,
+      "shot_attack": 90,
+      "defense": 75,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 850,
+    "drops": [
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Gobfin Ignis",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "55B",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 90,
+      "shot_attack": 90,
+      "defense": 75,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 850,
+    "drops": [
+      "Flame Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Loupmoon",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "56",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 130,
+      "shot_attack": 100,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 842,
+    "drops": [
+      "Bone"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Loupmoon Cryst",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "56B",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 130,
+      "shot_attack": 105,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1176,
+    "drops": [
+      "Bone"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Cawgnito",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "57",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 80,
+      "shot_attack": 95,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 770,
+    "drops": [
+      "Bone",
+      "Venom Gland",
+      "Small Pal Soul"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "farming"
+    ]
+  },
+  {
+    "name": "Arsox",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "58",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 85,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 95,
+      "support": 100,
+      "stamina": 120
+    },
+    "price": 1176,
+    "drops": [
+      "Horn",
+      "Flame Organ"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Muffly",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "59",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 60,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 55,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 385,
+    "drops": [
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Fuack Ignis",
+    "elements": [
+      "Water",
+      "Fire"
+    ],
+    "deck_id": "5B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 60,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 60,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 463,
+    "drops": [
+      "Leather",
+      "Aquatic Pal Fluids",
+      "Flame Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "kindling",
+      "watering"
+    ]
+  },
+  {
+    "name": "Vixy",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "6",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 70,
+      "shot_attack": 70,
+      "defense": 70,
+      "support": 140,
+      "stamina": 100
+    },
+    "price": 407,
+    "drops": [
+      "Leather",
+      "Bone"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming"
+    ]
+  },
+  {
+    "name": "Bristla",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "60",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 80,
+      "shot_attack": 80,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 756,
+    "drops": [
+      "Tomato Seeds",
+      "Beautiful Flower"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Cinnamoth",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "61",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 534,
+    "drops": [
+      "Honey",
+      "Lettuce Seeds",
+      "Tomato Seeds"
+    ],
+    "work_orders": [
+      "base_worker",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Puffolt",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "62",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 556,
+    "drops": [
+      "Electric Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Elphidran",
+    "elements": [
+      "Dragon"
+    ],
+    "deck_id": "63",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 80,
+      "shot_attack": 80,
+      "defense": 90,
+      "support": 100,
+      "stamina": 130
+    },
+    "price": 1205,
+    "drops": [
+      "High Quality Pal Oil",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Elphidran Aqua",
+    "elements": [
+      "Dragon",
+      "Water"
+    ],
+    "deck_id": "63B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 115,
+      "melee_attack": 80,
+      "shot_attack": 80,
+      "defense": 95,
+      "support": 100,
+      "stamina": 130
+    },
+    "price": 1543,
+    "drops": [
+      "High Quality Pal Oil",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "lumbering",
+      "watering"
+    ]
+  },
+  {
+    "name": "Vanwyrm",
+    "elements": [
+      "Fire",
+      "Dark"
+    ],
+    "deck_id": "64",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 90,
+      "support": 100,
+      "stamina": 150
+    },
+    "price": 1464,
+    "drops": [
+      "Bone",
+      "Ruby",
+      "Gold Coin"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Vanwyrm Cryst",
+    "elements": [
+      "Ice",
+      "Dark"
+    ],
+    "deck_id": "64B",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 120,
+      "defense": 95,
+      "support": 100,
+      "stamina": 150
+    },
+    "price": 1624,
+    "drops": [
+      "Bone",
+      "Ice Organ",
+      "Sapphire"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter",
+      "base_worker",
+      "transport",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Felbat",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "65",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 110,
+      "support": 110,
+      "stamina": 100
+    },
+    "price": 1744,
+    "drops": [
+      "Cloth",
+      "Small Pal Soul"
+    ],
+    "work_orders": [
+      "base_worker",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Vaelet",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "66",
+    "rarity": 4,
+    "size": "M",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 120,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2095,
+    "drops": [
+      "Low Grade Medical Supplies",
+      "Tomato Seeds",
+      "Onion Seeds"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Beegarde",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "67",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1166,
+    "drops": [
+      "Honey"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "farming",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Elizabee",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "68",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1769,
+    "drops": [
+      "Honey",
+      "Elizabee's Staff"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Lovander",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "69",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 70,
+      "shot_attack": 70,
+      "defense": 70,
+      "support": 140,
+      "stamina": 100
+    },
+    "price": 1056,
+    "drops": [
+      "Mushroom",
+      "Cake",
+      "Suspicious Juice",
+      "Strange Juice",
+      "Memory Wiping Medicine"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Celaray",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "7",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 521,
+    "drops": [
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Grintale",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "70",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1074,
+    "drops": [
+      "High Quality Pal Oil"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Tarantriss",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "71",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1806,
+    "drops": [
+      "Fiber",
+      "Venom Gland"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Polapup",
+    "elements": [
+      "Ice",
+      "Water"
+    ],
+    "deck_id": "72",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 105,
+      "support": 100,
+      "stamina": 120
+    },
+    "price": 1794,
+    "drops": [
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "watering",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Polapup Terra",
+    "elements": [
+      "Ice",
+      "Ground"
+    ],
+    "deck_id": "72B",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 110,
+      "support": 100,
+      "stamina": 120
+    },
+    "price": 1942,
+    "drops": [
+      "Leather",
+      "Aquatic Pal Fluids",
+      "World Tree Holy Water",
+      "Ground Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Leezpunk",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "73",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 90,
+      "shot_attack": 80,
+      "defense": 50,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 476,
+    "drops": [
+      "Copper Key",
+      "Silver Key",
+      "Leezpunk Crest"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Leezpunk Ignis",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "73B",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 90,
+      "shot_attack": 80,
+      "defense": 50,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 493,
+    "drops": [
+      "Flame Organ",
+      "Silver Key",
+      "Leezpunk Crest"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Gorirat",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "74",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 110,
+      "shot_attack": 95,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1214,
+    "drops": [
+      "Leather",
+      "Bone",
+      "Neutral Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Gorirat Terra",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "74B",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 110,
+      "shot_attack": 100,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1284,
+    "drops": [
+      "Ore",
+      "Bone",
+      "Ground Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Surfent",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "75",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 70,
+      "shot_attack": 90,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 968,
+    "drops": [
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "mount",
+      "swimmer",
+      "base_worker",
+      "farming",
+      "watering"
+    ]
+  },
+  {
+    "name": "Surfent Terra",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "75B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 70,
+      "shot_attack": 90,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1205,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Ore"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Robinquill",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "76",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1335,
+    "drops": [
+      "Potato Seeds",
+      "Arrow"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Robinquill Terra",
+    "elements": [
+      "Grass",
+      "Ground"
+    ],
+    "deck_id": "76B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1294,
+    "drops": [
+      "Potato Seeds",
+      "Arrow"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Flopie",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "77",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 65,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 512,
+    "drops": [
+      "Low Grade Medical Supplies",
+      "Lettuce Seeds"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Wixen",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "78",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 50,
+      "shot_attack": 110,
+      "defense": 80,
+      "support": 120,
+      "stamina": 100
+    },
+    "price": 1284,
+    "drops": [
+      "Flame Organ",
+      "Advanced Technical Manual"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Wixen Noct",
+    "elements": [
+      "Fire",
+      "Dark"
+    ],
+    "deck_id": "78B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 50,
+      "shot_attack": 110,
+      "defense": 85,
+      "support": 120,
+      "stamina": 100
+    },
+    "price": 1509,
+    "drops": [
+      "Medium Pal Soul",
+      "Advanced Technical Manual"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Katress",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "79",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1356,
+    "drops": [
+      "Leather",
+      "Katress Hair",
+      "Advanced Technical Manual"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Katress Ignis",
+    "elements": [
+      "Dark",
+      "Fire"
+    ],
+    "deck_id": "79B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1675,
+    "drops": [
+      "Flame Organ",
+      "Katress Hair",
+      "Advanced Technical Manual"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "kindling",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Celaray Lux",
+    "elements": [
+      "Water",
+      "Electric"
+    ],
+    "deck_id": "7B",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 658,
+    "drops": [
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "electricity",
+      "watering"
+    ]
+  },
+  {
+    "name": "Cremis",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "8",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 75,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 489,
+    "drops": [
+      "Wool"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming"
+    ]
+  },
+  {
+    "name": "Helzephyr",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "80",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 125,
+      "defense": 100,
+      "support": 100,
+      "stamina": 170
+    },
+    "price": 2109,
+    "drops": [
+      "Venom Gland",
+      "Medium Pal Soul",
+      "Dark Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter",
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Helzephyr Lux",
+    "elements": [
+      "Dark",
+      "Electric"
+    ],
+    "deck_id": "80B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 125,
+      "defense": 100,
+      "support": 100,
+      "stamina": 170
+    },
+    "price": 2469,
+    "drops": [
+      "Electric Organ",
+      "Medium Pal Soul",
+      "Dark Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "fighter",
+      "base_worker",
+      "transport",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Elgrove",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "81",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 105,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2041,
+    "drops": [
+      "Horn",
+      "Leather",
+      "World Tree Holy Water",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "lumbering",
+      "transport"
+    ]
+  },
+  {
+    "name": "Elgrove Cryst",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "81B",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 105,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2484,
+    "drops": [
+      "Horn",
+      "Leather",
+      "Ice Organ",
+      "World Tree Holy Water",
+      "Ice Radiant Gem",
+      "Decayed Ancient Relic"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "lumbering",
+      "transport",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Lunaris",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "82",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 80,
+      "shot_attack": 100,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1845,
+    "drops": [
+      "Paldium Fragment"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Fenglope",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "83",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 110,
+      "shot_attack": 110,
+      "defense": 90,
+      "support": 100,
+      "stamina": 140
+    },
+    "price": 1659,
+    "drops": [
+      "Leather",
+      "Horn",
+      "Neutral Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Fenglope Lux",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "83B",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 110,
+      "shot_attack": 115,
+      "defense": 90,
+      "support": 100,
+      "stamina": 140
+    },
+    "price": 2164,
+    "drops": [
+      "Leather",
+      "Horn",
+      "Electric Organ",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Dinossom",
+    "elements": [
+      "Grass",
+      "Dragon"
+    ],
+    "deck_id": "84",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 90,
+      "shot_attack": 85,
+      "defense": 90,
+      "support": 150,
+      "stamina": 130
+    },
+    "price": 1315,
+    "drops": [
+      "Tomato Seeds",
+      "Lettuce Seeds"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Dinossom Lux",
+    "elements": [
+      "Electric",
+      "Dragon"
+    ],
+    "deck_id": "84B",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 90,
+      "shot_attack": 90,
+      "defense": 90,
+      "support": 150,
+      "stamina": 130
+    },
+    "price": 1543,
+    "drops": [
+      "Tomato Seeds",
+      "Carrot Seeds"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Bushi",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "85",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 125,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1442,
+    "drops": [
+      "Bone",
+      "Ingot"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "lumbering",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Bushi Noct",
+    "elements": [
+      "Fire",
+      "Dark"
+    ],
+    "deck_id": "85B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 130,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1857,
+    "drops": [
+      "Flame Organ",
+      "Ingot",
+      "Medium Pal Soul"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "lumbering",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Munchill",
+    "elements": [
+      "Ice",
+      "Water"
+    ],
+    "deck_id": "86",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 85,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 798,
+    "drops": [
+      "Munchill Meat",
+      "Aquatic Pal Fluids",
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Mammorest",
+    "elements": [
+      "Grass",
+      "Ground"
+    ],
+    "deck_id": "87",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 150,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 90,
+      "support": 30,
+      "stamina": 180
+    },
+    "price": 2220,
+    "drops": [
+      "High Quality Pal Oil",
+      "Leather",
+      "Mammorest Meat",
+      "Grass Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Mammorest Cryst",
+    "elements": [
+      "Ice",
+      "Ground"
+    ],
+    "deck_id": "87B",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 150,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 90,
+      "support": 30,
+      "stamina": 180
+    },
+    "price": 2424,
+    "drops": [
+      "High Quality Pal Oil",
+      "Leather",
+      "Mammorest Meat",
+      "Ice Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "mining",
+      "lumbering",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Finsider",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "88",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 85,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 677,
+    "drops": [
+      "Leather",
+      "Small Pal Soul",
+      "Aquatic Pal Fluids"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Finsider Ignis",
+    "elements": [
+      "Water",
+      "Fire"
+    ],
+    "deck_id": "88B",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 90,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 749,
+    "drops": [
+      "Leather",
+      "Small Pal Soul",
+      "Flame Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "kindling",
+      "watering"
+    ]
+  },
+  {
+    "name": "Petallia",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "89",
+    "rarity": 4,
+    "size": "M",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1769,
+    "drops": [
+      "Beautiful Flower",
+      "Potato Seeds"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Petallia Ignis",
+    "elements": [
+      "Grass",
+      "Fire"
+    ],
+    "deck_id": "89B",
+    "rarity": 4,
+    "size": "M",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 100,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2357,
+    "drops": [],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "kindling",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Croajiro",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "9",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 85,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 584,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Cloth"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Leafan",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "90",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 95,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1806,
+    "drops": [
+      "Leather"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Incineram",
+    "elements": [
+      "Fire",
+      "Dark"
+    ],
+    "deck_id": "91",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 150,
+      "shot_attack": 100,
+      "defense": 85,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1325,
+    "drops": [
+      "Horn",
+      "Leather"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "mining",
+      "transport",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Incineram Noct",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "91B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 150,
+      "shot_attack": 105,
+      "defense": 85,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2036,
+    "drops": [
+      "Horn",
+      "Leather"
+    ],
+    "work_orders": [
+      "fighter",
+      "base_worker",
+      "mining",
+      "transport"
+    ]
+  },
+  {
+    "name": "Dazzi",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "92",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 110,
+      "shot_attack": 80,
+      "defense": 70,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 616,
+    "drops": [
+      "Electric Organ",
+      "Dazzi Cloud"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Dazzi Noct",
+    "elements": [
+      "Dark",
+      "Electric"
+    ],
+    "deck_id": "92B",
+    "rarity": 1,
+    "size": "XS",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 110,
+      "shot_attack": 80,
+      "defense": 75,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 599,
+    "drops": [
+      "Electric Organ",
+      "Dazzi Cloud",
+      "Dark Fragment"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "electricity",
+      "medicine"
+    ]
+  },
+  {
+    "name": "Pyrin",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "93",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 110,
+      "shot_attack": 95,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1464,
+    "drops": [
+      "Flame Organ",
+      "Leather",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Pyrin Noct",
+    "elements": [
+      "Fire",
+      "Dark"
+    ],
+    "deck_id": "93B",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 110,
+      "shot_attack": 95,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2034,
+    "drops": [
+      "Flame Organ",
+      "Leather",
+      "Fire Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "lumbering",
+      "kindling"
+    ]
+  },
+  {
+    "name": "Relaxaurus",
+    "elements": [
+      "Dragon",
+      "Water"
+    ],
+    "deck_id": "94",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 110,
+      "shot_attack": 115,
+      "defense": 110,
+      "support": 100,
+      "stamina": 200
+    },
+    "price": 2365,
+    "drops": [
+      "High Quality Pal Oil",
+      "Ruby",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Relaxaurus Lux",
+    "elements": [
+      "Dragon",
+      "Electric"
+    ],
+    "deck_id": "94B",
+    "rarity": 4,
+    "size": "XL",
+    "stats": {
+      "hp": 120,
+      "melee_attack": 110,
+      "shot_attack": 120,
+      "defense": 110,
+      "support": 100,
+      "stamina": 200
+    },
+    "price": 2685,
+    "drops": [
+      "High Quality Pal Oil",
+      "Electric Organ",
+      "Sapphire",
+      "Dragon Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "fighter",
+      "base_worker",
+      "transport",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Foxcicle",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "95",
+    "rarity": 3,
+    "size": "S",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 105,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1543,
+    "drops": [
+      "Leather",
+      "Ice Organ"
+    ],
+    "work_orders": [
+      "base_worker",
+      "farming",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Beakon",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "96",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 80,
+      "support": 100,
+      "stamina": 160
+    },
+    "price": 1934,
+    "drops": [
+      "Electric Organ",
+      "Electric Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic",
+      "Glowing Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "transport",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Beakon Cryst",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "96B",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 115,
+      "defense": 85,
+      "support": 100,
+      "stamina": 160
+    },
+    "price": 2227,
+    "drops": [
+      "Ice Organ",
+      "World Tree Holy Water",
+      "Water Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "flyer",
+      "base_worker",
+      "transport",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Ghangler",
+    "elements": [
+      "Dark",
+      "Water"
+    ],
+    "deck_id": "97",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 125,
+      "defense": 105,
+      "support": 100,
+      "stamina": 320
+    },
+    "price": 2263,
+    "drops": [
+      "Bone",
+      "Venom Gland"
+    ],
+    "work_orders": [
+      "mount",
+      "swimmer",
+      "fighter",
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Ghangler Ignis",
+    "elements": [
+      "Fire",
+      "Water"
+    ],
+    "deck_id": "97B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 130,
+      "defense": 105,
+      "support": 100,
+      "stamina": 320
+    },
+    "price": 2424,
+    "drops": [
+      "Bone",
+      "Flame Organ"
+    ],
+    "work_orders": [
+      "mount",
+      "swimmer",
+      "fighter",
+      "base_worker",
+      "transport",
+      "kindling",
+      "watering"
+    ]
+  },
+  {
+    "name": "Rayhound",
+    "elements": [
+      "Electric"
+    ],
+    "deck_id": "98",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1205,
+    "drops": [
+      "Electric Organ"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "electricity"
+    ]
+  },
+  {
+    "name": "Rayhound Cryst",
+    "elements": [
+      "Ice"
+    ],
+    "deck_id": "98B",
+    "rarity": 3,
+    "size": "M",
+    "stats": {
+      "hp": 90,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1138,
+    "drops": [
+      "Ice Organ",
+      "World Tree Holy Water",
+      "Water Radiant Gem",
+      "Decayed Ancient Relic",
+      "Dormant Ancient Relic",
+      "Gorgeous Ancient Relic"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "cooling"
+    ]
+  },
+  {
+    "name": "Menasting",
+    "elements": [
+      "Dark",
+      "Ground"
+    ],
+    "deck_id": "99",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 100,
+      "defense": 130,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 2469,
+    "drops": [
+      "Medium Pal Soul",
+      "Venom Gland"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Menasting Terra",
+    "elements": [
+      "Ground"
+    ],
+    "deck_id": "99B",
+    "rarity": 4,
+    "size": "L",
+    "stats": {
+      "hp": 100,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 130,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 10000,
+    "drops": [
+      "Medium Pal Soul",
+      "Sapphire"
+    ],
+    "work_orders": [
+      "base_worker",
+      "mining",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Croajiro Noct",
+    "elements": [
+      "Water",
+      "Dark"
+    ],
+    "deck_id": "9B",
+    "rarity": 3,
+    "size": "XS",
+    "stats": {
+      "hp": 85,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1254,
+    "drops": [
+      "Aquatic Pal Fluids",
+      "Cloth",
+      "Venom Gland"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport",
+      "watering"
+    ]
+  },
+  {
+    "name": "Red Slime",
+    "elements": [
+      "Fire"
+    ],
+    "deck_id": "None",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 85,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 700,
+    "drops": [
+      "Hallowed Bar"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Demon Eye",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "None",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 110,
+      "defense": 95,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 750,
+    "drops": [
+      "Hallowed Bar"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Purple Slime",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "None",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 75,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 800,
+    "drops": [
+      "Hallowed Bar"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Cave Bat",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "None",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 65,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1000,
+    "drops": [
+      "Hallowed Bar"
+    ],
+    "work_orders": [
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Green Slime",
+    "elements": [
+      "Grass"
+    ],
+    "deck_id": "None",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 65,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 500,
+    "drops": [
+      "Hallowed Bar"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Blue Slime",
+    "elements": [
+      "Water"
+    ],
+    "deck_id": "None",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 70,
+      "melee_attack": 100,
+      "shot_attack": 70,
+      "defense": 80,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 600,
+    "drops": [
+      "Hallowed Bar"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Rainbow Slime",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "None",
+    "rarity": 1,
+    "size": "M",
+    "stats": {
+      "hp": 105,
+      "melee_attack": 100,
+      "shot_attack": 95,
+      "defense": 105,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1500,
+    "drops": [
+      "Hallowed Bar"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Enchanted Sword",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "None",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 95,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 90,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1250,
+    "drops": [
+      "Hallowed Bar"
+    ],
+    "work_orders": [
+      "base_worker",
+      "lumbering"
+    ]
+  },
+  {
+    "name": "Eye of Cthulhu",
+    "elements": [
+      "Dark"
+    ],
+    "deck_id": "None",
+    "rarity": 3,
+    "size": "L",
+    "stats": {
+      "hp": 110,
+      "melee_attack": 100,
+      "shot_attack": 105,
+      "defense": 95,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 3000,
+    "drops": [
+      "Hallowed Bar"
+    ],
+    "work_orders": [
+      "base_worker",
+      "transport"
+    ]
+  },
+  {
+    "name": "Illuminant Bat",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "None",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 80,
+      "defense": 95,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 1250,
+    "drops": [
+      "Hallowed Bar"
+    ],
+    "work_orders": [
+      "base_worker"
+    ]
+  },
+  {
+    "name": "Illuminant Slime",
+    "elements": [
+      "Neutral"
+    ],
+    "deck_id": "None",
+    "rarity": 1,
+    "size": "S",
+    "stats": {
+      "hp": 80,
+      "melee_attack": 100,
+      "shot_attack": 75,
+      "defense": 85,
+      "support": 100,
+      "stamina": 100
+    },
+    "price": 900,
+    "drops": [
+      "Hallowed Bar"
+    ],
+    "work_orders": [
+      "mount",
+      "base_worker",
+      "transport"
+    ]
+  }
+]

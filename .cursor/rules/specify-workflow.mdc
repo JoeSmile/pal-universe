@@ -9,6 +9,16 @@ globs: .specify/tasks/*
 
 ---
 
+## 启动检查
+
+每次 Cursor 打开此项目时（或检测到 `.specify/tasks/` 变更时）：
+
+1. **读取 `CONTRIBUTING.md`** — 了解项目协作规范、角色分工、代码标准
+2. **读取 `PROJECT_CONTEXT.md`** — 了解项目全景、技术栈、进度
+3. 然后开始处理任务
+
+---
+
 ## 任务文件格式
 
 ```markdown
@@ -72,7 +82,27 @@ globs: .specify/tasks/*
 - 运行相关测试
 - 满足所有验收标准后才标记完成
 
-### 4. 执行后
+### 4. 执行后（关键 — 验收验证）
+
+在标记 `completed` 前，必须完成以下验证：
+
+**先勾选 AC：** 将任务文件中所有 `- [ ]` 改为 `- [x]`（逐项确认已实现）
+**运行本地验证链：**
+```bash
+cd frontend
+bun run type-check
+bun run lint
+bun run test
+bun run build
+```
+**确认无安全警报：**
+```bash
+pip install semgrep && semgrep --config=.semgrep/rules/ --severity=ERROR frontend/src/ backend/
+```
+**验证数据完整（涉及数据修改时）：**
+```bash
+cd .. && python3 scripts/validate_data.py
+```
 
 - 如果全部通过：
   ```

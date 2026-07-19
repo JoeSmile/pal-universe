@@ -1,0 +1,65 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":separateMajorMinor",
+    ":combinePatchMinorUpdates",
+    ":enableVulnerabilityAlerts",
+    "group:monorepos",
+    "group:recommended"
+  ],
+  "labels": ["dependencies", "renovate"],
+  "rangeStrategy": "bump",
+  "schedule": ["every weekend"],
+  "timezone": "Asia/Shanghai",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 9am on Monday"]
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "matchPackageNames": ["next", "react", "react-dom"],
+      "groupName": "React & Next.js",
+      "schedule": ["every 2 weeks"]
+    },
+    {
+      "matchPackageNames": ["eslint", "eslint-config-next", "typescript"],
+      "groupName": "Linting & TypeScript",
+      "schedule": ["every 2 weeks"]
+    },
+    {
+      "matchPackageNames": ["@types/*"],
+      "automerge": true,
+      "groupName": "TypeScript typings"
+    },
+    {
+      "matchPackageNames": ["tailwindcss", "@tailwindcss/*"],
+      "groupName": "Tailwind CSS",
+      "schedule": ["every 2 weeks"]
+    },
+    {
+      "matchPackageNames": ["framer-motion"],
+      "schedule": ["every 2 weeks"],
+      "labels": ["dependencies", "animation"]
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "schedule": ["at any time"]
+  },
+  "prConcurrentLimit": 3,
+  "prHourlyLimit": 2,
+  "bumpVersion": null,
+  "rebaseWhen": "behind-base-branch",
+  "assignees": ["JoeSmile"],
+  "reviewers": ["JoeSmile"]
+}
