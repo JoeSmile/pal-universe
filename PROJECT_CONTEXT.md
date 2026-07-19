@@ -72,6 +72,7 @@ pal-universe/
 | 前端框架 | Next.js 15 + React 19 | ✅ 已初始化 |
 | 样式 | Tailwind CSS v4 + Radix UI | ✅ 已初始化 |
 | 动画 | Framer Motion | ✅ 已安装 |
+| 国际化 | 中文 + 英文（不拓展其他语言） | ⬜ 待实现 |
 | 地图 | Leaflet + React-Leaflet | ⬜ 待安装 |
 | 后端 API | FastAPI + Uvicorn | ✅ 已有 |
 | AI 编排 | LangGraph StateGraph | ✅ 已有 |

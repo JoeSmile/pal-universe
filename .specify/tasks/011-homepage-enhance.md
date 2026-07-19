@@ -1,9 +1,10 @@
 # 011-homepage-enhance
 
 ## Status
-- status: pending
+- status: in_progress
 - assigned_to: cursor
 - depends_on: [005, 006]
+- started_at: 2026-07-19
 
 ## Goal
 

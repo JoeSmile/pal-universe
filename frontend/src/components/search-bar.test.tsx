@@ -22,15 +22,15 @@ const samplePals: PalName[] = [
 ];
 
 describe("getMinQueryLength", () => {
-  it("allows single-character Chinese queries", () => {
+  it("allows single-character queries for local search", () => {
     expect(getMinQueryLength("猫")).toBe(1);
-    expect(getMinQueryLength("An")).toBe(2);
+    expect(getMinQueryLength("A")).toBe(1);
   });
 });
 
 describe("searchPals", () => {
   it("does not search until minimum length is met", () => {
-    expect(searchPals(samplePals, "A")).toEqual([]);
+    expect(searchPals(samplePals, "")).toEqual([]);
   });
 
   it("matches fuzzy Chinese substring with one character", () => {
