@@ -4,6 +4,7 @@ import { afterEach, describe, expect, it } from "vitest";
 import { ElementBadge } from "@/components/element-badge";
 import { PalCard } from "@/components/pal-card";
 import { WorkBadge } from "@/components/work-badge";
+import { useLocaleStore } from "@/lib/i18n/store";
 import type { PalCardData } from "@/lib/pal-types";
 
 afterEach(() => {
@@ -50,15 +51,16 @@ describe("WorkBadge", () => {
 });
 
 describe("PalCard", () => {
-  it("renders bilingual name, elements, and work suitability", () => {
+  it("renders localized pal name, elements, and work suitability", () => {
+    useLocaleStore.setState({ locale: "en", hydrated: true });
     render(<PalCard pal={samplePal} />);
 
     expect(screen.getByRole("heading", { name: "Anubis" })).toBeInTheDocument();
-    expect(screen.getByText("阿努比斯")).toBeInTheDocument();
+    expect(screen.queryByText("阿努比斯")).not.toBeInTheDocument();
     expect(screen.getByText("地")).toBeInTheDocument();
     expect(screen.getByText("挖矿")).toBeInTheDocument();
     expect(screen.getByText("运输")).toBeInTheDocument();
-    expect(screen.getByLabelText("稀有度 4")).toBeInTheDocument();
+    expect(screen.getByLabelText("rarity 4")).toBeInTheDocument();
   });
 
   it("reveals stat bars on hover", async () => {
@@ -70,7 +72,7 @@ describe("PalCard", () => {
     await user.hover(screen.getByTestId("pal-card"));
 
     expect(await screen.findByTestId("pal-card-stats")).toBeInTheDocument();
-    expect(screen.getByText("基础属性")).toBeInTheDocument();
+    expect(screen.getByText(/基础属性|Base stats/i)).toBeInTheDocument();
     expect(screen.getByText("HP")).toBeInTheDocument();
   });
 });

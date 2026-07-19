@@ -1,3 +1,5 @@
+import type { Locale } from "@/lib/i18n/locale";
+
 export interface PalName {
   id: string;
   name: string;
@@ -54,9 +56,10 @@ export function isChatIntent(query: string): boolean {
   return trimmed.length > 8;
 }
 
-export function formatPalLabel(pal: PalName): string {
-  if (pal.name_cn && pal.name_cn !== pal.name) {
-    return `${pal.name} · ${pal.name_cn}`;
+/** Display exactly one language for a pal name — never bilingual. */
+export function formatPalLabel(pal: PalName, locale: Locale = "en"): string {
+  if (locale === "zh") {
+    return pal.name_cn || pal.name;
   }
   return pal.name;
 }
@@ -145,6 +148,7 @@ function scorePal(pal: PalName, normalized: string): number {
 function suggestByEditDistance(
   pals: PalName[],
   normalized: string,
+  locale: Locale,
 ): PalSearchResult[] {
   let best: PalName | null = null;
   let bestDist = Infinity;
@@ -174,13 +178,18 @@ function suggestByEditDistance(
   return [
     {
       ...best,
-      label: formatPalLabel(best),
+      label: formatPalLabel(best, locale),
       isSuggestion: true,
     },
   ];
 }
 
-export function searchPals(pals: PalName[], query: string, limit = 12): PalSearchResult[] {
+export function searchPals(
+  pals: PalName[],
+  query: string,
+  limit = 12,
+  locale: Locale = "en",
+): PalSearchResult[] {
   const normalized = normalize(query);
   if (normalized.length < getMinQueryLength(query)) {
     return [];
@@ -201,9 +210,9 @@ export function searchPals(pals: PalName[], query: string, limit = 12): PalSearc
       .slice(0, limit)
       .map(({ pal }) => ({
         ...pal,
-        label: formatPalLabel(pal),
+        label: formatPalLabel(pal, locale),
       }));
   }
 
-  return suggestByEditDistance(pals, normalized);
+  return suggestByEditDistance(pals, normalized, locale);
 }

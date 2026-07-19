@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
+import { LocaleProvider } from "@/components/locale-provider";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -16,7 +17,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Pal Universe",
-  description: "Palworld 超级百科——AI 聊天助手 + TCG 级卡牌图鉴",
+  description: "Palworld encyclopedia — AI guides + TCG-grade pal cards",
 };
 
 export default function RootLayout({
@@ -25,11 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>): React.ReactElement {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" suppressHydrationWarning>
       <body
         className={`${dmSans.variable} ${jetbrainsMono.variable} min-h-screen font-sans antialiased`}
       >
-        {children}
+        <LocaleProvider>{children}</LocaleProvider>
       </body>
     </html>
   );

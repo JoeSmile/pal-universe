@@ -1,49 +1,53 @@
+"use client";
+
 import Link from "next/link";
 import { Flame, LayoutGrid, Map, Package, Split, Star } from "lucide-react";
+import { useLocaleStore } from "@/lib/i18n/store";
+import type { MessageKey } from "@/lib/i18n/messages";
 import { cn } from "@/lib/utils";
 
-export interface QuickLinkItem {
+interface QuickLinkItem {
   href: string;
-  label: string;
-  description: string;
+  labelKey: MessageKey;
+  descKey: MessageKey;
   icon: typeof Split;
 }
 
-export const QUICK_LINKS: QuickLinkItem[] = [
+const QUICK_LINKS: QuickLinkItem[] = [
   {
     href: "/breeding",
-    label: "繁殖计算器",
-    description: "查父母组合与后代",
+    labelKey: "link.breeding",
+    descKey: "link.breedingDesc",
     icon: Split,
   },
   {
     href: "/types",
-    label: "属性克制",
-    description: "元素相克速查",
+    labelKey: "link.types",
+    descKey: "link.typesDesc",
     icon: Flame,
   },
   {
     href: "/map",
-    label: "地图",
-    description: "刷新点与区域",
+    labelKey: "link.map",
+    descKey: "link.mapDesc",
     icon: Map,
   },
   {
     href: "/pals",
-    label: "帕鲁列表",
-    description: "浏览全部帕鲁",
+    labelKey: "link.pals",
+    descKey: "link.palsDesc",
     icon: LayoutGrid,
   },
   {
     href: "/tier",
-    label: "Tier 排行",
-    description: "强度与劳作榜",
+    labelKey: "link.tier",
+    descKey: "link.tierDesc",
     icon: Star,
   },
   {
     href: "/items",
-    label: "物品图鉴",
-    description: "掉落与材料",
+    labelKey: "link.items",
+    descKey: "link.itemsDesc",
     icon: Package,
   },
 ];
@@ -53,10 +57,12 @@ interface QuickLinksProps {
 }
 
 export function QuickLinks({ className }: QuickLinksProps): React.ReactElement {
+  const translate = useLocaleStore((state) => state.t);
+
   return (
-    <section aria-label="快捷功能入口" className={cn("w-full", className)}>
+    <section aria-label={translate("home.features")} className={cn("w-full", className)}>
       <h2 className="mb-4 text-sm font-medium tracking-wide text-text-secondary uppercase">
-        功能入口
+        {translate("home.features")}
       </h2>
       <ul className="grid grid-cols-2 gap-3 md:grid-cols-3">
         {QUICK_LINKS.map((item) => {
@@ -72,8 +78,10 @@ export function QuickLinks({ className }: QuickLinksProps): React.ReactElement {
                 )}
               >
                 <Icon className="size-5 text-accent" aria-hidden="true" />
-                <span className="text-sm font-medium text-text-primary">{item.label}</span>
-                <span className="text-xs text-text-tertiary">{item.description}</span>
+                <span className="text-sm font-medium text-text-primary">
+                  {translate(item.labelKey)}
+                </span>
+                <span className="text-xs text-text-tertiary">{translate(item.descKey)}</span>
               </Link>
             </li>
           );
@@ -82,3 +90,5 @@ export function QuickLinks({ className }: QuickLinksProps): React.ReactElement {
     </section>
   );
 }
+
+export { QUICK_LINKS };

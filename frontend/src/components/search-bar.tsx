@@ -5,8 +5,10 @@ import { Loader2, Search, Sparkles, X } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState, type KeyboardEvent } from "react";
 import palsData from "@/data/pals.json";
 import palNames from "@/data/pal-names.json";
+import { useLocaleStore } from "@/lib/i18n/store";
 import { cn } from "@/lib/utils";
 import {
+  formatPalLabel,
   getMinQueryLength,
   isChatIntent,
   searchPals,
@@ -39,12 +41,18 @@ function enrich(result: PalSearchResult): PalSearchResult {
   return { ...result, elements: meta.elements, rarity: meta.rarity };
 }
 
-function RarityStars({ rarity }: { rarity?: number }): React.ReactElement | null {
+function RarityStars({
+  rarity,
+  label,
+}: {
+  rarity?: number;
+  label: string;
+}): React.ReactElement | null {
   if (!rarity) {
     return null;
   }
   return (
-    <span className="text-xs tracking-widest text-warning" aria-label={`稀有度 ${rarity}`}>
+    <span className="text-xs tracking-widest text-warning" aria-label={label}>
       {"★".repeat(Math.max(1, Math.min(rarity, 5)))}
     </span>
   );
@@ -63,6 +71,8 @@ export function SearchBar({
   onSelectPal,
   onAskAi,
 }: SearchBarProps): React.ReactElement {
+  const locale = useLocaleStore((state) => state.locale);
+  const translate = useLocaleStore((state) => state.t);
   const inputId = useId();
   const listId = useId();
   const [query, setQuery] = useState("");
@@ -91,7 +101,7 @@ export function SearchBar({
 
     setIsLoading(true);
     const timer = window.setTimeout(() => {
-      setResults(searchPals(pals, trimmed).map(enrich));
+      setResults(searchPals(pals, trimmed, 12, locale).map(enrich));
       setIsLoading(false);
       setActiveIndex(-1);
     }, searchDelayMs);
@@ -99,7 +109,7 @@ export function SearchBar({
     return () => {
       window.clearTimeout(timer);
     };
-  }, [query, searchDelayMs, chatIntent]);
+  }, [query, searchDelayMs, chatIntent, locale]);
 
   function handleClear(): void {
     setQuery("");
@@ -110,11 +120,12 @@ export function SearchBar({
 
   function selectPal(pal: PalSearchResult): void {
     skipSearchRef.current = true;
+    const display = formatPalLabel(pal, locale);
     if (pal.isSuggestion) {
-      setQuery(pal.name);
-      setResults(searchPals(pals, pal.name).map(enrich));
+      setQuery(display);
+      setResults(searchPals(pals, pal.name, 12, locale).map(enrich));
     } else {
-      setQuery(pal.label);
+      setQuery(display);
       setResults([]);
     }
     setActiveIndex(-1);
@@ -201,7 +212,7 @@ export function SearchBar({
     <div className={cn("flex w-full max-w-xl flex-col-reverse md:flex-col", className)}>
       <div>
         <label htmlFor={inputId} className="sr-only">
-          搜索帕鲁或提问 AI
+          {translate("home.searchLabel")}
         </label>
         <div
           className={cn(
@@ -219,7 +230,7 @@ export function SearchBar({
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             onKeyDown={handleInputKeyDown}
-            placeholder="搜索帕鲁，或输入攻略问题…"
+            placeholder={translate("home.searchPlaceholder")}
             autoComplete="off"
             spellCheck={false}
             role="combobox"
@@ -233,14 +244,17 @@ export function SearchBar({
             )}
           />
           {isLoading ? (
-            <Loader2 className="size-4 shrink-0 animate-spin text-accent" aria-label="搜索中" />
+            <Loader2
+              className="size-4 shrink-0 animate-spin text-accent"
+              aria-label={translate("home.searching")}
+            />
           ) : null}
           {query.length > 0 && !isLoading ? (
             <button
               type="button"
               onClick={handleClear}
               className="rounded-md p-1 text-text-tertiary transition-colors hover:bg-bg-hover hover:text-text-primary"
-              aria-label="清除搜索"
+              aria-label={translate("home.clearSearch")}
             >
               <X className="size-4" />
             </button>
@@ -248,12 +262,14 @@ export function SearchBar({
         </div>
 
         {showEmpty ? (
-          <p className="mt-3 text-center text-sm text-text-secondary">未找到匹配的帕鲁</p>
+          <p className="mt-3 text-center text-sm text-text-secondary">
+            {translate("home.noResults")}
+          </p>
         ) : null}
 
         {chatIntent && query.trim().length > 0 ? (
           <p className="mt-3 text-center text-sm text-text-secondary">
-            检测到攻略问题 — 按 Enter 问 AI
+            {translate("home.chatHint")}
           </p>
         ) : null}
       </div>
@@ -272,14 +288,10 @@ export function SearchBar({
           >
             {suggestionOnly ? (
               <p className="border-b border-border px-4 py-2 text-sm text-text-secondary">
-                🤔 您是不是要找:
+                {translate("home.didYouMean")}
               </p>
             ) : null}
-            <ul
-              id={listId}
-              role="listbox"
-              className="max-h-[min(40dvh,20rem)] overflow-y-auto"
-            >
+            <ul id={listId} role="listbox" className="max-h-[min(40dvh,20rem)] overflow-y-auto">
               {results.map((pal, index) => (
                 <li
                   key={`${pal.id}-${pal.name}`}
@@ -302,7 +314,10 @@ export function SearchBar({
                       <span className="block text-sm font-medium text-text-primary">
                         {pal.label}
                       </span>
-                      <RarityStars rarity={pal.rarity} />
+                      <RarityStars
+                        rarity={pal.rarity}
+                        label={translate("rarity.label", { n: pal.rarity ?? 0 })}
+                      />
                     </span>
                     {pal.elements && pal.elements.length > 0 ? (
                       <span className="mt-1 block text-xs text-text-secondary">
@@ -325,7 +340,7 @@ export function SearchBar({
               )}
             >
               <Sparkles className="size-4" aria-hidden="true" />
-              按 Enter 问 AI 更多
+              {translate("home.askAi")}
             </button>
           </motion.div>
         ) : null}

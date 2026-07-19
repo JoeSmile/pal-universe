@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pal Universe — API 网关层设计</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a10;font-family:'Inter',system-ui,sans-serif;color:#e2e8f0;padding:24px;max-width:1200px;margin:0 auto}
+h1{font-size:24px;font-weight:700;color:#f8fafc;text-align:center}
+.sub{text-align:center;font-size:13px;color:#64748b;margin:4px 0 18px}
+
+/* 图例 */
+.lg{display:flex;gap:14px;justify-content:center;margin-bottom:18px;font-size:11px;flex-wrap:wrap}
+.li{display:flex;align-items:center;gap:5px;color:#94a3b8}
+.ld{width:7px;height:7px;border-radius:50%}
+
+/* 请求流 */
+.flow{background:#13141f;border:1px solid #1e2030;border-radius:8px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px}
+.flow-node{background:#1e2030;padding:6px 12px;border-radius:5px;white-space:nowrap;color:#cbd5e1}
+.flow-arrow{color:#475569;font-size:16px}
+
+/* 模块网格 */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.card{background:#13141f;border:1px solid #1e2030;border-radius:6px;padding:12px}
+.card.full{grid-column:1/-1}
+.card h3{font-size:13px;font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.card table{width:100%;border-collapse:collapse;font-size:11px}
+.card td,.card th{padding:6px 8px;border-bottom:1px solid #1e2030;text-align:left;vertical-align:top}
+.card th{color:#94a3b8;font-weight:500;width:100px}
+.card td{color:#cbd5e1}
+.card .tag{display:inline-block;font-size:9px;padding:2px 6px;border-radius:3px;margin-right:4px}
+.tg-blue{background:#3b82f633;color:#60a5fa}
+.tg-green{background:#10b98133;color:#34d399}
+.tg-orange{background:#f59e0b33;color:#fbbf24}
+.tg-purple{background:#8b5cf633;color:#a78bfa}
+.tg-red{background:#f43f5e33;color:#fb7185}
+
+/* 审计日志表格 */
+.log-table{width:100%;border-collapse:collapse;font-size:10px;margin-top:8px}
+.log-table th{padding:6px 8px;border-bottom:1px solid #1e2030;color:#94a3b8;font-weight:500;text-align:left}
+.log-table td{padding:6px 8px;border-bottom:1px solid #1e2030;color:#cbd5e1;font-family:monospace;font-size:9px}
+
+/* 端点到表 */
+.api-table{width:100%;border-collapse:collapse;font-size:10px;margin-top:8px}
+.api-table th{padding:6px 8px;border-bottom:1px solid #1e2030;color:#94a3b8;font-weight:500;text-align:left}
+.api-table td{padding:6px 8px;border-bottom:1px solid #1e2030;color:#cbd5e1}
+.api-table .method{display:inline-block;font-size:9px;padding:2px 7px;border-radius:3px;font-weight:600}
+.mth-get{background:#3b82f633;color:#60a5fa}
+.mth-post{background:#10b98133;color:#34d399}
+.mth-delete{background:#f43f5e33;color:#fb7185}
+
+/* Schema 校验表 */
+.schema-table{width:100%;border-collapse:collapse;font-size:10px;margin-top:8px}
+.schema-table th{padding:5px 8px;border-bottom:1px solid #1e2030;color:#94a3b8;font-weight:500;text-align:left}
+.schema-table td{padding:5px 8px;border-bottom:1px solid #1e2030;color:#cbd5e1}
+.schema-table .req{color:#fb7185}
+.schema-table .opt{color:#64748b}
+</style>
+</head>
+<body>
+
+<h1>Pal Universe · API 网关层</h1>
+<p class="sub">请求流转 · 模块功能 · Schema · 审计 · 成本 · 安全</p>
+
+<div class="lg">
+  <span class="li"><span class="ld" style="background:#22c55e"></span>已完成</span>
+  <span class="li"><span class="ld" style="background:#f59e0b"></span>进行中</span>
+  <span class="li"><span class="ld" style="background:#64748b"></span>待实现</span>
+</div>
+
+<!-- 请求流 -->
+<div class="flow">
+  <span class="flow-node" style="color:#60a5fa">用户</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-node" style="color:#34d399">CDN/WAF</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-node" style="color:#34d399">Nginx SSL</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-node" style="color:#a78bfa">Rate Limit</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-node" style="color:#a78bfa">Schema 校验</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-node" style="color:#fbbf24">审计日志</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-node" style="color:#fbbf24">成本计量</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-node" style="color:#fb7185">熔断检查</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-node" style="color:#22c55e">FastAPI 路由</span>
+  <span class="flow-arrow">→</span>
+  <span class="flow-node" style="color:#f8fafc">Response</span>
+</div>
+
+<!-- 模块网格 -->
+<div class="grid">
+
+<!-- 1. 模块结构 -->
+<div class="card full">
+  <h3>📦 模块结构</h3>
+  <table>
+    <tr><th>backend/app/api/v1/</th><td>
+      <span class="tag tg-green">api.py</span> 路由注册、生命周期<br>
+      <span class="tag tg-blue">pals.py</span> 帕鲁查询 · 搜索 · 详情<br>
+      <span class="tag tg-blue">breeding.py</span> 繁殖计算 · 反向查询 · 多代推演<br>
+      <span class="tag tg-blue">chat.py</span> AI 聊天 · 流式 SSE · 对话历史<br>
+      <span class="tag tg-blue">map.py</span> 帕鲁位置 · 资源点 · 地图数据<br>
+      <span class="tag tg-purple">items.py</span> 物品查询 · 配方（Phase 2）<br>
+      <span class="tag tg-orange">middleware.py</span> 审计 · 成本 · 熔断（中间件层）
+    </td></tr>
+  </table>
+</div>
+
+<!-- 2. API 端点一览 -->
+<div class="card full">
+  <h3>🔌 API 端点</h3>
+  <table class="api-table">
+    <tr>
+      <th style="width:70px">方法</th>
+      <th style="width:220px">路径</th>
+      <th>说明</th>
+      <th style="width:50px">状态</th>
+    </tr>
+    <tr>
+      <td><span class="method mth-get">GET</span></td>
+      <td><code>/api/v1/pals/search</code></td>
+      <td>帕鲁搜索（q/types/work/page/per_page）</td>
+      <td><span class="tag tg-blue">待实现</span></td>
+    </tr>
+    <tr>
+      <td><span class="method mth-get">GET</span></td>
+      <td><code>/api/v1/pals/{name}</code></td>
+      <td>帕鲁详情（含技能、位置、繁殖排名）</td>
+      <td><span class="tag tg-blue">待实现</span></td>
+    </tr>
+    <tr>
+      <td><span class="method mth-get">GET</span></td>
+      <td><code>/api/v1/breeding/calculate</code></td>
+      <td>父代→子代（parent1/parent2）</td>
+      <td><span class="tag tg-blue">待实现</span></td>
+    </tr>
+    <tr>
+      <td><span class="method mth-get">GET</span></td>
+      <td><code>/api/v1/breeding/reverse</code></td>
+      <td>子代→父代（target）</td>
+      <td><span class="tag tg-blue">待实现</span></td>
+    </tr>
+    <tr>
+      <td><span class="method mth-get">GET</span></td>
+      <td><code>/api/v1/breeding/path</code></td>
+      <td>多代推演（start/target/generations）</td>
+      <td><span class="tag tg-blue">待实现</span></td>
+    </tr>
+    <tr>
+      <td><span class="method mth-post">POST</span></td>
+      <td><code>/api/v1/chat/stream</code></td>
+      <td>AI 聊天流式（SSE）</td>
+      <td><span class="tag tg-blue">待实现</span></td>
+    </tr>
+    <tr>
+      <td><span class="method mth-get">GET</span></td>
+      <td><code>/api/v1/chat/messages</code></td>
+      <td>获取对话历史</td>
+      <td><span class="tag tg-blue">待实现</span></td>
+    </tr>
+    <tr>
+      <td><span class="method mth-delete">DELETE</span></td>
+      <td><code>/api/v1/chat/messages</code></td>
+      <td>清空对话历史</td>
+      <td><span class="tag tg-blue">待实现</span></td>
+    </tr>
+    <tr>
+      <td><span class="method mth-get">GET</span></td>
+      <td><code>/api/v1/map/pal-locations</code></td>
+      <td>帕鲁位置（pal_name）</td>
+      <td><span class="tag tg-purple">Phase 2</span></td>
+    </tr>
+    <tr>
+      <td><span class="method mth-get">GET</span></td>
+      <td><code>/health</code></td>
+      <td>健康检查（无需认证）</td>
+      <td><span class="tag tg-green">已有</span></td>
+    </tr>
+  </table>
+</div>
+
+<!-- 3. Schema 校验 -->
+<div class="card">
+  <h3>🔍 Schema 校验（Pydantic）</h3>
+  <table class="schema-table">
+    <tr><th>端点</th><th>校验规则</th></tr>
+    <tr>
+      <td><code>/pals/search</code></td>
+      <td>
+        <span class="req">q</span>: str(1-50)<br>
+        <span class="opt">types</span>: Optional[list[ElementType]]<br>
+        <span class="opt">work</span>: Optional[WorkType]<br>
+        <span class="opt">page</span>: int(1-100), default=1<br>
+        <span class="opt">per_page</span>: int(1-50), default=20
+      </td>
+    </tr>
+    <tr>
+      <td><code>/pals/{name}</code></td>
+      <td><span class="req">name</span>: str(1-100), URL encoded</td>
+    </tr>
+    <tr>
+      <td><code>/breeding/calculate</code></td>
+      <td>
+        <span class="req">parent1</span>: str(1-100)<br>
+        <span class="req">parent2</span>: str(1-100)
+      </td>
+    </tr>
+    <tr>
+      <td><code>/chat/stream</code></td>
+      <td>
+        <span class="req">messages</span>: list[{role, content}], max=50<br>
+        <span class="req">role</span>: enum(user|assistant)<br>
+        <span class="req">content</span>: str(1-2000)<br>
+        <span class="opt">conversation_id</span>: Optional[uuid]
+      </td>
+    </tr>
+    <tr>
+      <td><code>/chat/messages</code></td>
+      <td>无需参数（按 session 自动关联）</td>
+    </tr>
+  </table>
+</div>
+
+<!-- 4. 错误码 -->
+<div class="card">
+  <h3>⚠️ 错误码规范</h3>
+  <table class="schema-table">
+    <tr><th>HTTP</th><th>code</th><th>说明</th></tr>
+    <tr><td>400</td><td><code>INVALID_PARAMS</code></td><td>参数校验失败</td></tr>
+    <tr><td>400</td><td><code>VALIDATION_ERROR</code></td><td>Schema 不符合</td></tr>
+    <tr><td>404</td><td><code>PAL_NOT_FOUND</code></td><td>帕鲁不存在</td></tr>
+    <tr><td>404</td><td><code>BREEDING_NOT_FOUND</code></td><td>繁殖组合不存在</td></tr>
+    <tr><td>429</td><td><code>RATE_LIMITED</code></td><td>请求频率超限</td></tr>
+    <tr><td>429</td><td><code>BUDGET_EXCEEDED</code></td><td>预算超限降级</td></tr>
+    <tr><td>500</td><td><code>INTERNAL_ERROR</code></td><td>服务器内部错误</td></tr>
+    <tr><td>502</td><td><code>LLM_GATEWAY_ERROR</code></td><td>AI 服务不可用</td></tr>
+  </table>
+  <div style="margin-top:6px;font-size:11px;color:#475569">
+    响应格式: <code>{"error": {"code": "...", "message": "..."}}</code>
+  </div>
+</div>
+
+<!-- 5. 审计日志 -->
+<div class="card full">
+  <h3>📋 审计日志</h3>
+  <div style="font-size:11px;color:#64748b;margin-bottom:6px">
+    所有非健康检查的 API 请求走审计。记录格式：
+  </div>
+  <table class="log-table">
+    <tr>
+      <th>字段</th><th>类型</th><th>示例</th><th>说明</th>
+    </tr>
+    <tr><td><code>timestamp</code></td><td>ISO8601</td><td>2026-07-19T17:00:00+08:00</td><td>请求时间</td></tr>
+    <tr><td><code>method</code></td><td>string</td><td>POST</td><td>HTTP 方法</td></tr>
+    <tr><td><code>path</code></td><td>string</td><td>/api/v1/chat/stream</td><td>请求路径</td></tr>
+    <tr><td><code>ip</code></td><td>string</td><td>1.2.3.4</td><td>来源 IP</td></tr>
+    <tr><td><code>user_agent</code></td><td>string</td><td>Mozilla/5.0...</td><td>客户端标识</td></tr>
+    <tr><td><code>status</code></td><td>int</td><td>200</td><td>HTTP 状态码</td></tr>
+    <tr><td><code>duration_ms</code></td><td>int</td><td>234</td><td>请求耗时</td></tr>
+    <tr><td><code>tokens_used</code></td><td>int | null</td><td>156</td><td>LLM token 消耗（仅 chat）</td></tr>
+    <tr><td><code>error_code</code></td><td>string | null</td><td>PAL_NOT_FOUND</td><td>业务错误码</td></tr>
+  </table>
+  <div style="margin-top:6px;font-size:11px;color:#475569">
+    存储: 本地文件轮转（按天分割，保留 7 天）→ 后续归档到对象存储<br>
+    成本审计: 按 IP 维度聚合 token 消耗，超限触发告警
+  </div>
+</div>
+
+<!-- 6. 中间件模块 -->
+<div class="card">
+  <h3>⚙️ 中间件层</h3>
+  <div style="font-size:11px;color:#94a3b8;margin-bottom:4px">
+    backend/app/core/middleware.py
+  </div>
+  <table style="width:100%;font-size:11px;border-collapse:collapse">
+    <tr><th style="text-align:left;color:#64748b;padding:3px 0">中间件</th><th style="text-align:left;color:#64748b;padding:3px 0">功能</th></tr>
+    <tr><td style="padding:3px 0"><code>AuditMiddleware</code></td><td style="padding:3px 0">记录全量请求日志</td></tr>
+    <tr><td style="padding:3px 0"><code>CostTrackingMiddleware</code></td><td style="padding:3px 0">统计 LLM token 消耗</td></tr>
+    <tr><td style="padding:3px 0"><code>CircuitBreakerMiddleware</code></td><td style="padding:3px 0">预算超限 → 返回 429 BUDGET_EXCEEDED</td></tr>
+    <tr><td style="padding:3px 0"><code>RateLimitMiddleware</code></td><td style="padding:3px 0">slowapi 多级限制</td></tr>
+  </table>
+</div>
+
+<!-- 7. Rate Limit 配置 -->
+<div class="card">
+  <h3>🚦 Rate Limit 矩阵</h3>
+  <table style="width:100%;font-size:11px;border-collapse:collapse">
+    <tr><th style="text-align:left;color:#64748b;padding:3px 0">端点</th><th style="text-align:left;color:#64748b;padding:3px 0">限制</th><th style="text-align:left;color:#64748b;padding:3px 0">维度</th></tr>
+    <tr><td style="padding:3px 0">/pals/*</td><td style="padding:3px 0">60/min</td><td style="padding:3px 0">IP</td></tr>
+    <tr><td style="padding:3px 0">/breeding/*</td><td style="padding:3px 0">30/min</td><td style="padding:3px 0">IP</td></tr>
+    <tr><td style="padding:3px 0">/chat/* (非流式)</td><td style="padding:3px 0">10/min</td><td style="padding:3px 0">IP</td></tr>
+    <tr><td style="padding:3px 0">/chat/stream</td><td style="padding:3px 0">5/min</td><td style="padding:3px 0">IP（成本高）</td></tr>
+    <tr><td style="padding:3px 0">/health</td><td style="padding:3px 0">不限制</td><td style="padding:3px 0">-</td></tr>
+  </table>
+</div>
+
+<!-- 8. 成本熔断 -->
+<div class="card full">
+  <h3>💰 成本熔断策略</h3>
+  <table style="width:100%;font-size:11px;border-collapse:collapse">
+    <tr><th style="text-align:left;color:#64748b;padding:3px 0">触发条件</th><th style="text-align:left;color:#64748b;padding:3px 0">动作</th></tr>
+    <tr><td style="padding:3px 0">单 IP 日 token > 50000</td><td style="padding:3px 0">该 IP 的 /chat/stream 返回 429 BUDGET_EXCEEDED</td></tr>
+    <tr><td style="padding:3px 0">全局日 token > 500000</td><td style="padding:3px 0">所有 /chat/stream 降级，返回本地匹配结果</td></tr>
+    <tr><td style="padding:3px 0">全局月费用 > $50</td><td style="padding:3px 0">告警通知，人工介入</td></tr>
+    <tr><td style="padding:3px 0">LLM 错误率 > 5%</td><td style="padding:3px 0">自动切换到备用模型</td></tr>
+  </table>
+  <div style="margin-top:6px;font-size:11px;color:#475569">
+    成本计量位置: AuditMiddleware 中捕获 response，如果是 chat 端点则记录 LLM token 消耗<br>
+    存储后端: Valkey（当日）+ 审计日志文件（持久化）
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>

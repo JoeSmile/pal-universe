@@ -323,6 +323,9 @@ def seed_database(d: PalworldData):
     # 写入帕鲁
     rarity_map = {"Common": 1, "Uncommon": 2, "Rare": 3, "Epic": 4, "Legendary": 5}
     for pal in d.pals:
+        # 注入繁殖排名
+        pal_data = dict(pal)
+        pal_data["breeding_rank"] = d.breeding_ranks.get(pal["name"], 1500)
         work_orders = [ws for ws in d.pal_work_orders.get(pal["name"], [])] if hasattr(d, 'pal_work_orders') else []
         cur.execute(
             """INSERT INTO pals (name, elements, deck_id, rarity, size, hp, melee_attack,
@@ -346,7 +349,7 @@ def seed_database(d: PalworldData):
                 json.dumps(pal.get("notable_drops", [])),
                 json.dumps(pal.get("role_tags", [])),
                 json.dumps(pal.get("skills", [])),
-                json.dumps(pal),
+                json.dumps(pal_data),
             ),
         )
     print(f"  ✅ 帕鲁: {len(d.pals)} 条写入")

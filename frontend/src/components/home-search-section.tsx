@@ -4,7 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import { HotPals } from "@/components/hot-pals";
 import { QuickLinks } from "@/components/quick-links";
 import { SearchBar } from "@/components/search-bar";
+import { SiteHeader } from "@/components/site-header";
 import { streamMockChat } from "@/lib/chat-mock";
+import { useLocaleStore } from "@/lib/i18n/store";
 import { cn } from "@/lib/utils";
 
 interface ChatMessage {
@@ -14,6 +16,7 @@ interface ChatMessage {
 }
 
 export function HomeSearchSection(): React.ReactElement {
+  const translate = useLocaleStore((state) => state.t);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isStreaming, setIsStreaming] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
@@ -80,12 +83,13 @@ export function HomeSearchSection(): React.ReactElement {
   const showChat = messages.length > 0;
 
   return (
-    <main className="min-h-screen bg-bg-base text-text-primary">
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 py-10 md:gap-12 md:px-6 md:py-16">
+    <div className="min-h-screen bg-bg-base text-text-primary">
+      <SiteHeader />
+      <main className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 py-10 md:gap-12 md:px-6 md:py-16">
         <header className="text-center">
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Pal Universe</h1>
           <p className="mt-3 text-base text-text-secondary md:text-lg">
-            智能搜索 · AI 攻略 · 帕鲁百科
+            {translate("home.tagline")}
           </p>
         </header>
 
@@ -98,10 +102,12 @@ export function HomeSearchSection(): React.ReactElement {
 
         {showChat ? (
           <section
-            aria-label="AI 对话"
+            aria-label="AI chat"
             className="mx-auto w-full max-w-xl rounded-xl border border-border bg-bg-surface p-4"
           >
-            <h2 className="mb-3 text-sm font-medium text-text-secondary">AI 助手（mock）</h2>
+            <h2 className="mb-3 text-sm font-medium text-text-secondary">
+              {translate("home.chatTitle")}
+            </h2>
             <ul className="flex max-h-[40vh] flex-col gap-3 overflow-y-auto">
               {messages.map((message) => (
                 <li
@@ -123,7 +129,7 @@ export function HomeSearchSection(): React.ReactElement {
 
         <QuickLinks />
         <HotPals />
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }

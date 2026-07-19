@@ -5,12 +5,14 @@ import Image from "next/image";
 import { useState } from "react";
 import { ElementBadge } from "@/components/element-badge";
 import { WorkBadge } from "@/components/work-badge";
+import { useLocaleStore } from "@/lib/i18n/store";
 import {
   getPalImageUrl,
   normalizeWorkOrders,
   type PalCardData,
   type PalWorkOrder,
 } from "@/lib/pal-types";
+import { formatPalLabel } from "@/lib/search-pals";
 import { cn } from "@/lib/utils";
 
 const springStiff = { type: "spring" as const, stiffness: 300, damping: 25 };
@@ -31,7 +33,7 @@ function RarityStars({ rarity }: { rarity: number }): React.ReactElement {
   return (
     <span
       className="bg-gradient-to-r from-[var(--color-rarity-5)] to-[var(--color-warning)] bg-clip-text text-sm tracking-widest text-transparent"
-      aria-label={`稀有度 ${stars}`}
+      aria-label={`rarity ${stars}`}
       style={{
         WebkitBackgroundClip: "text",
       }}
@@ -65,9 +67,15 @@ interface PalCardProps {
 }
 
 export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
+  const locale = useLocaleStore((state) => state.locale);
+  const translate = useLocaleStore((state) => state.t);
   const [hovered, setHovered] = useState(false);
   const [imgSrc, setImgSrc] = useState(getPalImageUrl(pal.name, "webp"));
   const works: PalWorkOrder[] = normalizeWorkOrders(pal.work_orders);
+  const displayName = formatPalLabel(
+    { id: pal.deck_id, name: pal.name, name_cn: pal.name_cn },
+    locale,
+  );
 
   return (
     <motion.article
@@ -110,8 +118,9 @@ export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
       <div className="flex flex-1 flex-col gap-3 p-4">
         <header className="flex items-start justify-between gap-2">
           <div className="min-w-0">
-            <h3 className="truncate text-lg font-semibold text-text-primary">{pal.name}</h3>
-            <p className="truncate text-sm text-text-secondary">{pal.name_cn}</p>
+            <h3 className="truncate text-lg font-semibold text-text-primary">
+              {displayName}
+            </h3>
           </div>
           <RarityStars rarity={pal.rarity} />
         </header>
@@ -139,7 +148,9 @@ export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
               className="overflow-hidden border-t border-border pt-3"
               data-testid="pal-card-stats"
             >
-              <p className="mb-2 text-xs font-medium text-text-tertiary">基础属性</p>
+              <p className="mb-2 text-xs font-medium text-text-tertiary">
+                {translate("stats.title")}
+              </p>
               <div className="flex flex-col gap-1.5">
                 {STAT_LABELS.map(({ key, label }) => (
                   <StatBar key={key} label={label} value={pal.stats[key]} />

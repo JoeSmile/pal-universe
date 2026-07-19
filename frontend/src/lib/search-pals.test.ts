@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  formatPalLabel,
   getMinQueryLength,
   isChatIntent,
   levenshtein,
@@ -69,5 +70,12 @@ describe("searchPals spell correction", () => {
 
   it("returns empty when distance is greater than 2", () => {
     expect(searchPals(samplePals, "zzzzz")).toEqual([]);
+  });
+});
+
+describe("formatPalLabel", () => {
+  it("shows exactly one language", () => {
+    expect(formatPalLabel(samplePals[0]!, "en")).toBe("Anubis");
+    expect(formatPalLabel(samplePals[0]!, "zh")).toBe("阿努比斯");
   });
 });

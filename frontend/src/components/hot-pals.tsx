@@ -1,8 +1,12 @@
+"use client";
+
 import palsData from "@/data/pals.json";
 import palNames from "@/data/pal-names.json";
+import { formatPalLabel } from "@/lib/search-pals";
+import { useLocaleStore } from "@/lib/i18n/store";
 import { cn } from "@/lib/utils";
 
-export interface HotPal {
+interface HotPal {
   name: string;
   name_cn: string;
   elements: string[];
@@ -51,9 +55,9 @@ function buildHotPals(limit = 8): HotPal[] {
     }));
 }
 
-function RarityStars({ rarity }: { rarity: number }): React.ReactElement {
+function RarityStars({ rarity, label }: { rarity: number; label: string }): React.ReactElement {
   return (
-    <span className="text-xs tracking-widest text-warning" aria-label={`稀有度 ${rarity}`}>
+    <span className="text-xs tracking-widest text-warning" aria-label={label}>
       {"★".repeat(Math.max(1, Math.min(rarity, 5)))}
     </span>
   );
@@ -65,12 +69,14 @@ interface HotPalsProps {
 }
 
 export function HotPals({ className, limit = 8 }: HotPalsProps): React.ReactElement {
+  const locale = useLocaleStore((state) => state.locale);
+  const translate = useLocaleStore((state) => state.t);
   const pals = buildHotPals(limit);
 
   return (
-    <section aria-label="热门帕鲁" className={cn("w-full", className)}>
+    <section aria-label={translate("home.hotPals")} className={cn("w-full", className)}>
       <h2 className="mb-4 text-sm font-medium tracking-wide text-text-secondary uppercase">
-        热门帕鲁
+        {translate("home.hotPals")}
       </h2>
       <ul
         className={cn(
@@ -90,10 +96,17 @@ export function HotPals({ className, limit = 8 }: HotPalsProps): React.ReactElem
               )}
             >
               <div className="flex items-start justify-between gap-2">
-                <h3 className="text-sm font-medium text-text-primary">{pal.name}</h3>
-                <RarityStars rarity={pal.rarity} />
+                <h3 className="text-sm font-medium text-text-primary">
+                  {formatPalLabel(
+                    { id: pal.deck_id, name: pal.name, name_cn: pal.name_cn },
+                    locale,
+                  )}
+                </h3>
+                <RarityStars
+                  rarity={pal.rarity}
+                  label={translate("rarity.label", { n: pal.rarity })}
+                />
               </div>
-              <p className="text-xs text-text-secondary">{pal.name_cn}</p>
               <p className="flex flex-wrap gap-1.5 text-xs">
                 {pal.elements.map((element) => (
                   <span
