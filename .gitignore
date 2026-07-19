@@ -59,3 +59,6 @@ frontend/public/images/
 
 # Backend is a separate repo
 backend/.git/
+
+# Backend subdirectory (separate repo)
+backend/
