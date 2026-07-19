@@ -1,9 +1,11 @@
 # 006-pal-card
 
 ## Status
-- status: pending
+- status: completed
 - assigned_to: cursor
 - depends_on: []
+- started_at: 2026-07-19
+- completed_at: 2026-07-19
 
 ## Goal
 
@@ -16,14 +18,14 @@
 - Create: `frontend/src/components/pal-card.test.tsx`
 
 ## Acceptance Criteria
-- [ ] 卡片渲染帕鲁名（双语）、元素类型、工作适性
-- [ ] 元素类型徽章使用 TOKENS.md 定义的颜色（如 火=#FF6B35）
-- [ ] 悬停时卡片上浮 + 阴影加深 (Framer Motion spring)
-- [ ] 工作适性用图标 + 等级点阵显示
-- [ ] 稀有度星级用金色渐变显示
-- [ ] 卡片渐进式披露：默认展示名称+类型+工作，悬停展开属性条
-- [ ] TypeScript strict 模式通过
-- [ ] 测试通过
+- [x] 卡片渲染帕鲁名（双语）、元素类型、工作适性
+- [x] 元素类型徽章使用 TOKENS.md 定义的颜色（如 火=#FF6B35）
+- [x] 悬停时卡片上浮 + 阴影加深 (Framer Motion spring)
+- [x] 工作适性用图标 + 等级点阵显示
+- [x] 稀有度星级用金色渐变显示
+- [x] 卡片渐进式披露：默认展示名称+类型+工作，悬停展开属性条
+- [x] TypeScript strict 模式通过
+- [x] 测试通过
 
 ## Implementation Hints
 - 组件 Props 类型参照 PRD-001 中的 PalCardData 接口
