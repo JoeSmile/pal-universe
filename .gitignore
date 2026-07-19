@@ -49,8 +49,10 @@ __pycache__/
 .venv/
 *.egg-info/
 
-# Data (copied at build time)
+# Data (copied at build time) — keep frontend static search data tracked
 data/
+!frontend/src/data/
+!frontend/src/data/**
 
 # Backend is a separate repo
 backend/.git/

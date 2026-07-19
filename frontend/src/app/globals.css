@@ -1,7 +1,45 @@
 @import "tailwindcss";
+@import "./tokens.css";
 @config "../../tailwind.config.ts";
 
 @theme {
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --color-bg-base: var(--color-bg-base);
+  --color-bg-surface: var(--color-bg-surface);
+  --color-bg-elevated: var(--color-bg-elevated);
+  --color-bg-hover: var(--color-bg-hover);
+  --color-bg-inset: var(--color-bg-inset);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-tertiary: var(--color-text-tertiary);
+  --color-text-inverse: var(--color-text-inverse);
+  --color-text-link: var(--color-text-link);
+
+  --color-border: var(--color-border);
+  --color-border-hover: var(--color-border-hover);
+  --color-border-active: var(--color-border-active);
+
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-glow: var(--color-accent-glow);
+  --color-accent-muted: var(--color-accent-muted);
+
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-danger: var(--color-danger);
+  --color-info: var(--color-info);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-2xl: var(--radius-2xl);
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
 }
