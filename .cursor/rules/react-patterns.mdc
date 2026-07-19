@@ -1,0 +1,62 @@
+---
+description: Pal Universe React 组件编写规范
+globs: frontend/src/**/*.tsx
+---
+
+# React 组件规范
+
+## 组件结构（按顺序）
+
+1. Import 语句（React → 第三方 → 本地）
+2. 类型定义（interface Props / interface Data）
+3. 常量（默认值、配置）
+4. 组件函数
+5. 样式辅助函数（如果有）
+6. 默认导出
+
+## 代码示例
+
+```tsx
+"use client";
+
+import { useState } from "react";
+import { Search } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+interface SearchBarProps {
+  className?: string;
+  placeholder?: string;
+  onSelect?: (value: string) => void;
+}
+
+const DEFAULT_PLACEHOLDER = "搜索帕鲁…";
+
+export function SearchBar({
+  className,
+  placeholder = DEFAULT_PLACEHOLDER,
+  onSelect,
+}: SearchBarProps): React.ReactElement {
+  const [query, setQuery] = useState("");
+
+  return (
+    <div className={cn("flex w-full", className)}>
+      <Search className="size-5 text-text-tertiary" aria-hidden="true" />
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder={placeholder}
+        className="min-w-0 flex-1 bg-transparent text-text-primary outline-none"
+      />
+    </div>
+  );
+}
+```
+
+## 原则
+
+- Props 用 interface 不要用 type，以 `Props` 后缀结尾
+- 组件函数显式标注返回类型 `React.ReactElement`
+- 默认值提取为常量，不硬写在参数里
+- Tailwind 类名合并用 `cn()` 工具函数，不要用 `join()` 或模板字符串
+- `"use client"` 只在需要浏览器 API 或交互状态时加，默认 Server Component

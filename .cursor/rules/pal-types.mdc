@@ -1,0 +1,67 @@
+---
+description: 帕鲁数据模型类型定义
+globs: frontend/src/**/*.ts
+---
+
+# 核心类型
+
+> 所有帕鲁相关组件和函数使用这些类型，保持一致。
+
+## PalName（搜索用）
+
+```typescript
+interface PalName {
+  id: string;
+  name: string;    // "Anubis"
+  name_cn: string; // "冥王犬"
+}
+
+interface PalSearchResult extends PalName {
+  label: string;   // "Anubis · 冥王犬"（展示用）
+  isSuggestion?: boolean; // 拼写纠错标记
+}
+```
+
+## PalCardData（卡片展示用）
+
+```typescript
+interface PalCardData {
+  name: string;
+  elements: string[];
+  deck_id: string;
+  rarity: number;   // 1-5
+  size: string;
+  stats: {
+    hp: number;
+    melee_attack: number;
+    shot_attack: number;
+    defense: number;
+    support: number;
+    stamina: number;
+  };
+  work_orders: Array<{ skill: string; level: number }>;
+}
+```
+
+## 图片 URL 构造
+
+```typescript
+function getPalImageUrl(name: string): string {
+  return `/images/pals/${encodeURIComponent(name)}.webp`;
+}
+```
+
+## 育种排名
+
+```typescript
+interface BreedingData {
+  parent1: string;
+  parent2: string;
+  child: string;
+  is_special: boolean;
+}
+
+interface BreedingRanks {
+  [palName: string]: number; // { "Anubis": 570, "Cattiva": 1460 }
+}
+```

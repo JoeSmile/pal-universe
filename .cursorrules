@@ -1,38 +1,31 @@
-<!-- code-review-graph MCP tools -->
-## MCP Tools: code-review-graph
+# Pal Universe — Cursor 启动指令
 
-**IMPORTANT: This project has a knowledge graph. ALWAYS use the
-code-review-graph MCP tools BEFORE using Grep/Glob/Read to explore
-the codebase.** The graph is faster, cheaper (fewer tokens), and gives
-you structural context (callers, dependents, test coverage) that file
-scanning cannot.
+你每次加载此项目时，按以下顺序读取上下文：
 
-### When to use graph tools FIRST
+1. `CONTRIBUTING.md` — 项目协作规范、角色分工
+2. `PROJECT_CONTEXT.md` — 项目全景、技术栈、进度
+3. `docs/architecture/ARCHITECTURE.html` — 系统架构总览
+4. `.specify/spec.md` — 功能规格
+5. `.specify/plan.md` — 技术方案
+6. `.specify/constitution.md` — 项目宪章（编码规范、质量门禁）
 
-- **Exploring code**: `semantic_search_nodes_tool` or `query_graph_tool` instead of Grep
-- **Understanding impact**: `get_impact_radius_tool` instead of manually tracing imports
-- **Code review**: `detect_changes_tool` + `get_review_context_tool` instead of reading entire files
-- **Finding relationships**: `query_graph_tool` with callers_of/callees_of/imports_of/tests_for
-- **Architecture questions**: `get_architecture_overview_tool` + `list_communities_tool`
+然后检查 `.specify/tasks/` 中是否有 `assigned_to: cursor` + `status: pending` 的任务。
 
-Fall back to Grep/Glob/Read **only** when the graph doesn't cover what you need.
+## 可用 MCP
 
-### Key Tools
+- codebase-memory-mcp: 用于快速查找已有代码模式和组件
+- code-review-graph: 用于理解代码结构和变更影响
 
-| Tool | Use when |
-| ------ | ---------- |
-| `detect_changes_tool` | Reviewing code changes — gives risk-scored analysis |
-| `get_review_context_tool` | Need source snippets for review — token-efficient |
-| `get_impact_radius_tool` | Understanding blast radius of a change |
-| `get_affected_flows_tool` | Finding which execution paths are impacted |
-| `query_graph_tool` | Tracing callers, callees, imports, tests, dependencies |
-| `semantic_search_nodes_tool` | Finding functions/classes by name or keyword |
-| `get_architecture_overview_tool` | Understanding high-level codebase structure |
-| `refactor_tool` | Planning renames, finding dead code |
+## 关键路径
 
-### Workflow
+```
+frontend/src/
+  components/   ← React 组件
+  lib/          ← 工具函数
+  data/         ← Mock JSON 数据
+  app/          ← Next.js App Router 页面
 
-1. The graph auto-updates on file changes (via hooks).
-2. Use `detect_changes_tool` for code review.
-3. Use `get_affected_flows_tool` to understand impact.
-4. Use `query_graph_tool` pattern="tests_for" to check coverage.
+scripts/        ← Python 数据脚本
+.specify/       ← 任务和契约
+docs/           ← 文档
+```

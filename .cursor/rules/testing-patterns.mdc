@@ -1,0 +1,41 @@
+---
+description: 测试编写规范
+globs: frontend/src/**/*.test.{ts,tsx}
+---
+
+# 测试规范
+
+## 测试框架
+
+Vitest + @testing-library/react
+
+## 测试结构
+
+```typescript
+import { describe, it, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import { ComponentName } from "./component-name";
+
+describe("ComponentName", () => {
+  it("renders default state", () => {
+    render(<ComponentName />);
+    expect(screen.getByRole("textbox")).toBeDefined();
+  });
+
+  it("responds to user input", async () => {
+    const user = userEvent.setup();
+    render(<ComponentName />);
+    await user.type(screen.getByRole("textbox"), "Anubis");
+    expect(screen.getByText("Anubis")).toBeDefined();
+  });
+});
+```
+
+## 原则
+
+- describe/it 嵌套，不要用 test()
+- 每个文件一个 describe，对应一个组件
+- 用户交互用 `userEvent`（比 fireEvent 更接近真实操作）
+- 测试覆盖：正常渲染、用户交互、边界情况（空数据、loading）
+- 不需要 100% 覆盖，但核心交互路径必须测

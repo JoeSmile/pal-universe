@@ -1,0 +1,60 @@
+---
+description: Pal Universe 数据和图片引用规范
+globs: frontend/src/**/*
+---
+
+# 数据与图片引用规范
+
+## 帕鲁数据
+
+```typescript
+// ✅ 正确：从 mock 数据导入
+import palsData from "@/data/pals.json";
+import breedingData from "@/data/breeding.json";
+import typeChart from "@/data/type-chart.json";
+
+// ❌ 错误：直接 import 大 JSON 时没有类型标注
+// ❌ 错误：硬编码帕鲁数据
+// ❌ 错误：从 palworld-kb 源目录导入
+```
+
+## 图片路径
+
+```typescript
+// ✅ 正确
+`/images/pals/${palName}.webp`   // 真图
+`/images/pals/${palName}.svg`    // 占位图
+
+// ❌ 错误：直接拼 CDN URL
+// ❌ 错误：假设所有图片都是 .webp（有 11 张 .svg 占位图）
+```
+
+图片查找逻辑：
+1. 先尝试 `{name}.webp`（真图，288 张）
+2. 不存在则 fallback `{name}.svg`（占位图，11 张）
+3. 再 fallback 默认占位图
+
+## 元素颜色
+
+从 `docs/design/TOKENS.md` 定义的 CSS 变量取，不要硬编码：
+
+```tsx
+// ✅ 正确
+<div className="bg-element-fire text-element-fire-text" />
+
+// ❌ 错误
+<div style={{ backgroundColor: "#FF6B35" }} />
+```
+
+可用的元素色 CSS 变量：
+```
+--color-element-fire   --color-element-fire-text
+--color-element-water  --color-element-water-text
+--color-element-grass  --color-element-grass-text
+--color-element-electric  --color-element-electric-text
+--color-element-ice    --color-element-ice-text
+--color-element-ground  --color-element-ground-text
+--color-element-dark   --color-element-dark-text
+--color-element-dragon  --color-element-dragon-text
+--color-element-neutral  --color-element-neutral-text
+```
