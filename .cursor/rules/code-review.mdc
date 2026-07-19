@@ -1,0 +1,67 @@
+---
+description: Pal Universe AI Code Review 规范（用户说 code review 时必须遵守）
+alwaysApply: true
+---
+
+# Code Review 规则
+
+当用户要求 **code review** / **审查代码** 时，必须按本规则执行，不得用通用闲聊式 review 代替。
+
+## 依据
+
+- 审查维度与输出格式：`docs/epics/PRD-006-AUTOMATION-PIPELINE.md` §4
+- 验收门禁：`docs/architecture/CODE-ACCEPTANCE.md`
+- 行为准则：`.specify/constitution.md`
+- 图谱优先：先用 codebase-memory MCP（`detect_changes` / `search_graph`），不足再用 Grep/Read
+
+## 审查维度（6 项）
+
+| 维度 | 检查项 | 通过条件 |
+|------|--------|---------|
+| 正确性 | 逻辑是否正确 | 无逻辑错误 |
+| 性能 | O(n²)/重复渲染等 | 无重大问题 |
+| 安全 | XSS/注入/敏感信息 | 零容忍 |
+| 可维护性 | 命名/结构/注释 | 符合宪章 |
+| 测试覆盖 | 新代码有对应测试 | 有意义覆盖，非假绿 |
+| 类型安全 | TS 类型 | strict 通过 |
+
+## 执行步骤
+
+1. 确认审查范围（相对 `origin/main` 的 commit + 工作区未提交变更；或用户指定的 diff）
+2. `detect_changes` + 读关键 task AC（`.specify/tasks/`）
+3. 抽查真实数据/集成路径，不只看 mock 测试是否绿
+4. 能跑则跑：`bun run type-check` / `lint` / 相关 `test`
+5. 按下方格式输出；安全问题进「阻止合并」
+
+## 输出格式（必须）
+
+```markdown
+## 🤖 AI Code Review Report
+
+### 范围
+- Base / Head / 工作区说明
+- 对应 task（如有）
+
+### ✅ 通过的检查
+- [x] …
+
+### ⚠️ 建议改进
+1. **{维度}**: path:line — 问题说明
+   ```suggestion
+   // 可选：具体改法
+   ```
+
+### ❌ 阻止合并
+1. **{维度}**: …（无则写「（无）」）
+
+### 裁决
+**Ready to merge?** Yes | No | With fixes
+**Reasoning:** 1–2 句
+```
+
+## 校准
+
+- 安全与数据错误 → 阻止合并
+- AC 未满足 / 假绿测试 / 架构偏离 → 至少进建议改进；严重则阻止
+- 风格 nit 不升格为阻止项
+- 先写通过项，再写问题；每条带 path（尽量含行号）与 WHY

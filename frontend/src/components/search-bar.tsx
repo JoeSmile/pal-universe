@@ -6,7 +6,7 @@ import { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
 import palNames from "@/data/pal-names.json";
 import { cn } from "@/lib/utils";
 import {
-  MIN_QUERY_LENGTH,
+  getMinQueryLength,
   searchPals,
   type PalName,
   type PalSearchResult,
@@ -43,7 +43,7 @@ export function SearchBar({
     }
 
     const trimmed = query.trim();
-    if (trimmed.length < MIN_QUERY_LENGTH) {
+    if (trimmed.length < getMinQueryLength(trimmed)) {
       setResults([]);
       setIsLoading(false);
       setActiveIndex(-1);
@@ -188,7 +188,7 @@ export function SearchBar({
           ) : null}
         </div>
 
-        {query.trim().length >= MIN_QUERY_LENGTH && !isLoading && results.length === 0 ? (
+        {query.trim().length >= getMinQueryLength(query) && !isLoading && results.length === 0 ? (
           <p className="mt-3 text-center text-sm text-text-secondary md:mt-3">
             未找到匹配的帕鲁
           </p>

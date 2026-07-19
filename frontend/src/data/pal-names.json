@@ -2,19 +2,19 @@
   {
     "id": "184",
     "name": "Aegidron",
-    "name_cn": "艾吉德龙"
+    "name_cn": "磐甲龙"
   },
   {
     "id": "47",
     "name": "Amione",
-    "name_cn": "阿米欧妮"
+    "name_cn": "莉欧·莉涅"
   },
   {
     "id": "139",
     "name": "Anubis",
-    "name_cn": "冥王犬",
+    "name_cn": "阿努比斯",
     "aliases": [
-      "阿努比斯"
+      "冥王犬"
     ]
   },
   {
@@ -25,137 +25,137 @@
   {
     "id": "158",
     "name": "Astegon",
-    "name_cn": "阿斯特冈"
+    "name_cn": "魔渊龙"
   },
   {
     "id": "204",
     "name": "Astralym",
-    "name_cn": "星辉灵"
+    "name_cn": "枯星龙"
   },
   {
     "id": "161",
     "name": "Azurmane",
-    "name_cn": "蓝鬃"
+    "name_cn": "驭雷马"
   },
   {
     "id": "41",
     "name": "Azurobe",
-    "name_cn": "青龙"
+    "name_cn": "碧海龙"
   },
   {
     "id": "41B",
     "name": "Azurobe Cryst",
-    "name_cn": "冰青龙"
+    "name_cn": "碧月龙"
   },
   {
     "id": "168",
     "name": "Bakemi",
-    "name_cn": "化身鬼"
+    "name_cn": "吓丝妮"
   },
   {
     "id": "191",
     "name": "Bastigor",
-    "name_cn": "巴斯蒂戈"
+    "name_cn": "霜牙王"
   },
   {
     "id": "96",
     "name": "Beakon",
-    "name_cn": "雷鸣鸟"
+    "name_cn": "迅雷鸟"
   },
   {
     "id": "96B",
     "name": "Beakon Cryst",
-    "name_cn": "冰雷鸣鸟"
+    "name_cn": "疾霜鸟"
   },
   {
     "id": "67",
     "name": "Beegarde",
-    "name_cn": "蜂女王"
+    "name_cn": "骑士蜂"
   },
   {
     "id": "195",
     "name": "Bellanoir",
-    "name_cn": "贝拉诺尔"
+    "name_cn": "贝菈诺娃"
   },
   {
     "id": "195B",
     "name": "Bellanoir Libero",
-    "name_cn": "贝拉诺尔·利贝罗"
+    "name_cn": "贝菈露洁"
   },
   {
     "id": "137",
     "name": "Blazamut",
-    "name_cn": "炽焰兽"
+    "name_cn": "焰煌"
   },
   {
     "id": "137B",
     "name": "Blazamut Ryu",
-    "name_cn": "Blazamut Ryu"
+    "name_cn": "殁殃"
   },
   {
     "id": "112",
     "name": "Blazehowl",
-    "name_cn": "炽焰狼"
+    "name_cn": "狱焰王"
   },
   {
     "id": "112B",
     "name": "Blazehowl Noct",
-    "name_cn": "暗焰狼"
+    "name_cn": "狱阎王"
   },
   {
-    "id": "None",
+    "id": "",
     "name": "Blue Slime",
-    "name_cn": "Blue Slime"
+    "name_cn": "蓝史莱姆"
   },
   {
     "id": "110",
     "name": "Braloha",
-    "name_cn": "Braloha"
+    "name_cn": "梁叶龙"
   },
   {
     "id": "60",
     "name": "Bristla",
-    "name_cn": "荆棘女神"
+    "name_cn": "荊棘魔仙"
   },
   {
     "id": "108",
     "name": "Broncherry",
-    "name_cn": "叶泥龙"
+    "name_cn": "连理龙"
   },
   {
     "id": "108B",
     "name": "Broncherry Aqua",
-    "name_cn": "水叶泥龙"
+    "name_cn": "海誓龙"
   },
   {
     "id": "156",
     "name": "Bulldosu",
-    "name_cn": "Bulldosu"
+    "name_cn": "力士獒"
   },
   {
     "id": "85",
     "name": "Bushi",
-    "name_cn": "武士犬"
+    "name_cn": "浪刃武士"
   },
   {
     "id": "85B",
     "name": "Bushi Noct",
-    "name_cn": "暗武士犬"
+    "name_cn": "鬼刃武士"
   },
   {
     "id": "34",
     "name": "Caprity",
-    "name_cn": "食梦兽"
+    "name_cn": "灌木羊"
   },
   {
     "id": "34B",
     "name": "Caprity Noct",
-    "name_cn": "暗食梦兽"
+    "name_cn": "郁木羊"
   },
   {
     "id": "136",
     "name": "Carnibora",
-    "name_cn": "Carnibora"
+    "name_cn": "颚莉丝"
   },
   {
     "id": "2",
@@ -163,34 +163,34 @@
     "name_cn": "捣蛋猫"
   },
   {
-    "id": "None",
+    "id": "",
     "name": "Cave Bat",
-    "name_cn": "Cave Bat"
+    "name_cn": "洞穴蝙蝠"
   },
   {
     "id": "57",
     "name": "Cawgnito",
-    "name_cn": "黑鸦"
+    "name_cn": "黑鸦隐士"
   },
   {
     "id": "7",
     "name": "Celaray",
-    "name_cn": "吊篮冰鸟"
+    "name_cn": "鲁米儿"
   },
   {
     "id": "7B",
     "name": "Celaray Lux",
-    "name_cn": "Celaray Lux"
+    "name_cn": "雷米儿"
   },
   {
     "id": "157",
     "name": "Celesdir",
-    "name_cn": "天导灵"
+    "name_cn": "净世鹿"
   },
   {
     "id": "157B",
     "name": "Celesdir Noct",
-    "name_cn": "Celesdir Noct"
+    "name_cn": "织夜鹿"
   },
   {
     "id": "3",
@@ -200,22 +200,22 @@
   {
     "id": "103",
     "name": "Chillet",
-    "name_cn": "疾风迅龙"
+    "name_cn": "疾旋鼬"
   },
   {
     "id": "103B",
     "name": "Chillet Ignis",
-    "name_cn": "炽疾风迅龙"
+    "name_cn": "桃旋鼬"
   },
   {
     "id": "61",
     "name": "Cinnamoth",
-    "name_cn": "蛾蛹"
+    "name_cn": "幻悦蝶"
   },
   {
     "id": "14",
     "name": "Clovee",
-    "name_cn": "Clovee"
+    "name_cn": "幸叶茸"
   },
   {
     "id": "8",
@@ -225,22 +225,22 @@
   {
     "id": "9",
     "name": "Croajiro",
-    "name_cn": "Croajiro"
+    "name_cn": "武道蛙"
   },
   {
     "id": "9B",
     "name": "Croajiro Noct",
-    "name_cn": "Croajiro Noct"
+    "name_cn": "极道蛙"
   },
   {
     "id": "132",
     "name": "Cryolinx",
-    "name_cn": "霜牙狼"
+    "name_cn": "冰棘兽"
   },
   {
     "id": "132B",
     "name": "Cryolinx Terra",
-    "name_cn": "沙霜牙狼"
+    "name_cn": "金棘兽"
   },
   {
     "id": "22",
@@ -250,97 +250,97 @@
   {
     "id": "194",
     "name": "Dandilord",
-    "name_cn": "Dandilord"
+    "name_cn": "夜蔓爵"
   },
   {
     "id": "123",
     "name": "Dazemu",
-    "name_cn": "达泽姆"
+    "name_cn": "战冠雀"
   },
   {
     "id": "92",
     "name": "Dazzi",
-    "name_cn": "Dazzi"
+    "name_cn": "雷鸣童子"
   },
   {
     "id": "92B",
     "name": "Dazzi Noct",
-    "name_cn": "Dazzi Noct"
+    "name_cn": "天阴童子"
   },
   {
-    "id": "None",
+    "id": "",
     "name": "Demon Eye",
-    "name_cn": "Demon Eye"
+    "name_cn": "恶魔眼"
   },
   {
     "id": "16",
     "name": "Depresso",
-    "name_cn": "瞅瞅灵"
+    "name_cn": "瞅什魔"
   },
   {
     "id": "107",
     "name": "Digtoise",
-    "name_cn": "钻地龟"
+    "name_cn": "碎岩龟"
   },
   {
     "id": "84",
     "name": "Dinossom",
-    "name_cn": "叶啸龙"
+    "name_cn": "花冠龙"
   },
   {
     "id": "84B",
     "name": "Dinossom Lux",
-    "name_cn": "雷啸龙"
+    "name_cn": "雷冠龙"
   },
   {
     "id": "33",
     "name": "Direhowl",
-    "name_cn": "狼犬"
+    "name_cn": "猎狼"
   },
   {
     "id": "155",
     "name": "Dogen",
-    "name_cn": "道犬"
+    "name_cn": "汪宗师"
   },
   {
     "id": "138",
     "name": "Dualith",
-    "name_cn": "Dualith"
+    "name_cn": "双心岩傀"
   },
   {
     "id": "138B",
     "name": "Dualith Noct",
-    "name_cn": "Dualith Noct"
+    "name_cn": "咒心岩傀"
   },
   {
     "id": "109",
     "name": "Dumud",
-    "name_cn": "泥豚"
+    "name_cn": "趴趴鲶"
   },
   {
     "id": "109B",
     "name": "Dumud Gild",
-    "name_cn": "Dumud Gild"
+    "name_cn": "梆梆鲶"
   },
   {
     "id": "176",
     "name": "Dupin",
-    "name_cn": "Dupin"
+    "name_cn": "拉比耶尔"
   },
   {
     "id": "172",
     "name": "Dynamoff",
-    "name_cn": "Dynamoff"
+    "name_cn": "雷云鹫"
   },
   {
     "id": "171",
     "name": "Eidrolon",
-    "name_cn": "Eidrolon"
+    "name_cn": "灵曦龙"
   },
   {
     "id": "171B",
     "name": "Eidrolon Ignis",
-    "name_cn": "Eidrolon Ignis"
+    "name_cn": "狱熙龙"
   },
   {
     "id": "32",
@@ -350,17 +350,17 @@
   {
     "id": "32B",
     "name": "Eikthyrdeer Terra",
-    "name_cn": "紫霞鹿"
+    "name_cn": "祇岳鹿"
   },
   {
     "id": "81",
     "name": "Elgrove",
-    "name_cn": "Elgrove"
+    "name_cn": "密林陶洛斯"
   },
   {
     "id": "81B",
     "name": "Elgrove Cryst",
-    "name_cn": "Elgrove Cryst"
+    "name_cn": "冰峰陶洛斯"
   },
   {
     "id": "68",
@@ -370,7 +370,7 @@
   {
     "id": "63",
     "name": "Elphidran",
-    "name_cn": "水灵龙"
+    "name_cn": "精灵龙"
   },
   {
     "id": "63B",
@@ -378,69 +378,69 @@
     "name_cn": "水灵龙"
   },
   {
-    "id": "None",
+    "id": "",
     "name": "Enchanted Sword",
-    "name_cn": "Enchanted Sword"
+    "name_cn": "附魔剑"
   },
   {
-    "id": "None",
+    "id": "",
     "name": "Eye of Cthulhu",
-    "name_cn": "Eye of Cthulhu"
+    "name_cn": "克苏鲁之眼"
   },
   {
     "id": "188",
     "name": "Faleris",
-    "name_cn": "炽焰鸟"
+    "name_cn": "荷鲁斯"
   },
   {
     "id": "188B",
     "name": "Faleris Aqua",
-    "name_cn": "Faleris Aqua"
+    "name_cn": "伊西斯"
   },
   {
     "id": "65",
     "name": "Felbat",
-    "name_cn": "暗蝠"
+    "name_cn": "夜幕魔蝠"
   },
   {
     "id": "83",
     "name": "Fenglope",
-    "name_cn": "疾风羚"
+    "name_cn": "云海鹿"
   },
   {
     "id": "83B",
     "name": "Fenglope Lux",
-    "name_cn": "雷疾风羚"
+    "name_cn": "雷隐鹿"
   },
   {
     "id": "88",
     "name": "Finsider",
-    "name_cn": "鳍隐"
+    "name_cn": "布偶鲨"
   },
   {
     "id": "88B",
     "name": "Finsider Ignis",
-    "name_cn": "炽鳍隐"
+    "name_cn": "粉粉布偶鲨"
   },
   {
     "id": "25",
     "name": "Flambelle",
-    "name_cn": "燎火鸟"
+    "name_cn": "融焰娘"
   },
   {
     "id": "174",
     "name": "Flaracle",
-    "name_cn": "Flaracle"
+    "name_cn": "昭炎狐"
   },
   {
     "id": "77",
     "name": "Flopie",
-    "name_cn": "波娜露"
+    "name_cn": "波娜兔"
   },
   {
     "id": "95",
     "name": "Foxcicle",
-    "name_cn": "冰狐"
+    "name_cn": "吹雪狐"
   },
   {
     "id": "29",
@@ -450,22 +450,22 @@
   {
     "id": "29B",
     "name": "Foxparks Cryst",
-    "name_cn": "Foxparks Cryst"
+    "name_cn": "雪绒狐"
   },
   {
     "id": "200",
     "name": "Frostallion",
-    "name_cn": "霜星"
+    "name_cn": "唤冬兽"
   },
   {
     "id": "200B",
     "name": "Frostallion Noct",
-    "name_cn": "暗霜星"
+    "name_cn": "唤夜兽"
   },
   {
     "id": "114",
     "name": "Frostplume",
-    "name_cn": "Frostplume"
+    "name_cn": "白真雪雀"
   },
   {
     "id": "5",
@@ -475,47 +475,47 @@
   {
     "id": "5B",
     "name": "Fuack Ignis",
-    "name_cn": "炽冲浪鸭"
+    "name_cn": "热浪鸭"
   },
   {
     "id": "31",
     "name": "Fuddler",
-    "name_cn": "隧援"
+    "name_cn": "遁地鼠"
   },
   {
     "id": "49",
     "name": "Galeclaw",
-    "name_cn": "疾风隼"
+    "name_cn": "天擒鸟"
   },
   {
     "id": "97",
     "name": "Ghangler",
-    "name_cn": "Ghangler"
+    "name_cn": "冥灯鱼"
   },
   {
     "id": "97B",
     "name": "Ghangler Ignis",
-    "name_cn": "Ghangler Ignis"
+    "name_cn": "炙灯鱼"
   },
   {
     "id": "154",
     "name": "Gildane",
-    "name_cn": "金丹"
+    "name_cn": "金驰兽"
   },
   {
     "id": "120",
     "name": "Gildra",
-    "name_cn": "Gildra"
+    "name_cn": "缚乃伊"
   },
   {
     "id": "48",
     "name": "Gloopie",
-    "name_cn": "咕噜"
+    "name_cn": "墨沫姬"
   },
   {
     "id": "48B",
     "name": "Gloopie Primo",
-    "name_cn": "Gloopie Primo"
+    "name_cn": "梦沫姬"
   },
   {
     "id": "55",
@@ -525,22 +525,22 @@
   {
     "id": "55B",
     "name": "Gobfin Ignis",
-    "name_cn": "炽鲨小子"
+    "name_cn": "红小鲨"
   },
   {
     "id": "74",
     "name": "Gorirat",
-    "name_cn": "铁臂猿"
+    "name_cn": "铁拳猿"
   },
   {
     "id": "74B",
     "name": "Gorirat Terra",
-    "name_cn": "沙铁臂猿"
+    "name_cn": "石掌猿"
   },
   {
-    "id": "None",
+    "id": "",
     "name": "Green Slime",
-    "name_cn": "Green Slime"
+    "name_cn": "绿史莱姆"
   },
   {
     "id": "70",
@@ -550,7 +550,7 @@
   {
     "id": "185",
     "name": "Grizzbolt",
-    "name_cn": "雷胖丁"
+    "name_cn": "暴电熊"
   },
   {
     "id": "12",
@@ -565,27 +565,27 @@
   {
     "id": "38B",
     "name": "Hangyu Cryst",
-    "name_cn": "冰吊缚灵"
+    "name_cn": "冰缚灵"
   },
   {
     "id": "197",
     "name": "Hartalis",
-    "name_cn": "Hartalis"
+    "name_cn": "默世鹿"
   },
   {
     "id": "80",
     "name": "Helzephyr",
-    "name_cn": "冥卫鸟"
+    "name_cn": "雷冥鸟"
   },
   {
     "id": "80B",
     "name": "Helzephyr Lux",
-    "name_cn": "雷冥卫鸟"
+    "name_cn": "雷鸣鸟"
   },
   {
     "id": "10",
     "name": "Herbil",
-    "name_cn": "Herbil"
+    "name_cn": "达鼠泥"
   },
   {
     "id": "19",
@@ -595,42 +595,42 @@
   {
     "id": "166",
     "name": "Hoodle",
-    "name_cn": "Hoodle"
+    "name_cn": "兜兜灵"
   },
   {
     "id": "119",
     "name": "Icelyn",
-    "name_cn": "Icelyn"
+    "name_cn": "冰姬灵"
   },
   {
-    "id": "None",
+    "id": "",
     "name": "Illuminant Bat",
-    "name_cn": "Illuminant Bat"
+    "name_cn": "夜明蝙蝠"
   },
   {
-    "id": "None",
+    "id": "",
     "name": "Illuminant Slime",
-    "name_cn": "Illuminant Slime"
+    "name_cn": "夜明史莱姆"
   },
   {
     "id": "91",
     "name": "Incineram",
-    "name_cn": "焰煌"
+    "name_cn": "炎魔羊"
   },
   {
     "id": "91B",
     "name": "Incineram Noct",
-    "name_cn": "暗焰煌"
+    "name_cn": "暗魔羊"
   },
   {
     "id": "45",
     "name": "Jelliette",
-    "name_cn": "Jelliette"
+    "name_cn": "海月仙"
   },
   {
     "id": "46",
     "name": "Jellroy",
-    "name_cn": "Jellroy"
+    "name_cn": "海月灵"
   },
   {
     "id": "202",
@@ -640,7 +640,7 @@
   {
     "id": "15",
     "name": "Jolthog",
-    "name_cn": "电刺猬"
+    "name_cn": "电棘鼠"
   },
   {
     "id": "15B",
@@ -650,12 +650,12 @@
   {
     "id": "121",
     "name": "Jormuntide",
-    "name_cn": "海皇龙"
+    "name_cn": "覆海龙"
   },
   {
     "id": "121B",
     "name": "Jormuntide Ignis",
-    "name_cn": "炽海皇龙"
+    "name_cn": "腾炎龙"
   },
   {
     "id": "79",
@@ -665,32 +665,32 @@
   {
     "id": "79B",
     "name": "Katress Ignis",
-    "name_cn": "炽暗巫猫"
+    "name_cn": "炽巫猫"
   },
   {
     "id": "43",
     "name": "Kelpsea",
-    "name_cn": "叶海龙"
+    "name_cn": "水灵儿"
   },
   {
     "id": "43B",
     "name": "Kelpsea Ignis",
-    "name_cn": "炽叶海龙"
+    "name_cn": "火灵儿"
   },
   {
     "id": "126",
     "name": "Kikit",
-    "name_cn": "奇奇"
+    "name_cn": "球犰"
   },
   {
     "id": "30",
     "name": "Killamari",
-    "name_cn": "吊缚灵"
+    "name_cn": "勾魂鱿"
   },
   {
     "id": "30B",
     "name": "Killamari Primo",
-    "name_cn": "Killamari Primo"
+    "name_cn": "蚀魂鱿"
   },
   {
     "id": "21",
@@ -700,27 +700,27 @@
   {
     "id": "21B",
     "name": "Kingpaca Cryst",
-    "name_cn": "Kingpaca Cryst"
+    "name_cn": "冰帝美露帕"
   },
   {
     "id": "111",
     "name": "Kitsun",
-    "name_cn": "九尾狐"
+    "name_cn": "苍焰狼"
   },
   {
     "id": "111B",
     "name": "Kitsun Noct",
-    "name_cn": "暗九尾狐"
+    "name_cn": "幽焰狼"
   },
   {
     "id": "159",
     "name": "Knocklem",
-    "name_cn": "敲击小子"
+    "name_cn": "泰锋"
   },
   {
     "id": "159B",
     "name": "Knocklem Ignis",
-    "name_cn": "Knocklem Ignis"
+    "name_cn": "丹烽"
   },
   {
     "id": "1",
@@ -730,17 +730,17 @@
   {
     "id": "165",
     "name": "Lapiron",
-    "name_cn": "Lapiron"
+    "name_cn": "詹兔曼"
   },
   {
     "id": "170",
     "name": "Lapure",
-    "name_cn": "Lapure"
+    "name_cn": "兔绣袖"
   },
   {
     "id": "90",
     "name": "Leafan",
-    "name_cn": "Leafan"
+    "name_cn": "莉芳"
   },
   {
     "id": "73",
@@ -750,17 +750,17 @@
   {
     "id": "73B",
     "name": "Leezpunk Ignis",
-    "name_cn": "炽朋克蜥"
+    "name_cn": "热血蜥"
   },
   {
     "id": "4",
     "name": "Lifmunk",
-    "name_cn": "Lifmunk"
+    "name_cn": "翠叶鼠"
   },
   {
     "id": "180",
     "name": "Loomen",
-    "name_cn": "Loomen"
+    "name_cn": "妖焰灯"
   },
   {
     "id": "56",
@@ -770,22 +770,22 @@
   {
     "id": "56B",
     "name": "Loupmoon Cryst",
-    "name_cn": "Loupmoon Cryst"
+    "name_cn": "霜镰魔"
   },
   {
     "id": "69",
     "name": "Lovander",
-    "name_cn": "热血蜥"
+    "name_cn": "博爱蜥"
   },
   {
     "id": "125",
     "name": "Lullu",
-    "name_cn": "噜噜"
+    "name_cn": "春彩娘"
   },
   {
     "id": "82",
     "name": "Lunaris",
-    "name_cn": "月灵"
+    "name_cn": "秘斯媞雅"
   },
   {
     "id": "186",
@@ -795,12 +795,12 @@
   {
     "id": "186B",
     "name": "Lyleen Noct",
-    "name_cn": "暗百合女王"
+    "name_cn": "黑月女王"
   },
   {
     "id": "115",
     "name": "Majex",
-    "name_cn": "Majex"
+    "name_cn": "紫狐娇"
   },
   {
     "id": "87",
@@ -810,22 +810,22 @@
   {
     "id": "87B",
     "name": "Mammorest Cryst",
-    "name_cn": "冰猛犸"
+    "name_cn": "雪猛犸"
   },
   {
     "id": "117",
     "name": "Maraith",
-    "name_cn": "冥铠蝎"
+    "name_cn": "噬魂兽"
   },
   {
     "id": "27",
     "name": "Mau",
-    "name_cn": "暗巫猫"
+    "name_cn": "喵丝特"
   },
   {
     "id": "27B",
     "name": "Mau Cryst",
-    "name_cn": "冰巫猫"
+    "name_cn": "冰丝特"
   },
   {
     "id": "20",
@@ -840,112 +840,112 @@
   {
     "id": "99B",
     "name": "Menasting Terra",
-    "name_cn": "Menasting Terra"
+    "name_cn": "金铠蝎"
   },
   {
     "id": "144",
     "name": "Mimog",
-    "name_cn": "拟态魔"
+    "name_cn": "旺财"
   },
   {
     "id": "105",
     "name": "Moldron",
-    "name_cn": "Moldron"
+    "name_cn": "流焰龙"
   },
   {
     "id": "105B",
     "name": "Moldron Cryst",
-    "name_cn": "Moldron Cryst"
+    "name_cn": "川霜龙"
   },
   {
     "id": "102",
     "name": "Mossanda",
-    "name_cn": "森猛犸"
+    "name_cn": "叶胖达"
   },
   {
     "id": "102B",
     "name": "Mossanda Lux",
-    "name_cn": "雷猛犸"
+    "name_cn": "雷胖达"
   },
   {
     "id": "40",
     "name": "Mozzarina",
-    "name_cn": "庞克奇"
+    "name_cn": "波霸牛"
   },
   {
     "id": "59",
     "name": "Muffly",
-    "name_cn": "Muffly"
+    "name_cn": "雪绵啾"
   },
   {
     "id": "86",
     "name": "Munchill",
-    "name_cn": "Munchill"
+    "name_cn": "肚肚鳄"
   },
   {
     "id": "179",
     "name": "Mycora",
-    "name_cn": "Mycora"
+    "name_cn": "红菇娘"
   },
   {
     "id": "199",
     "name": "Necromus",
-    "name_cn": "暗黑骑士"
+    "name_cn": "混沌骑士"
   },
   {
     "id": "100",
     "name": "Needoll",
-    "name_cn": "Needoll"
+    "name_cn": "球抱苞"
   },
   {
     "id": "100B",
     "name": "Needoll Noct",
-    "name_cn": "Needoll Noct"
+    "name_cn": "妖抱苞"
   },
   {
     "id": "201",
     "name": "Neptilius",
-    "name_cn": "Neptilius"
+    "name_cn": "海皇鲸"
   },
   {
     "id": "148",
     "name": "Nitemary",
-    "name_cn": "夜玛丽"
+    "name_cn": "魅爱莉"
   },
   {
     "id": "148B",
     "name": "Nitemary Botan",
-    "name_cn": "Nitemary Botan"
+    "name_cn": "碧艾莉"
   },
   {
     "id": "51",
     "name": "Nitewing",
-    "name_cn": "暗夜翼"
+    "name_cn": "疾风隼"
   },
   {
     "id": "24",
     "name": "Nox",
-    "name_cn": "紫霞鹿"
+    "name_cn": "露娜蒂"
   },
   {
     "id": "143",
     "name": "Nyafia",
-    "name_cn": "夜喵"
+    "name_cn": "妮瞅莎"
   },
   {
     "id": "150",
     "name": "Omascul",
-    "name_cn": "奥马斯库尔"
+    "name_cn": "面惧"
   },
   {
     "id": "175",
     "name": "Ophydia",
-    "name_cn": "Ophydia"
+    "name_cn": "沁莲龙"
   },
   {
     "id": "187",
     "name": "Orserk",
-    "name_cn": "雷龙"
+    "name_cn": "波鲁杰克斯"
   },
   {
     "id": "198",
@@ -955,12 +955,12 @@
   {
     "id": "106",
     "name": "Palumba",
-    "name_cn": "帕伦巴"
+    "name_cn": "咕咕桑葩"
   },
   {
     "id": "203",
     "name": "Panthalus",
-    "name_cn": "Panthalus"
+    "name_cn": "奥沧鲸"
   },
   {
     "id": "17",
@@ -970,7 +970,7 @@
   {
     "id": "17B",
     "name": "Pengullet Lux",
-    "name_cn": "Pengullet Lux"
+    "name_cn": "闪丸丸"
   },
   {
     "id": "18",
@@ -980,112 +980,112 @@
   {
     "id": "18B",
     "name": "Penking Lux",
-    "name_cn": "Penking Lux"
+    "name_cn": "闪丸王"
   },
   {
     "id": "89",
     "name": "Petallia",
-    "name_cn": "花冠龙"
+    "name_cn": "花丽娜"
   },
   {
     "id": "89B",
     "name": "Petallia Ignis",
-    "name_cn": "Petallia Ignis"
+    "name_cn": "樱丽娜"
   },
   {
     "id": "131",
     "name": "Pierdon",
-    "name_cn": "Pierdon"
+    "name_cn": "磐峰兽"
   },
   {
     "id": "131B",
     "name": "Pierdon Cryst",
-    "name_cn": "Pierdon Cryst"
+    "name_cn": "寒峰兽"
   },
   {
     "id": "72",
     "name": "Polapup",
-    "name_cn": "波拉幼犬"
+    "name_cn": "香草豹冰"
   },
   {
     "id": "72B",
     "name": "Polapup Terra",
-    "name_cn": "Polapup Terra"
+    "name_cn": "巧克力豹冰"
   },
   {
     "id": "141",
     "name": "Prixter",
-    "name_cn": "毒刺"
+    "name_cn": "蛊刺妖"
   },
   {
     "id": "141B",
     "name": "Prixter Lux",
-    "name_cn": "Prixter Lux"
+    "name_cn": "电针妖"
   },
   {
     "id": "147",
     "name": "Prunelia",
-    "name_cn": "梅子灵"
+    "name_cn": "梅莉姆"
   },
   {
     "id": "62",
     "name": "Puffolt",
-    "name_cn": "Puffolt"
+    "name_cn": "电汪汪"
   },
   {
     "id": "13",
     "name": "Pupperai",
-    "name_cn": "Pupperai"
+    "name_cn": "宗铭丸"
   },
   {
-    "id": "None",
+    "id": "",
     "name": "Purple Slime",
-    "name_cn": "Purple Slime"
+    "name_cn": "紫史莱姆"
   },
   {
     "id": "93",
     "name": "Pyrin",
-    "name_cn": "炽焰马"
+    "name_cn": "火麒麟"
   },
   {
     "id": "93B",
     "name": "Pyrin Noct",
-    "name_cn": "暗焰马"
+    "name_cn": "邪麒麟"
   },
   {
     "id": "124",
     "name": "Quivern",
-    "name_cn": "羽绿龙"
+    "name_cn": "天羽龙"
   },
   {
     "id": "124B",
     "name": "Quivern Botan",
-    "name_cn": "叶羽绿龙"
+    "name_cn": "翠羽龙"
   },
   {
     "id": "104",
     "name": "Ragnahawk",
-    "name_cn": "烬煌"
+    "name_cn": "燧火鸟"
   },
   {
-    "id": "None",
+    "id": "",
     "name": "Rainbow Slime",
-    "name_cn": "Rainbow Slime"
+    "name_cn": "彩虹史莱姆"
   },
   {
     "id": "98",
     "name": "Rayhound",
-    "name_cn": "雷犬"
+    "name_cn": "霹雳犬"
   },
   {
     "id": "98B",
     "name": "Rayhound Cryst",
-    "name_cn": "Rayhound Cryst"
+    "name_cn": "凛光犬"
   },
   {
-    "id": "None",
+    "id": "",
     "name": "Red Slime",
-    "name_cn": "Red Slime"
+    "name_cn": "红史莱姆"
   },
   {
     "id": "101",
@@ -1095,207 +1095,207 @@
   {
     "id": "94",
     "name": "Relaxaurus",
-    "name_cn": "悠然龙"
+    "name_cn": "佩克龙"
   },
   {
     "id": "94B",
     "name": "Relaxaurus Lux",
-    "name_cn": "雷悠然龙"
+    "name_cn": "派克龙"
   },
   {
     "id": "183",
     "name": "Renjishi",
-    "name_cn": "Renjishi"
+    "name_cn": "燎火舞伶"
   },
   {
     "id": "129",
     "name": "Reptyro",
-    "name_cn": "熔岩龟"
+    "name_cn": "熔岩兽"
   },
   {
     "id": "129B",
     "name": "Reptyro Cryst",
-    "name_cn": "Reptyro Cryst"
+    "name_cn": "寒霜兽"
   },
   {
     "id": "44",
     "name": "Ribbuny",
-    "name_cn": "捣蛋猫"
+    "name_cn": "姬小兔"
   },
   {
     "id": "44B",
     "name": "Ribbuny Botan",
-    "name_cn": "Ribbuny Botan"
+    "name_cn": "艾小兔"
   },
   {
     "id": "76",
     "name": "Robinquill",
-    "name_cn": "羽绿丁"
+    "name_cn": "羽箭射手"
   },
   {
     "id": "76B",
     "name": "Robinquill Terra",
-    "name_cn": "沙羽绿丁"
+    "name_cn": "山岳射手"
   },
   {
     "id": "26",
     "name": "Rooby",
-    "name_cn": "壶小兔"
+    "name_cn": "燎火鹿"
   },
   {
     "id": "177",
     "name": "Roujay",
-    "name_cn": "Roujay"
+    "name_cn": "盗影鸦"
   },
   {
     "id": "28",
     "name": "Rushoar",
-    "name_cn": "迷你炸猪"
+    "name_cn": "草莽猪"
   },
   {
     "id": "140",
     "name": "Sekhmet",
-    "name_cn": "Sekhmet"
+    "name_cn": "塞赫麦特"
   },
   {
     "id": "190",
     "name": "Selyne",
-    "name_cn": "塞琳"
+    "name_cn": "辉月伊"
   },
   {
     "id": "189",
     "name": "Shadowbeak",
-    "name_cn": "冥卫鸟"
+    "name_cn": "异构格里芬"
   },
   {
     "id": "192",
     "name": "Shaolong",
-    "name_cn": "Shaolong"
+    "name_cn": "霄龙"
   },
   {
     "id": "118",
     "name": "Shroomer",
-    "name_cn": "菇菇"
+    "name_cn": "菇咚"
   },
   {
     "id": "118B",
     "name": "Shroomer Noct",
-    "name_cn": "暗菇菇"
+    "name_cn": "菇波"
   },
   {
     "id": "116",
     "name": "Sibelyx",
-    "name_cn": "白绒雪"
+    "name_cn": "绸笠蛾"
   },
   {
     "id": "116B",
     "name": "Sibelyx Primo",
-    "name_cn": "Sibelyx Primo"
+    "name_cn": "绢笠蛾"
   },
   {
     "id": "193",
     "name": "Silvance",
-    "name_cn": "Silvance"
+    "name_cn": "暮尘蛾"
   },
   {
     "id": "160",
     "name": "Silvegis",
-    "name_cn": "银甲龙"
+    "name_cn": "艾基鲁迦"
   },
   {
     "id": "128",
     "name": "Skutlass",
-    "name_cn": "Skutlass"
+    "name_cn": "鞘刀鱼"
   },
   {
     "id": "128B",
     "name": "Skutlass Ignis",
-    "name_cn": "Skutlass Ignis"
+    "name_cn": "炼刃鱼"
   },
   {
     "id": "167",
     "name": "Slowatt",
-    "name_cn": "Slowatt"
+    "name_cn": "电懒懒"
   },
   {
     "id": "149",
     "name": "Smokie",
-    "name_cn": "Smokie"
+    "name_cn": "墨丸"
   },
   {
     "id": "149B",
     "name": "Smokie Cryst",
-    "name_cn": "Smokie Cryst"
+    "name_cn": "冬丸"
   },
   {
     "id": "163",
     "name": "Snock",
-    "name_cn": "Snock"
+    "name_cn": "电涡蜗"
   },
   {
     "id": "163B",
     "name": "Snock Lux",
-    "name_cn": "Snock Lux"
+    "name_cn": "金涡蜗"
   },
   {
     "id": "133",
     "name": "Snugloo",
-    "name_cn": "Snugloo"
+    "name_cn": "雪墩墩"
   },
   {
     "id": "182",
     "name": "Solenne",
-    "name_cn": "Solenne"
+    "name_cn": "墨罗娜"
   },
   {
     "id": "169",
     "name": "Solmora",
-    "name_cn": "Solmora"
+    "name_cn": "曼波王"
   },
   {
     "id": "169B",
     "name": "Solmora Lux",
-    "name_cn": "Solmora Lux"
+    "name_cn": "曼波皇"
   },
   {
     "id": "135",
     "name": "Sootseer",
-    "name_cn": "煤烟先知"
+    "name_cn": "恐炬灵"
   },
   {
     "id": "164",
     "name": "Souffline",
-    "name_cn": "Souffline"
+    "name_cn": "蒲蒲飞芽"
   },
   {
     "id": "42",
     "name": "Sparkit",
-    "name_cn": "电棘鼠"
+    "name_cn": "伏特喵"
   },
   {
     "id": "153",
     "name": "Splatterina",
-    "name_cn": "泼墨狐"
+    "name_cn": "幽恋娜"
   },
   {
     "id": "130",
     "name": "Starryon",
-    "name_cn": "星辉"
+    "name_cn": "夜冥驹"
   },
   {
     "id": "130B",
     "name": "Starryon Primo",
-    "name_cn": "Starryon Primo"
+    "name_cn": "日耀驹"
   },
   {
     "id": "75",
     "name": "Surfent",
-    "name_cn": "浪刃龙"
+    "name_cn": "滑水蛇"
   },
   {
     "id": "75B",
     "name": "Surfent Terra",
-    "name_cn": "沙浪刃龙"
+    "name_cn": "流沙蛇"
   },
   {
     "id": "122",
@@ -1305,17 +1305,17 @@
   {
     "id": "122B",
     "name": "Suzaku Aqua",
-    "name_cn": "青鸾"
+    "name_cn": "清雀"
   },
   {
     "id": "35",
     "name": "Swee",
-    "name_cn": "绒雪美"
+    "name_cn": "毛掸儿"
   },
   {
     "id": "36",
     "name": "Sweepa",
-    "name_cn": "冰美露"
+    "name_cn": "毛老爹"
   },
   {
     "id": "23",
@@ -1325,27 +1325,27 @@
   {
     "id": "23B",
     "name": "Tanzee Ignis",
-    "name_cn": "Tanzee Ignis"
+    "name_cn": "秋叶猿"
   },
   {
     "id": "71",
     "name": "Tarantriss",
-    "name_cn": "狼蛛女王"
+    "name_cn": "桃蛛娘"
   },
   {
     "id": "11",
     "name": "Teafant",
-    "name_cn": "壶小妖"
+    "name_cn": "壶小象"
   },
   {
     "id": "142",
     "name": "Tetroise",
-    "name_cn": "Tetroise"
+    "name_cn": "重岩龟"
   },
   {
     "id": "142B",
     "name": "Tetroise Primo",
-    "name_cn": "Tetroise Primo"
+    "name_cn": "净岩龟"
   },
   {
     "id": "53",
@@ -1355,22 +1355,22 @@
   {
     "id": "52",
     "name": "Tombat",
-    "name_cn": "暗冥猫"
+    "name_cn": "猫蝠怪"
   },
   {
     "id": "173",
     "name": "Tropicaw",
-    "name_cn": "Tropicaw"
+    "name_cn": "大红呱"
   },
   {
     "id": "37",
     "name": "Turtacle",
-    "name_cn": "Turtacle"
+    "name_cn": "盔盔仔"
   },
   {
     "id": "37B",
     "name": "Turtacle Terra",
-    "name_cn": "Turtacle Terra"
+    "name_cn": "金盔仔"
   },
   {
     "id": "54",
@@ -1380,121 +1380,121 @@
   {
     "id": "54B",
     "name": "Univolt Cryst",
-    "name_cn": "Univolt Cryst"
+    "name_cn": "凌角马"
   },
   {
     "id": "66",
     "name": "Vaelet",
-    "name_cn": "花叶苗"
+    "name_cn": "薇莉塔"
   },
   {
     "id": "162",
     "name": "Valentail",
-    "name_cn": "Valentail"
+    "name_cn": "喵璐璐"
   },
   {
     "id": "64",
     "name": "Vanwyrm",
-    "name_cn": "炽翼龙"
+    "name_cn": "烽歌龙"
   },
   {
     "id": "64B",
     "name": "Vanwyrm Cryst",
-    "name_cn": "冰翼龙"
+    "name_cn": "霜歌龙"
   },
   {
     "id": "178",
     "name": "Venusa",
-    "name_cn": "Venusa"
+    "name_cn": "梅杜娜"
   },
   {
     "id": "152",
     "name": "Verdash",
-    "name_cn": "绿叶兔"
+    "name_cn": "踏春兔"
   },
   {
     "id": "6",
     "name": "Vixy",
-    "name_cn": "玉藻鼠"
+    "name_cn": "玉藻狐"
   },
   {
     "id": "113",
     "name": "Warsect",
-    "name_cn": "铠甲虫"
+    "name_cn": "铠格力斯"
   },
   {
     "id": "113B",
     "name": "Warsect Terra",
-    "name_cn": "Warsect Terra"
+    "name_cn": "格鲁力斯"
   },
   {
     "id": "151",
     "name": "Whalaska",
-    "name_cn": "鲸落"
+    "name_cn": "凉晶鲸"
   },
   {
     "id": "151B",
     "name": "Whalaska Ignis",
-    "name_cn": "炽鲸落"
+    "name_cn": "桃晶鲸"
   },
   {
     "id": "50",
     "name": "Wispaw",
-    "name_cn": "Wispaw"
+    "name_cn": "念影喵"
   },
   {
     "id": "181",
     "name": "Wistella",
-    "name_cn": "Wistella"
+    "name_cn": "缀夜星"
   },
   {
     "id": "78",
     "name": "Wixen",
-    "name_cn": "炎巫狐"
+    "name_cn": "焰巫狐"
   },
   {
     "id": "78B",
     "name": "Wixen Noct",
-    "name_cn": "暗炎巫狐"
+    "name_cn": "幽巫狐"
   },
   {
     "id": "39",
     "name": "Woolipop",
-    "name_cn": "美露帕"
+    "name_cn": "棉花糖"
   },
   {
     "id": "39B",
     "name": "Woolipop Terra",
-    "name_cn": "Woolipop Terra"
+    "name_cn": "可可棉花糖"
   },
   {
     "id": "134",
     "name": "Wumpo",
-    "name_cn": "雪美露"
+    "name_cn": "白绒雪怪"
   },
   {
     "id": "134B",
     "name": "Wumpo Botan",
-    "name_cn": "叶雪美露"
+    "name_cn": "绿苔绒怪"
   },
   {
     "id": "146",
     "name": "Xenogard",
-    "name_cn": "Xenogard"
+    "name_cn": "杰诺路达"
   },
   {
     "id": "196",
     "name": "Xenolord",
-    "name_cn": "Xenolord"
+    "name_cn": "杰诺多兰"
   },
   {
     "id": "145",
     "name": "Xenovader",
-    "name_cn": "异界入侵者"
+    "name_cn": "杰诺贝达"
   },
   {
     "id": "127",
     "name": "Yakumo",
-    "name_cn": "Yakumo"
+    "name_cn": "八云犬"
   }
 ]

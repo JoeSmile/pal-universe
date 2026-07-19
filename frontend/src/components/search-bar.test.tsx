@@ -3,41 +3,67 @@ import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { HomeSearchSection } from "@/components/home-search-section";
 import { SearchBar } from "@/components/search-bar";
-import { formatPalLabel, searchPals, type PalName } from "@/lib/search-pals";
+import {
+  formatPalLabel,
+  getMinQueryLength,
+  searchPals,
+  type PalName,
+} from "@/lib/search-pals";
 
 afterEach(() => {
   cleanup();
 });
 
 const samplePals: PalName[] = [
-  { id: "139", name: "Anubis", name_cn: "冥王犬", aliases: ["阿努比斯"] },
-  { id: "1", name: "Lamball", name_cn: "棉悠悠" },
+  { id: "139", name: "Anubis", name_cn: "阿努比斯", aliases: ["冥王犬"] },
   { id: "2", name: "Cattiva", name_cn: "捣蛋猫" },
+  { id: "44", name: "Ribbuny", name_cn: "姬小兔" },
+  { id: "27", name: "Mau", name_cn: "喵丝特" },
 ];
 
+describe("getMinQueryLength", () => {
+  it("allows single-character Chinese queries", () => {
+    expect(getMinQueryLength("猫")).toBe(1);
+    expect(getMinQueryLength("An")).toBe(2);
+  });
+});
+
 describe("searchPals", () => {
-  it("does not search until 2 characters", () => {
+  it("does not search until minimum length is met", () => {
     expect(searchPals(samplePals, "A")).toEqual([]);
+  });
+
+  it("matches fuzzy Chinese substring with one character", () => {
+    const results = searchPals(samplePals, "猫");
+    expect(results.some((p) => p.name === "Cattiva")).toBe(true);
+    expect(results.some((p) => p.name === "Ribbuny")).toBe(false);
   });
 
   it("matches English and Chinese names", () => {
     const byEn = searchPals(samplePals, "An");
     expect(byEn.some((p) => p.name === "Anubis")).toBe(true);
-    expect(byEn[0]?.label).toBe("Anubis · 冥王犬");
+    expect(byEn[0]?.label).toBe("Anubis · 阿努比斯");
 
-    const byCn = searchPals(samplePals, "冥王");
+    const byCn = searchPals(samplePals, "阿努");
     expect(byCn.some((p) => p.name === "Anubis")).toBe(true);
   });
 
-  it("matches aliases like 阿努比斯", () => {
-    const results = searchPals(samplePals, "阿努");
+  it("keeps distinct Chinese names for Cattiva and Ribbuny", () => {
+    const cattiva = samplePals.find((p) => p.name === "Cattiva");
+    const ribbuny = samplePals.find((p) => p.name === "Ribbuny");
+    expect(cattiva?.name_cn).toBe("捣蛋猫");
+    expect(ribbuny?.name_cn).toBe("姬小兔");
+  });
+
+  it("matches aliases like 冥王犬", () => {
+    const results = searchPals(samplePals, "冥王");
     expect(results[0]?.name).toBe("Anubis");
   });
 });
 
 describe("formatPalLabel", () => {
   it("joins English and Chinese with a middle dot", () => {
-    expect(formatPalLabel(samplePals[0]!)).toBe("Anubis · 冥王犬");
+    expect(formatPalLabel(samplePals[0]!)).toBe("Anubis · 阿努比斯");
   });
 });
 
@@ -60,7 +86,7 @@ describe("SearchBar", () => {
     expect(await screen.findByLabelText("搜索中")).toBeInTheDocument();
 
     await waitFor(() => {
-      expect(screen.getByText("Anubis · 冥王犬")).toBeInTheDocument();
+      expect(screen.getByText("Anubis · 阿努比斯")).toBeInTheDocument();
     });
 
     const clear = screen.getByRole("button", { name: /清除搜索/i });
@@ -68,8 +94,18 @@ describe("SearchBar", () => {
 
     expect(input).toHaveValue("");
     await waitFor(() => {
-      expect(screen.queryByText("Anubis · 冥王犬")).not.toBeInTheDocument();
+      expect(screen.queryByText("Anubis · 阿努比斯")).not.toBeInTheDocument();
     });
+  });
+
+  it("shows results for single Chinese character queries", async () => {
+    const user = userEvent.setup();
+    render(<SearchBar searchDelayMs={20} />);
+
+    const input = screen.getByRole("combobox", { name: /搜索帕鲁/i });
+    await user.type(input, "猫");
+
+    expect(await screen.findByRole("option", { name: /Cattiva · 捣蛋猫/i })).toBeInTheDocument();
   });
 
   it("selects a result on click and notifies callback", async () => {
@@ -80,13 +116,13 @@ describe("SearchBar", () => {
     const input = screen.getByRole("combobox", { name: /搜索帕鲁/i });
     await user.type(input, "An");
 
-    const option = await screen.findByRole("option", { name: /Anubis · 冥王犬/i });
+    const option = await screen.findByRole("option", { name: /Anubis · 阿努比斯/i });
     await user.click(option);
 
     expect(onSelectPal).toHaveBeenCalledWith(
-      expect.objectContaining({ name: "Anubis", name_cn: "冥王犬" }),
+      expect.objectContaining({ name: "Anubis", name_cn: "阿努比斯" }),
     );
-    expect(input).toHaveValue("Anubis · 冥王犬");
+    expect(input).toHaveValue("Anubis · 阿努比斯");
     await waitFor(() => {
       expect(screen.queryAllByRole("option")).toHaveLength(0);
     });
@@ -99,13 +135,13 @@ describe("SearchBar", () => {
 
     const input = screen.getByRole("combobox", { name: /搜索帕鲁/i });
     await user.type(input, "An");
-    await screen.findByRole("option", { name: /Anubis · 冥王犬/i });
+    await screen.findByRole("option", { name: /Anubis · 阿努比斯/i });
 
     await user.keyboard("{Enter}");
 
     expect(onSelectPal).toHaveBeenCalledWith(
       expect.objectContaining({ name: "Anubis" }),
     );
-    expect(input).toHaveValue("Anubis · 冥王犬");
+    expect(input).toHaveValue("Anubis · 阿努比斯");
   });
 });
