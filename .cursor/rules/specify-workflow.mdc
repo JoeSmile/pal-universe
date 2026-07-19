@@ -1,0 +1,105 @@
+---
+description: Spec-Kit 工作流 — 协调 Hermes 和 Cursor 的任务执行
+globs: .specify/tasks/*
+---
+
+# Spec-Kit 工作流规则
+
+本文档定义了 Cursor 在处理 `.specify/tasks/` 下的任务文件时的行为规范。
+
+---
+
+## 任务文件格式
+
+```markdown
+# {ID}: {标题}
+
+## 状态
+- status: pending | in_progress | completed | failed
+- assigned_to: hermes | cursor
+- depends_on: []  ← 前置任务 ID 列表
+
+## 目标
+一句话描述这个任务做什么。
+
+## 文件清单
+- Create: path/to/new/file.tsx
+- Modify: path/to/existing/file.ts:42-67
+- Test: path/to/test/file.test.ts
+
+## 验收标准
+- [ ] 条件1
+- [ ] 条件2
+- [ ] 测试通过
+- [ ] TypeScript 检查通过
+
+## 实现提示
+重要的上下文信息。
+```
+
+---
+
+## 触发器
+
+当以下事件发生时，检查 `.specify/tasks/`：
+
+1. **文件变更** — `.specify/tasks/` 目录下任何文件的创建或修改
+2. **Git pull** — 拉取到新提交后
+3. **手动** — 用户在 Cursor Chat 中提及 "执行任务"
+
+---
+
+## 执行规则
+
+### 1. 任务选择
+
+- 只选择 `status: pending` 且 `depends_on` 中所有任务状态为 `completed` 的任务
+- 如果多个任务可用，按文件名序号升序执行
+- 一次只执行一个任务
+
+### 2. 执行前
+
+- 读取 `.specify/constitution.md` 了解项目规范
+- 读取 `.specify/spec.md` 了解功能上下文
+- 读取 `.specify/plan.md` 了解技术约束
+- 读取任务文件中引用的其他文档
+- 将任务文件的 `status` 更新为 `in_progress`
+
+### 3. 执行中
+
+- 严格按照文件清单操作
+- 每次修改后运行 TypeScript 类型检查
+- 运行相关测试
+- 满足所有验收标准后才标记完成
+
+### 4. 执行后
+
+- 如果全部通过：
+  ```
+  更新任务文件 status: completed
+  git add .
+  git commit -m "feat: {任务标题}"
+  ```
+- 如果失败：
+  ```
+  更新任务文件 status: failed
+  在文件中追加 "## 失败原因" 章节，写明原因
+  ```
+
+### 5. 如果是 Chat 对话中触发的任务
+
+用户可能在 Chat 中说 "帮我改一下 PalCard 的颜色"。
+此时：
+1. 直接修改代码（不写 task 文件）
+2. 验证通过后 git commit
+3. 告诉用户已修改
+
+---
+
+## 约束
+
+- ❌ 不要修改 `.specify/constitution.md`、`.specify/spec.md`、`.specify/plan.md`
+  （这些由 Hermes 管理）
+- ❌ 不要删除已完成的任务文件（Hermes 在 CI 中归档）
+- ❌ 不要跳过测试直接标记完成
+- ✅ 可以创建新的 `.cursor/rules/*.mdc` 补充项目特定规则

@@ -1,0 +1,52 @@
+# 003-ci-workflow
+
+## Status
+- status: completed
+- assigned_to: hermes
+- depends_on: [002]
+- completed_at: 2026-07-19
+
+## Goal
+
+创建 GitHub Actions CI workflow，每次 PR 自动跑质量门禁。
+
+## Files
+- Create: `.github/workflows/ci.yml`
+
+## Acceptance Criteria
+- [ ] 配置文件语法正确（可通过 `actionlint` 验证）
+- [ ] PR 创建后自动触发
+- [ ] job 包含：type-check → lint → test → build
+- [ ] 任意 step 失败则阻止合并（PR 显示红叉）
+- [ ] 总运行时间 < 3min
+
+## Workflow Spec
+
+```yaml
+name: CI
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bun run type-check   # tsc --noEmit
+      - run: bun run lint         # eslint .
+      - run: bun run test:run     # vitest run
+      - run: bun run build        # next build
+```
+
+## Implementation Hints
+- working-directory 指向 `frontend/`（后端单独部署，不混在同一个 CI 里）
+- 先不加入安全扫描和 Code Review，Phase 1 再扩展
+- 使用 `oven-sh/setup-bun@v2` action
