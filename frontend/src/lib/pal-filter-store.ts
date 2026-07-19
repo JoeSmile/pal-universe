@@ -19,8 +19,7 @@ export const FILTER_ELEMENTS = [
 ] as const;
 
 /**
- * Twelve work filters (AC). Maps to keys present in pals.json work_orders.
- * Official production suits + fighter / fishing for coverage.
+ * Twelve work filters (AC). Keys present in pals.json work_orders.
  */
 export const FILTER_WORKS = [
   "kindling",
@@ -88,8 +87,11 @@ export function filterPals(
 
   return pals.filter((pal) => {
     if (q) {
-      const label = formatPalLabel(pal, opts.locale).toLowerCase();
-      const hay = `${pal.name} ${pal.nameZh} ${label}`.toLowerCase();
+      const label = formatPalLabel(
+        { id: pal.deck_id, name: pal.name, name_cn: pal.name_cn },
+        opts.locale,
+      ).toLowerCase();
+      const hay = `${pal.name} ${pal.name_cn} ${label}`.toLowerCase();
       if (!hay.includes(q)) return false;
     }
 
@@ -99,7 +101,7 @@ export function filterPals(
     }
 
     if (opts.works.length > 0) {
-      const skills = new Set(pal.workOrders.map((w) => w.skill));
+      const skills = new Set(pal.work_orders.map((w) => w.skill));
       const ok = opts.works.some((work) => skills.has(work));
       if (!ok) return false;
     }

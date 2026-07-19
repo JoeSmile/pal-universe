@@ -41,7 +41,27 @@ export type MessageKey =
   | "element.Ground"
   | "element.Dark"
   | "element.Dragon"
-  | "element.Neutral";
+  | "element.Neutral"
+  | "list.title"
+  | "list.searchLabel"
+  | "list.searchPlaceholder"
+  | "list.elements"
+  | "list.works"
+  | "list.resultCount"
+  | "list.empty"
+  | "list.clearFilters"
+  | "work.kindling"
+  | "work.watering"
+  | "work.electricity"
+  | "work.mining"
+  | "work.lumbering"
+  | "work.cooling"
+  | "work.medicine"
+  | "work.transport"
+  | "work.farming"
+  | "work.base_worker"
+  | "work.fishing"
+  | "work.fighter";
 
 const en: Record<MessageKey, string> = {
   "nav.home": "Home",
@@ -85,6 +105,26 @@ const en: Record<MessageKey, string> = {
   "element.Dark": "Dark",
   "element.Dragon": "Dragon",
   "element.Neutral": "Neutral",
+  "list.title": "Pal List",
+  "list.searchLabel": "Search pals",
+  "list.searchPlaceholder": "Search by name…",
+  "list.elements": "Elements",
+  "list.works": "Work suitability",
+  "list.resultCount": "{n} pals",
+  "list.empty": "No matching pals found",
+  "list.clearFilters": "Clear filters",
+  "work.kindling": "Kindling",
+  "work.watering": "Watering",
+  "work.electricity": "Electricity",
+  "work.mining": "Mining",
+  "work.lumbering": "Lumbering",
+  "work.cooling": "Cooling",
+  "work.medicine": "Medicine",
+  "work.transport": "Transport",
+  "work.farming": "Farming",
+  "work.base_worker": "Handiwork",
+  "work.fishing": "Fishing",
+  "work.fighter": "Combat",
 };
 
 const zh: Record<MessageKey, string> = {
@@ -129,6 +169,26 @@ const zh: Record<MessageKey, string> = {
   "element.Dark": "暗",
   "element.Dragon": "龙",
   "element.Neutral": "无",
+  "list.title": "帕鲁列表",
+  "list.searchLabel": "搜索帕鲁",
+  "list.searchPlaceholder": "按名称搜索…",
+  "list.elements": "元素属性",
+  "list.works": "工作适性",
+  "list.resultCount": "{n} 只帕鲁",
+  "list.empty": "没有找到匹配的帕鲁",
+  "list.clearFilters": "清除筛选",
+  "work.kindling": "引火",
+  "work.watering": "浇水",
+  "work.electricity": "发电",
+  "work.mining": "挖矿",
+  "work.lumbering": "伐木",
+  "work.cooling": "冷却",
+  "work.medicine": "制药",
+  "work.transport": "运输",
+  "work.farming": "耕作",
+  "work.base_worker": "手工",
+  "work.fishing": "钓鱼",
+  "work.fighter": "战斗",
 };
 
 const catalogs: Record<Locale, Record<MessageKey, string>> = { en, zh };
