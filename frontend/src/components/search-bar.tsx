@@ -1,32 +1,67 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Loader2, Search, X } from "lucide-react";
-import { useEffect, useId, useRef, useState, type KeyboardEvent } from "react";
+import { Loader2, Search, Sparkles, X } from "lucide-react";
+import { useEffect, useId, useMemo, useRef, useState, type KeyboardEvent } from "react";
+import palsData from "@/data/pals.json";
 import palNames from "@/data/pal-names.json";
 import { cn } from "@/lib/utils";
 import {
   getMinQueryLength,
+  isChatIntent,
   searchPals,
   type PalName,
   type PalSearchResult,
 } from "@/lib/search-pals";
 
+interface PalMetaRecord {
+  name: string;
+  elements: string[];
+  rarity: number;
+}
+
 const pals = palNames as PalName[];
+
+const metaByName = new Map(
+  (palsData as PalMetaRecord[]).map((pal) => [
+    pal.name,
+    { elements: pal.elements, rarity: pal.rarity },
+  ]),
+);
 
 const springGentle = { type: "spring" as const, stiffness: 200, damping: 30 };
 
+function enrich(result: PalSearchResult): PalSearchResult {
+  const meta = metaByName.get(result.name);
+  if (!meta) {
+    return result;
+  }
+  return { ...result, elements: meta.elements, rarity: meta.rarity };
+}
+
+function RarityStars({ rarity }: { rarity?: number }): React.ReactElement | null {
+  if (!rarity) {
+    return null;
+  }
+  return (
+    <span className="text-xs tracking-widest text-warning" aria-label={`稀有度 ${rarity}`}>
+      {"★".repeat(Math.max(1, Math.min(rarity, 5)))}
+    </span>
+  );
+}
+
 interface SearchBarProps {
   className?: string;
-  /** Simulated delay to exercise loading state in tests / UX */
   searchDelayMs?: number;
   onSelectPal?: (pal: PalSearchResult) => void;
+  onAskAi?: (query: string) => void;
 }
 
 export function SearchBar({
   className,
   searchDelayMs = 80,
   onSelectPal,
+  onAskAi,
 }: SearchBarProps): React.ReactElement {
   const inputId = useId();
   const listId = useId();
@@ -36,6 +71,10 @@ export function SearchBar({
   const [activeIndex, setActiveIndex] = useState(-1);
   const skipSearchRef = useRef(false);
 
+  const chatIntent = useMemo(() => isChatIntent(query), [query]);
+  const suggestionOnly =
+    results.length > 0 && results.every((result) => result.isSuggestion);
+
   useEffect(() => {
     if (skipSearchRef.current) {
       skipSearchRef.current = false;
@@ -43,7 +82,7 @@ export function SearchBar({
     }
 
     const trimmed = query.trim();
-    if (trimmed.length < getMinQueryLength(trimmed)) {
+    if (trimmed.length < getMinQueryLength(trimmed) || chatIntent) {
       setResults([]);
       setIsLoading(false);
       setActiveIndex(-1);
@@ -52,7 +91,7 @@ export function SearchBar({
 
     setIsLoading(true);
     const timer = window.setTimeout(() => {
-      setResults(searchPals(pals, trimmed));
+      setResults(searchPals(pals, trimmed).map(enrich));
       setIsLoading(false);
       setActiveIndex(-1);
     }, searchDelayMs);
@@ -60,7 +99,7 @@ export function SearchBar({
     return () => {
       window.clearTimeout(timer);
     };
-  }, [query, searchDelayMs]);
+  }, [query, searchDelayMs, chatIntent]);
 
   function handleClear(): void {
     setQuery("");
@@ -71,11 +110,24 @@ export function SearchBar({
 
   function selectPal(pal: PalSearchResult): void {
     skipSearchRef.current = true;
-    setQuery(pal.label);
-    setResults([]);
+    if (pal.isSuggestion) {
+      setQuery(pal.name);
+      setResults(searchPals(pals, pal.name).map(enrich));
+    } else {
+      setQuery(pal.label);
+      setResults([]);
+    }
     setActiveIndex(-1);
     setIsLoading(false);
     onSelectPal?.(pal);
+  }
+
+  function askAi(): void {
+    const trimmed = query.trim();
+    if (!trimmed) {
+      return;
+    }
+    onAskAi?.(trimmed);
   }
 
   function resolveActiveIndex(): number {
@@ -89,54 +141,67 @@ export function SearchBar({
   }
 
   function handleInputKeyDown(event: KeyboardEvent<HTMLInputElement>): void {
-    if (results.length === 0) {
-      if (event.key === "Escape") {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      if (results.length > 0) {
+        setResults([]);
+        setActiveIndex(-1);
+      } else {
         handleClear();
       }
       return;
     }
 
-    switch (event.key) {
-      case "ArrowDown":
-        event.preventDefault();
-        setActiveIndex((index) => {
-          const next = index < 0 ? 0 : index + 1;
-          return Math.min(next, results.length - 1);
-        });
-        break;
-      case "ArrowUp":
-        event.preventDefault();
-        setActiveIndex((index) => {
-          const next = index < 0 ? results.length - 1 : index - 1;
-          return Math.max(next, 0);
-        });
-        break;
-      case "Enter": {
-        event.preventDefault();
-        const selected = results[resolveActiveIndex()];
-        if (selected) {
-          selectPal(selected);
-        }
-        break;
+    if (event.key === "Enter") {
+      event.preventDefault();
+      if (chatIntent || (results.length === 0 && query.trim().length > 0)) {
+        askAi();
+        return;
       }
-      case "Escape":
-        event.preventDefault();
-        setResults([]);
-        setActiveIndex(-1);
-        break;
+      const selected = results[resolveActiveIndex()];
+      if (selected) {
+        selectPal(selected);
+      }
+      return;
+    }
+
+    if (results.length === 0) {
+      return;
+    }
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      setActiveIndex((index) => {
+        const next = index < 0 ? 0 : index + 1;
+        return Math.min(next, results.length - 1);
+      });
+      return;
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      setActiveIndex((index) => {
+        const next = index < 0 ? results.length - 1 : index - 1;
+        return Math.max(next, 0);
+      });
     }
   }
 
-  const showResults = results.length > 0;
+  const showResults = results.length > 0 && !chatIntent;
   const highlightedIndex = resolveActiveIndex();
   const activeOptionId =
     highlightedIndex >= 0 ? `${listId}-option-${highlightedIndex}` : undefined;
+  const showEmpty =
+    !chatIntent &&
+    !isLoading &&
+    query.trim().length >= getMinQueryLength(query) &&
+    results.length === 0;
 
   return (
     <div className={cn("flex w-full max-w-xl flex-col-reverse md:flex-col", className)}>
       <div>
         <label htmlFor={inputId} className="sr-only">
-          搜索帕鲁
+          搜索帕鲁或提问 AI
         </label>
         <div
           className={cn(
@@ -145,19 +210,16 @@ export function SearchBar({
             "focus-within:border-accent focus-within:shadow-[var(--shadow-glow-accent)]",
           )}
         >
-          <Search
-            className="size-5 shrink-0 text-text-tertiary"
-            aria-hidden="true"
-          />
+          <Search className="size-5 shrink-0 text-text-tertiary" aria-hidden="true" />
           <input
             id={inputId}
             type="text"
             inputMode="search"
-            enterKeyHint="search"
+            enterKeyHint={chatIntent ? "go" : "search"}
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             onKeyDown={handleInputKeyDown}
-            placeholder="搜索帕鲁（中/英文）…"
+            placeholder="搜索帕鲁，或输入攻略问题…"
             autoComplete="off"
             spellCheck={false}
             role="combobox"
@@ -171,10 +233,7 @@ export function SearchBar({
             )}
           />
           {isLoading ? (
-            <Loader2
-              className="size-4 shrink-0 animate-spin text-accent"
-              aria-label="搜索中"
-            />
+            <Loader2 className="size-4 shrink-0 animate-spin text-accent" aria-label="搜索中" />
           ) : null}
           {query.length > 0 && !isLoading ? (
             <button
@@ -188,60 +247,87 @@ export function SearchBar({
           ) : null}
         </div>
 
-        {query.trim().length >= getMinQueryLength(query) && !isLoading && results.length === 0 ? (
-          <p className="mt-3 text-center text-sm text-text-secondary md:mt-3">
-            未找到匹配的帕鲁
+        {showEmpty ? (
+          <p className="mt-3 text-center text-sm text-text-secondary">未找到匹配的帕鲁</p>
+        ) : null}
+
+        {chatIntent && query.trim().length > 0 ? (
+          <p className="mt-3 text-center text-sm text-text-secondary">
+            检测到攻略问题 — 按 Enter 问 AI
           </p>
         ) : null}
       </div>
 
       <AnimatePresence>
         {showResults ? (
-          <motion.ul
-            id={listId}
-            role="listbox"
+          <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 4 }}
             transition={springGentle}
             className={cn(
-              "mb-3 max-h-[min(40dvh,20rem)] overflow-y-auto rounded-xl border border-border bg-bg-surface shadow-lg",
+              "mb-3 overflow-hidden rounded-xl border border-border bg-bg-surface shadow-lg",
               "md:mb-0 md:mt-3",
             )}
           >
-            {results.map((pal, index) => (
-              <motion.li
-                key={`${pal.id}-${pal.name}`}
-                role="presentation"
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ ...springGentle, delay: index * 0.03 }}
-                className="border-b border-border last:border-b-0"
-              >
-                <button
-                  type="button"
-                  id={`${listId}-option-${index}`}
-                  role="option"
-                  aria-selected={index === highlightedIndex}
-                  className={cn(
-                    "w-full px-4 py-3 text-left transition-colors hover:bg-bg-hover",
-                    index === highlightedIndex && "bg-bg-hover",
-                  )}
-                  onMouseEnter={() => setActiveIndex(index)}
-                  onClick={() => selectPal(pal)}
+            {suggestionOnly ? (
+              <p className="border-b border-border px-4 py-2 text-sm text-text-secondary">
+                🤔 您是不是要找:
+              </p>
+            ) : null}
+            <ul
+              id={listId}
+              role="listbox"
+              className="max-h-[min(40dvh,20rem)] overflow-y-auto"
+            >
+              {results.map((pal, index) => (
+                <li
+                  key={`${pal.id}-${pal.name}`}
+                  role="presentation"
+                  className="border-b border-border last:border-b-0"
                 >
-                  <span className="block text-sm font-medium text-text-primary">
-                    {pal.label}
-                  </span>
-                  {pal.id ? (
-                    <span className="mt-0.5 block text-xs text-text-secondary">
-                      #{pal.id}
+                  <button
+                    type="button"
+                    id={`${listId}-option-${index}`}
+                    role="option"
+                    aria-selected={index === highlightedIndex}
+                    className={cn(
+                      "w-full px-4 py-3 text-left transition-colors hover:bg-bg-hover",
+                      index === highlightedIndex && "bg-bg-hover",
+                    )}
+                    onMouseEnter={() => setActiveIndex(index)}
+                    onClick={() => selectPal(pal)}
+                  >
+                    <span className="flex items-center justify-between gap-3">
+                      <span className="block text-sm font-medium text-text-primary">
+                        {pal.label}
+                      </span>
+                      <RarityStars rarity={pal.rarity} />
                     </span>
-                  ) : null}
-                </button>
-              </motion.li>
-            ))}
-          </motion.ul>
+                    {pal.elements && pal.elements.length > 0 ? (
+                      <span className="mt-1 block text-xs text-text-secondary">
+                        {pal.elements.join(" · ")}
+                        {pal.id ? ` · #${pal.id}` : ""}
+                      </span>
+                    ) : pal.id ? (
+                      <span className="mt-0.5 block text-xs text-text-secondary">#{pal.id}</span>
+                    ) : null}
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <button
+              type="button"
+              onClick={askAi}
+              className={cn(
+                "flex w-full items-center justify-center gap-2 border-t border-border px-4 py-2.5",
+                "text-sm text-accent transition-colors hover:bg-bg-hover",
+              )}
+            >
+              <Sparkles className="size-4" aria-hidden="true" />
+              按 Enter 问 AI 更多
+            </button>
+          </motion.div>
         ) : null}
       </AnimatePresence>
     </div>

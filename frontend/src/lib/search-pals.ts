@@ -27,7 +27,8 @@ function containsCjk(value: string): boolean {
   return CJK_PATTERN.test(value);
 }
 
-export function getMinQueryLength(_query?: string): number {
+export function getMinQueryLength(query?: string): number {
+  void query;
   return MIN_QUERY_LENGTH;
 }
 
@@ -130,15 +131,6 @@ function scorePal(pal: PalName, normalized: string): number {
   return best;
 }
 
-function hasPrefixMatch(pal: PalName, normalized: string): boolean {
-  const fields = [
-    normalize(pal.name),
-    normalize(pal.name_cn),
-    ...(pal.aliases ?? []).map(normalize),
-  ];
-  return fields.some((field) => field.startsWith(normalized));
-}
-
 function suggestByEditDistance(
   pals: PalName[],
   normalized: string,
@@ -183,31 +175,23 @@ export function searchPals(pals: PalName[], query: string, limit = 12): PalSearc
     return [];
   }
 
-  const prefixHits: Array<{ pal: PalName; score: number }> = [];
-  const otherHits: Array<{ pal: PalName; score: number }> = [];
+  const scored: Array<{ pal: PalName; score: number }> = [];
 
   for (const pal of pals) {
     const score = scorePal(pal, normalized);
-    if (score <= 0) {
-      continue;
-    }
-    if (hasPrefixMatch(pal, normalized)) {
-      prefixHits.push({ pal, score });
-    } else {
-      otherHits.push({ pal, score });
+    if (score > 0) {
+      scored.push({ pal, score });
     }
   }
 
-  const ranked = (prefixHits.length > 0 ? prefixHits : otherHits)
-    .sort((a, b) => b.score - a.score || a.pal.name.localeCompare(b.pal.name))
-    .slice(0, limit)
-    .map(({ pal }) => ({
-      ...pal,
-      label: formatPalLabel(pal),
-    }));
-
-  if (ranked.length > 0) {
-    return ranked;
+  if (scored.length > 0) {
+    return scored
+      .sort((a, b) => b.score - a.score || a.pal.name.localeCompare(b.pal.name))
+      .slice(0, limit)
+      .map(({ pal }) => ({
+        ...pal,
+        label: formatPalLabel(pal),
+      }));
   }
 
   return suggestByEditDistance(pals, normalized);

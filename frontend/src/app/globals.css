@@ -43,3 +43,12 @@ body {
   background-color: var(--color-bg-base);
   color: var(--color-text-primary);
 }
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
