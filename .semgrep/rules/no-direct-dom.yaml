@@ -1,0 +1,18 @@
+rules:
+  - id: no-direct-dom-manipulation
+    pattern-either:
+      - pattern: document.getElementById(...)
+      - pattern: document.querySelector(...)
+      - pattern: document.querySelectorAll(...)
+      - pattern: document.createElement(...)
+      - pattern: $EL.innerHTML = $VAL
+      - pattern: $EL.innerHTML += $VAL
+    message: "❌ 禁止直接 DOM 操作 — 使用 React/Radix 声明式 API"
+    severity: ERROR
+    languages:
+      - typescript
+      - javascript
+    paths:
+      include:
+        - "**/frontend/src/**/*.ts"
+        - "**/frontend/src/**/*.tsx"

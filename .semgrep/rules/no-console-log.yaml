@@ -1,0 +1,17 @@
+rules:
+  - id: no-console-log
+    patterns:
+      - pattern: console.log(...)
+      - pattern-not: console.error(...)
+      - pattern-not: console.warn(...)
+    message: "❌ 禁止 `console.log` — 使用 `structlog`（后端）或删除（前端）"
+    severity: WARNING
+    languages:
+      - typescript
+      - javascript
+      - python
+    paths:
+      include:
+        - "**/frontend/src/**/*.ts"
+        - "**/frontend/src/**/*.tsx"
+        - "**/backend/**/*.py"

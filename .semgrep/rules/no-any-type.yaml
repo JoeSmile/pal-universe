@@ -1,0 +1,13 @@
+rules:
+  - id: no-any-type
+    pattern-either:
+      - pattern: "$x: any"
+      - pattern: "$x as any"
+    message: "❌ 禁止使用 `any` 类型 — 请使用具体类型或 `unknown`"
+    severity: ERROR
+    languages:
+      - typescript
+    paths:
+      include:
+        - "**/frontend/src/**/*.ts"
+        - "**/frontend/src/**/*.tsx"
