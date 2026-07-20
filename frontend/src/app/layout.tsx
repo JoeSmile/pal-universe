@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import { LocaleProvider } from "@/components/locale-provider";
+import { QueryProvider } from "@/components/query-provider";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -30,7 +31,9 @@ export default function RootLayout({
       <body
         className={`${dmSans.variable} ${jetbrainsMono.variable} min-h-screen font-sans antialiased`}
       >
-        <LocaleProvider>{children}</LocaleProvider>
+        <LocaleProvider>
+          <QueryProvider>{children}</QueryProvider>
+        </LocaleProvider>
       </body>
     </html>
   );

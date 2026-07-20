@@ -21,9 +21,18 @@
       "Lamball Mutton"
     ],
     "work_orders": [
-      "base_worker",
-      "farming",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -49,8 +58,18 @@
       "Wheat Seeds"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 1
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -74,8 +93,18 @@
       "Fiber"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -101,8 +130,18 @@
       "Venom Gland"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -131,10 +170,14 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "cooling"
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "cooling",
+        "level": 3
+      }
     ]
   },
   {
@@ -163,10 +206,22 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "lumbering",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 4
+      }
     ]
   },
   {
@@ -195,11 +250,22 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "transport",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 4
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 4
+      }
     ]
   },
   {
@@ -229,9 +295,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "cooling"
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "cooling",
+        "level": 2
+      }
     ]
   },
   {
@@ -261,9 +332,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 4
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      }
     ]
   },
   {
@@ -292,11 +368,14 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 5
+      }
     ]
   },
   {
@@ -326,11 +405,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "mining",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 5
+      },
+      {
+        "skill": "mining",
+        "level": 5
+      }
     ]
   },
   {
@@ -356,11 +438,14 @@
       "Leather"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "mining",
-      "cooling"
+      {
+        "skill": "mining",
+        "level": 5
+      },
+      {
+        "skill": "cooling",
+        "level": 5
+      }
     ]
   },
   {
@@ -386,9 +471,18 @@
       "Carrot Seeds"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining"
+      {
+        "skill": "planting",
+        "level": 4
+      },
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "mining",
+        "level": 5
+      }
     ]
   },
   {
@@ -413,8 +507,10 @@
       "High Quality Pal Oil"
     ],
     "work_orders": [
-      "base_worker",
-      "mining"
+      {
+        "skill": "mining",
+        "level": 4
+      }
     ]
   },
   {
@@ -443,8 +539,10 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker"
+      {
+        "skill": "planting",
+        "level": 5
+      }
     ]
   },
   {
@@ -474,9 +572,10 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 5
+      }
     ]
   },
   {
@@ -502,11 +601,22 @@
       "High Quality Pal Oil"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "farming",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "mining",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -533,11 +643,22 @@
       "Gold Coin"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "farming",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "mining",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 4
+      }
     ]
   },
   {
@@ -561,8 +682,10 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 1
+      }
     ]
   },
   {
@@ -592,9 +715,18 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining"
+      {
+        "skill": "planting",
+        "level": 5
+      },
+      {
+        "skill": "gathering",
+        "level": 5
+      },
+      {
+        "skill": "mining",
+        "level": 3
+      }
     ]
   },
   {
@@ -619,9 +751,10 @@
       "Leather"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 3
+      }
     ]
   },
   {
@@ -647,9 +780,10 @@
       "Dark Fragment"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 4
+      }
     ]
   },
   {
@@ -678,10 +812,14 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 5
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      }
     ]
   },
   {
@@ -711,10 +849,14 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 5
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      }
     ]
   },
   {
@@ -744,9 +886,22 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 5
+      }
     ]
   },
   {
@@ -770,9 +925,18 @@
       "Honey"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "mining",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 5
+      }
     ]
   },
   {
@@ -796,8 +960,14 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "cooling"
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "cooling",
+        "level": 4
+      }
     ]
   },
   {
@@ -827,10 +997,22 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "kindling",
-      "medicine"
+      {
+        "skill": "kindling",
+        "level": 4
+      },
+      {
+        "skill": "base_worker",
+        "level": 5
+      },
+      {
+        "skill": "medicine",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -855,10 +1037,18 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "farming",
-      "cooling",
-      "medicine"
+      {
+        "skill": "medicine",
+        "level": 3
+      },
+      {
+        "skill": "cooling",
+        "level": 3
+      },
+      {
+        "skill": "farming",
+        "level": 3
+      }
     ]
   },
   {
@@ -887,9 +1077,14 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "farming",
-      "medicine"
+      {
+        "skill": "medicine",
+        "level": 3
+      },
+      {
+        "skill": "farming",
+        "level": 4
+      }
     ]
   },
   {
@@ -915,9 +1110,14 @@
       "Crude Oil"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining"
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "mining",
+        "level": 4
+      }
     ]
   },
   {
@@ -946,10 +1146,26 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "farming"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 2
+      },
+      {
+        "skill": "farming",
+        "level": 3
+      }
     ]
   },
   {
@@ -975,9 +1191,22 @@
       "Mysterious Mushroom"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 2
+      }
     ]
   },
   {
@@ -1001,10 +1230,22 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "cooling",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 5
+      },
+      {
+        "skill": "medicine",
+        "level": 4
+      },
+      {
+        "skill": "cooling",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -1030,7 +1271,10 @@
       "Gumoss Leaf"
     ],
     "work_orders": [
-      "base_worker"
+      {
+        "skill": "planting",
+        "level": 1
+      }
     ]
   },
   {
@@ -1056,10 +1300,18 @@
       "Leather"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 5
+      },
+      {
+        "skill": "medicine",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -1089,11 +1341,10 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "swimmer",
-      "fighter",
-      "base_worker",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 7
+      }
     ]
   },
   {
@@ -1123,10 +1374,10 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 7
+      }
     ]
   },
   {
@@ -1155,10 +1406,10 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 5
+      }
     ]
   },
   {
@@ -1187,10 +1438,10 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 6
+      }
     ]
   },
   {
@@ -1214,8 +1465,10 @@
       "Bone"
     ],
     "work_orders": [
-      "mount",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 2
+      }
     ]
   },
   {
@@ -1244,11 +1497,22 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "mining",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 5
+      }
     ]
   },
   {
@@ -1278,11 +1542,26 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 5
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "mining",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 4
+      }
     ]
   },
   {
@@ -1307,8 +1586,22 @@
       "Red Berries"
     ],
     "work_orders": [
-      "base_worker",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "medicine",
+        "level": 3
+      }
     ]
   },
   {
@@ -1334,8 +1627,10 @@
       "Crude Oil"
     ],
     "work_orders": [
-      "base_worker",
-      "mining"
+      {
+        "skill": "mining",
+        "level": 1
+      }
     ]
   },
   {
@@ -1359,8 +1654,10 @@
       "Leather"
     ],
     "work_orders": [
-      "mount",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 2
+      }
     ]
   },
   {
@@ -1385,9 +1682,18 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 4
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "lumbering",
+        "level": 4
+      }
     ]
   },
   {
@@ -1417,10 +1723,22 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "kindling",
-      "watering"
+      {
+        "skill": "kindling",
+        "level": 3
+      },
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      }
     ]
   },
   {
@@ -1445,10 +1763,14 @@
       "Flame Organ"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 5
+      },
+      {
+        "skill": "mining",
+        "level": 5
+      }
     ]
   },
   {
@@ -1473,10 +1795,14 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining",
-      "cooling"
+      {
+        "skill": "mining",
+        "level": 5
+      },
+      {
+        "skill": "cooling",
+        "level": 5
+      }
     ]
   },
   {
@@ -1500,9 +1826,18 @@
       "Bone"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "transport"
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "lumbering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -1531,8 +1866,10 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 5
+      }
     ]
   },
   {
@@ -1561,8 +1898,10 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 7
+      }
     ]
   },
   {
@@ -1588,8 +1927,10 @@
       "Sulfur"
     ],
     "work_orders": [
-      "base_worker",
-      "mining"
+      {
+        "skill": "mining",
+        "level": 5
+      }
     ]
   },
   {
@@ -1618,9 +1959,14 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "cooling"
+      {
+        "skill": "mining",
+        "level": 5
+      },
+      {
+        "skill": "cooling",
+        "level": 6
+      }
     ]
   },
   {
@@ -1644,11 +1990,22 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "lumbering",
-      "transport",
-      "cooling"
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 4
+      },
+      {
+        "skill": "cooling",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 4
+      }
     ]
   },
   {
@@ -1672,11 +2029,22 @@
       "Ore"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "mining",
-      "lumbering",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "lumbering",
+        "level": 6
+      },
+      {
+        "skill": "mining",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 4
+      }
     ]
   },
   {
@@ -1705,10 +2073,22 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport",
-      "cooling"
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "mining",
+        "level": 3
+      },
+      {
+        "skill": "cooling",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -1737,11 +2117,22 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "transport",
-      "cooling"
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 5
+      },
+      {
+        "skill": "cooling",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 6
+      }
     ]
   },
   {
@@ -1770,10 +2161,22 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 6
+      }
     ]
   },
   {
@@ -1800,11 +2203,26 @@
       "Crude Oil"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "mining",
-      "farming",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "mining",
+        "level": 3
+      },
+      {
+        "skill": "farming",
+        "level": 2
+      }
     ]
   },
   {
@@ -1833,8 +2251,22 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 6
+      },
+      {
+        "skill": "base_worker",
+        "level": 4
+      },
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -1863,11 +2295,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "mining",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 6
+      },
+      {
+        "skill": "mining",
+        "level": 7
+      }
     ]
   },
   {
@@ -1897,11 +2332,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "mining",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 6
+      },
+      {
+        "skill": "mining",
+        "level": 7
+      }
     ]
   },
   {
@@ -1931,11 +2369,26 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining",
-      "lumbering",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 5
+      },
+      {
+        "skill": "mining",
+        "level": 6
+      },
+      {
+        "skill": "transport",
+        "level": 6
+      }
     ]
   },
   {
@@ -1965,11 +2418,26 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining",
-      "lumbering",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 5
+      },
+      {
+        "skill": "mining",
+        "level": 6
+      },
+      {
+        "skill": "transport",
+        "level": 6
+      }
     ]
   },
   {
@@ -1998,10 +2466,18 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 6
+      },
+      {
+        "skill": "mining",
+        "level": 6
+      },
+      {
+        "skill": "transport",
+        "level": 4
+      }
     ]
   },
   {
@@ -2026,7 +2502,14 @@
       "Berry Seeds"
     ],
     "work_orders": [
-      "base_worker"
+      {
+        "skill": "planting",
+        "level": 1
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      }
     ]
   },
   {
@@ -2055,9 +2538,18 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 6
+      },
+      {
+        "skill": "mining",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -2082,9 +2574,18 @@
       "Venom Gland"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "medicine"
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "lumbering",
+        "level": 4
+      },
+      {
+        "skill": "medicine",
+        "level": 2
+      }
     ]
   },
   {
@@ -2109,10 +2610,22 @@
       "Electric Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "electricity",
-      "medicine"
+      {
+        "skill": "electricity",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "lumbering",
+        "level": 4
+      },
+      {
+        "skill": "medicine",
+        "level": 2
+      }
     ]
   },
   {
@@ -2141,9 +2654,10 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining"
+      {
+        "skill": "mining",
+        "level": 4
+      }
     ]
   },
   {
@@ -2172,9 +2686,10 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining"
+      {
+        "skill": "mining",
+        "level": 6
+      }
     ]
   },
   {
@@ -2198,9 +2713,22 @@
       "Leather"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 4
+      },
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "lumbering",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -2226,8 +2754,14 @@
       "Training Manual (XL)"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -2251,10 +2785,14 @@
       "Meteorite Fragment"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "lumbering",
-      "transport"
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -2279,10 +2817,10 @@
       "High Quality Pal Oil"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "mining"
+      {
+        "skill": "mining",
+        "level": 4
+      }
     ]
   },
   {
@@ -2309,9 +2847,26 @@
       "Carrot Seeds"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "medicine",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -2335,8 +2890,14 @@
       "Small Pal Soul"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -2365,8 +2926,18 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -2390,7 +2961,10 @@
       "Chromite"
     ],
     "work_orders": [
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 2
+      }
     ]
   },
   {
@@ -2420,8 +2994,14 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "cooling"
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "cooling",
+        "level": 2
+      }
     ]
   },
   {
@@ -2445,8 +3025,10 @@
       "Electric Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 1
+      }
     ]
   },
   {
@@ -2470,7 +3052,10 @@
       "Dark Fragment"
     ],
     "work_orders": [
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 5
+      }
     ]
   },
   {
@@ -2500,11 +3085,14 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "fishing",
-      "watering",
-      "cooling"
+      {
+        "skill": "watering",
+        "level": 5
+      },
+      {
+        "skill": "cooling",
+        "level": 6
+      }
     ]
   },
   {
@@ -2534,12 +3122,14 @@
       "Fire Radiant Gem"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "fishing",
-      "kindling",
-      "cooling"
+      {
+        "skill": "kindling",
+        "level": 5
+      },
+      {
+        "skill": "cooling",
+        "level": 6
+      }
     ]
   },
   {
@@ -2564,9 +3154,26 @@
       "Bone"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 4
+      },
+      {
+        "skill": "base_worker",
+        "level": 5
+      },
+      {
+        "skill": "gathering",
+        "level": 5
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -2595,10 +3202,22 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 6
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "medicine",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -2622,8 +3241,10 @@
       "Leather"
     ],
     "work_orders": [
-      "mount",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 5
+      }
     ]
   },
   {
@@ -2647,10 +3268,26 @@
       "Bone"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 4
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "medicine",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -2675,10 +3312,14 @@
       "Fiber"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "mining",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -2707,9 +3348,14 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering"
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "lumbering",
+        "level": 7
+      }
     ]
   },
   {
@@ -2738,9 +3384,14 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering"
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "lumbering",
+        "level": 8
+      }
     ]
   },
   {
@@ -2770,11 +3421,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter",
-      "base_worker",
-      "mining"
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "mining",
+        "level": 7
+      }
     ]
   },
   {
@@ -2803,9 +3457,18 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "mining",
+        "level": 7
+      },
+      {
+        "skill": "transport",
+        "level": 7
+      }
     ]
   },
   {
@@ -2834,10 +3497,18 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 5
+      },
+      {
+        "skill": "mining",
+        "level": 7
+      },
+      {
+        "skill": "transport",
+        "level": 7
+      }
     ]
   },
   {
@@ -2861,8 +3532,10 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "cooling"
+      {
+        "skill": "cooling",
+        "level": 1
+      }
     ]
   },
   {
@@ -2886,10 +3559,22 @@
       "Venom Gland"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "farming",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "mining",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -2918,9 +3603,10 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering"
+      {
+        "skill": "lumbering",
+        "level": 6
+      }
     ]
   },
   {
@@ -2949,10 +3635,10 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 5
+      }
     ]
   },
   {
@@ -2976,7 +3662,10 @@
       "Leather"
     ],
     "work_orders": [
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 2
+      }
     ]
   },
   {
@@ -3001,8 +3690,10 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 4
+      }
     ]
   },
   {
@@ -3032,8 +3723,10 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 4
+      }
     ]
   },
   {
@@ -3057,8 +3750,14 @@
       "Wheat Seeds"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -3082,9 +3781,22 @@
       "Leather"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "mining",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -3109,8 +3821,14 @@
       "Horn"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -3135,8 +3853,10 @@
       "Electric Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 3
+      }
     ]
   },
   {
@@ -3162,9 +3882,18 @@
       "Small Pal Soul"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "medicine",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -3189,11 +3918,10 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "mount",
-      "swimmer",
-      "base_worker",
-      "fishing",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 4
+      }
     ]
   },
   {
@@ -3223,12 +3951,14 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "swimmer",
-      "base_worker",
-      "fishing",
-      "electricity",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 4
+      },
+      {
+        "skill": "electricity",
+        "level": 6
+      }
     ]
   },
   {
@@ -3254,10 +3984,22 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering",
-      "cooling"
+      {
+        "skill": "watering",
+        "level": 1
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "cooling",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -3281,7 +4023,14 @@
       "Leather"
     ],
     "work_orders": [
-      "base_worker"
+      {
+        "skill": "base_worker",
+        "level": 6
+      },
+      {
+        "skill": "gathering",
+        "level": 5
+      }
     ]
   },
   {
@@ -3311,11 +4060,10 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter",
-      "base_worker",
-      "transport"
+      {
+        "skill": "transport",
+        "level": 6
+      }
     ]
   },
   {
@@ -3345,12 +4093,14 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter",
-      "base_worker",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 6
+      },
+      {
+        "skill": "transport",
+        "level": 6
+      }
     ]
   },
   {
@@ -3374,11 +4124,18 @@
       "Electric Organ"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "transport",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 6
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -3403,7 +4160,14 @@
       "Fiber"
     ],
     "work_orders": [
-      "base_worker"
+      {
+        "skill": "planting",
+        "level": 5
+      },
+      {
+        "skill": "gathering",
+        "level": 5
+      }
     ]
   },
   {
@@ -3432,10 +4196,18 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 7
+      },
+      {
+        "skill": "base_worker",
+        "level": 6
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -3465,9 +4237,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 5
+      },
+      {
+        "skill": "planting",
+        "level": 7
+      }
     ]
   },
   {
@@ -3496,10 +4273,22 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "kindling",
-      "medicine"
+      {
+        "skill": "kindling",
+        "level": 7
+      },
+      {
+        "skill": "base_worker",
+        "level": 5
+      },
+      {
+        "skill": "medicine",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -3528,10 +4317,14 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "transport"
+      {
+        "skill": "gathering",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 5
+      }
     ]
   },
   {
@@ -3560,9 +4353,22 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 6
+      },
+      {
+        "skill": "gathering",
+        "level": 6
+      },
+      {
+        "skill": "medicine",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -3591,8 +4397,22 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 6
+      },
+      {
+        "skill": "base_worker",
+        "level": 4
+      },
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "medicine",
+        "level": 6
+      }
     ]
   },
   {
@@ -3618,10 +4438,22 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "electricity",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 1
+      },
+      {
+        "skill": "electricity",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -3647,11 +4479,26 @@
       "Penking Plume"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport",
-      "watering",
-      "cooling"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "mining",
+        "level": 3
+      },
+      {
+        "skill": "cooling",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -3681,9 +4528,18 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "kindling",
-      "medicine"
+      {
+        "skill": "kindling",
+        "level": 4
+      },
+      {
+        "skill": "base_worker",
+        "level": 4
+      },
+      {
+        "skill": "medicine",
+        "level": 4
+      }
     ]
   },
   {
@@ -3712,9 +4568,18 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 6
+      },
+      {
+        "skill": "medicine",
+        "level": 6
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -3744,8 +4609,18 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 8
+      },
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -3774,10 +4649,22 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 8
+      },
+      {
+        "skill": "base_worker",
+        "level": 6
+      },
+      {
+        "skill": "gathering",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 5
+      }
     ]
   },
   {
@@ -3807,10 +4694,10 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "mining"
+      {
+        "skill": "mining",
+        "level": 8
+      }
     ]
   },
   {
@@ -3839,12 +4726,22 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "lumbering",
-      "transport",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 5
+      },
+      {
+        "skill": "base_worker",
+        "level": 4
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 5
+      }
     ]
   },
   {
@@ -3873,9 +4770,22 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 7
+      },
+      {
+        "skill": "base_worker",
+        "level": 5
+      },
+      {
+        "skill": "gathering",
+        "level": 6
+      },
+      {
+        "skill": "medicine",
+        "level": 5
+      }
     ]
   },
   {
@@ -3904,9 +4814,18 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 5
+      },
+      {
+        "skill": "gathering",
+        "level": 6
+      },
+      {
+        "skill": "medicine",
+        "level": 7
+      }
     ]
   },
   {
@@ -3936,10 +4855,18 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "transport",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 8
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 4
+      }
     ]
   },
   {
@@ -3968,11 +4895,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 6
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -4001,11 +4931,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 6
+      },
+      {
+        "skill": "transport",
+        "level": 5
+      }
     ]
   },
   {
@@ -4034,10 +4967,10 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 2
+      }
     ]
   },
   {
@@ -4063,11 +4996,26 @@
       "Penking Plume"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport",
-      "electricity",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "electricity",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "mining",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -4092,7 +5040,10 @@
       "Advanced Technical Manual"
     ],
     "work_orders": [
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 1
+      }
     ]
   },
   {
@@ -4122,11 +5073,18 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 7
+      },
+      {
+        "skill": "medicine",
+        "level": 6
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -4155,12 +5113,18 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "mining",
-      "lumbering",
-      "cooling"
+      {
+        "skill": "lumbering",
+        "level": 6
+      },
+      {
+        "skill": "mining",
+        "level": 5
+      },
+      {
+        "skill": "cooling",
+        "level": 8
+      }
     ]
   },
   {
@@ -4190,11 +5154,14 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter",
-      "base_worker",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 8
+      },
+      {
+        "skill": "gathering",
+        "level": 5
+      }
     ]
   },
   {
@@ -4223,10 +5190,26 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 6
+      },
+      {
+        "skill": "base_worker",
+        "level": 6
+      },
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "medicine",
+        "level": 8
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -4256,10 +5239,26 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 8
+      },
+      {
+        "skill": "base_worker",
+        "level": 6
+      },
+      {
+        "skill": "gathering",
+        "level": 5
+      },
+      {
+        "skill": "medicine",
+        "level": 6
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -4283,10 +5282,18 @@
       "Dark Fragment"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 5
+      },
+      {
+        "skill": "medicine",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 4
+      }
     ]
   },
   {
@@ -4311,10 +5318,18 @@
       "High Quality Recovery Meds"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 6
+      },
+      {
+        "skill": "medicine",
+        "level": 7
+      },
+      {
+        "skill": "transport",
+        "level": 4
+      }
     ]
   },
   {
@@ -4339,10 +5354,10 @@
       "Meteorite Fragment"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 2
+      }
     ]
   },
   {
@@ -4368,10 +5383,14 @@
       "Large Pal Soul"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "lumbering"
+      {
+        "skill": "gathering",
+        "level": 7
+      },
+      {
+        "skill": "lumbering",
+        "level": 7
+      }
     ]
   },
   {
@@ -4397,11 +5416,14 @@
       "Large Pal Soul"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "mining",
-      "lumbering"
+      {
+        "skill": "lumbering",
+        "level": 6
+      },
+      {
+        "skill": "mining",
+        "level": 6
+      }
     ]
   },
   {
@@ -4427,11 +5449,14 @@
       "Large Pal Soul"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "mining",
-      "lumbering"
+      {
+        "skill": "lumbering",
+        "level": 6
+      },
+      {
+        "skill": "mining",
+        "level": 6
+      }
     ]
   },
   {
@@ -4455,9 +5480,22 @@
       "Red Berries"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "mining",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -4482,9 +5520,10 @@
       "Leather"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "farming"
+      {
+        "skill": "farming",
+        "level": 2
+      }
     ]
   },
   {
@@ -4509,11 +5548,10 @@
       "Diamond"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter",
-      "base_worker",
-      "cooling"
+      {
+        "skill": "cooling",
+        "level": 7
+      }
     ]
   },
   {
@@ -4538,10 +5576,10 @@
       "Large Pal Soul"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 7
+      }
     ]
   },
   {
@@ -4568,11 +5606,10 @@
       "Large Pal Soul"
     ],
     "work_orders": [
-      "mount",
-      "swimmer",
-      "fighter",
-      "base_worker",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 7
+      }
     ]
   },
   {
@@ -4599,10 +5636,10 @@
       "Large Pal Soul"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 8
+      }
     ]
   },
   {
@@ -4627,9 +5664,14 @@
       "Giant Pal Soul"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter"
+      {
+        "skill": "mount",
+        "level": 1
+      },
+      {
+        "skill": "flyer",
+        "level": 1
+      }
     ]
   },
   {
@@ -4651,9 +5693,7 @@
       "Leather",
       "High Quality Pal Oil"
     ],
-    "work_orders": [
-      "fighter"
-    ]
+    "work_orders": []
   },
   {
     "name": "Kingpaca",
@@ -4681,8 +5721,10 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 2
+      }
     ]
   },
   {
@@ -4707,9 +5749,14 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "cooling"
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "cooling",
+        "level": 4
+      }
     ]
   },
   {
@@ -4734,8 +5781,18 @@
       "Small Pal Soul"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -4759,9 +5816,26 @@
       "Mushroom"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 1
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "lumbering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -4786,10 +5860,22 @@
       "Flame Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 1
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "lumbering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -4814,7 +5900,10 @@
       "Small Pal Soul"
     ],
     "work_orders": [
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 1
+      }
     ]
   },
   {
@@ -4839,10 +5928,22 @@
       "High Quality Pal Oil"
     ],
     "work_orders": [
-      "base_worker",
-      "farming",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 1
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -4867,9 +5968,14 @@
       "Leather"
     ],
     "work_orders": [
-      "base_worker",
-      "farming",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -4894,8 +6000,14 @@
       "Leather"
     ],
     "work_orders": [
-      "base_worker",
-      "farming"
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -4920,9 +6032,14 @@
       "Sapphire"
     ],
     "work_orders": [
-      "base_worker",
-      "farming",
-      "cooling"
+      {
+        "skill": "cooling",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -4948,9 +6065,10 @@
       "Bone"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining"
+      {
+        "skill": "mining",
+        "level": 1
+      }
     ]
   },
   {
@@ -4975,8 +6093,10 @@
       "Flame Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 1
+      }
     ]
   },
   {
@@ -5001,8 +6121,10 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "cooling"
+      {
+        "skill": "cooling",
+        "level": 2
+      }
     ]
   },
   {
@@ -5027,8 +6149,14 @@
       "Chikipi Poultry"
     ],
     "work_orders": [
-      "base_worker",
-      "farming"
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -5055,9 +6183,18 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 1
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -5083,9 +6220,18 @@
       "Killamari Tentacle"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 1
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -5109,9 +6255,18 @@
       "Leather"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "mining",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -5140,9 +6295,10 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering"
+      {
+        "skill": "lumbering",
+        "level": 2
+      }
     ]
   },
   {
@@ -5171,9 +6327,10 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering"
+      {
+        "skill": "lumbering",
+        "level": 2
+      }
     ]
   },
   {
@@ -5199,8 +6356,10 @@
       "Gold Coin"
     ],
     "work_orders": [
-      "mount",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 1
+      }
     ]
   },
   {
@@ -5226,8 +6385,14 @@
       "Horn"
     ],
     "work_orders": [
-      "base_worker",
-      "farming"
+      {
+        "skill": "planting",
+        "level": 2
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -5254,8 +6419,14 @@
       "Venom Gland"
     ],
     "work_orders": [
-      "base_worker",
-      "farming"
+      {
+        "skill": "planting",
+        "level": 2
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -5280,8 +6451,14 @@
       "Swee Hair"
     ],
     "work_orders": [
-      "base_worker",
-      "cooling"
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "cooling",
+        "level": 1
+      }
     ]
   },
   {
@@ -5305,9 +6482,14 @@
       "Wool"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "cooling"
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "cooling",
+        "level": 3
+      }
     ]
   },
   {
@@ -5332,10 +6514,18 @@
       "Bone"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "mining",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -5361,10 +6551,18 @@
       "Bone"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "mining",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -5389,8 +6587,18 @@
       "Wheat Seeds"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -5415,9 +6623,22 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "cooling"
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "cooling",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -5442,8 +6663,10 @@
       "High Quality Pal Oil"
     ],
     "work_orders": [
-      "base_worker",
-      "farming"
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -5468,8 +6691,10 @@
       "Wool"
     ],
     "work_orders": [
-      "base_worker",
-      "farming"
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -5494,9 +6719,26 @@
       "Low Grade Medical Supplies"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 1
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "lumbering",
+        "level": 1
+      },
+      {
+        "skill": "medicine",
+        "level": 1
+      }
     ]
   },
   {
@@ -5521,8 +6763,10 @@
       "Milk"
     ],
     "work_orders": [
-      "base_worker",
-      "farming"
+      {
+        "skill": "farming",
+        "level": 2
+      }
     ]
   },
   {
@@ -5552,10 +6796,10 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "swimmer",
-      "base_worker",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 4
+      }
     ]
   },
   {
@@ -5585,10 +6829,10 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "swimmer",
-      "base_worker",
-      "cooling"
+      {
+        "skill": "cooling",
+        "level": 4
+      }
     ]
   },
   {
@@ -5612,10 +6856,22 @@
       "Electric Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "farming",
-      "transport",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 1
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -5640,9 +6896,14 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "farming",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -5667,9 +6928,14 @@
       "Flame Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "farming",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -5696,8 +6962,18 @@
       "Berry Seeds"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -5724,8 +7000,22 @@
       "Carrot"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -5750,10 +7040,18 @@
       "Jelliette Bell Flesh"
     ],
     "work_orders": [
-      "base_worker",
-      "fishing",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -5779,10 +7077,22 @@
       "Jellroy Bell Flesh"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering",
-      "medicine"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "medicine",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -5806,9 +7116,18 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 1
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -5834,10 +7153,18 @@
       "Gloopie Tentacle"
     ],
     "work_orders": [
-      "base_worker",
-      "fishing",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -5863,9 +7190,18 @@
       "Gloopie Tentacle"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -5890,8 +7226,10 @@
       "Leather"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 2
+      }
     ]
   },
   {
@@ -5916,9 +7254,18 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 1
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -5947,10 +7294,22 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "lumbering",
+        "level": 1
+      },
+      {
+        "skill": "medicine",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -5974,9 +7333,10 @@
       "Leather"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 2
+      }
     ]
   },
   {
@@ -6001,9 +7361,18 @@
       "Small Pal Soul"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "mining",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -6028,7 +7397,10 @@
       "Tocotoco Feather"
     ],
     "work_orders": [
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 1
+      }
     ]
   },
   {
@@ -6057,10 +7429,14 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 1
+      }
     ]
   },
   {
@@ -6089,10 +7465,14 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "cooling"
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "cooling",
+        "level": 6
+      }
     ]
   },
   {
@@ -6116,9 +7496,18 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -6142,9 +7531,18 @@
       "Flame Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -6168,8 +7566,10 @@
       "Bone"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker"
+      {
+        "skill": "base_worker",
+        "level": 2
+      }
     ]
   },
   {
@@ -6193,9 +7593,14 @@
       "Bone"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "cooling"
+      {
+        "skill": "base_worker",
+        "level": 4
+      },
+      {
+        "skill": "cooling",
+        "level": 4
+      }
     ]
   },
   {
@@ -6221,9 +7626,14 @@
       "Small Pal Soul"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "farming"
+      {
+        "skill": "lumbering",
+        "level": 2
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -6248,10 +7658,14 @@
       "Flame Organ"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 2
+      }
     ]
   },
   {
@@ -6275,9 +7689,14 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "cooling"
+      {
+        "skill": "cooling",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -6304,10 +7723,22 @@
       "Flame Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "kindling",
-      "watering"
+      {
+        "skill": "kindling",
+        "level": 2
+      },
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -6332,8 +7763,14 @@
       "Bone"
     ],
     "work_orders": [
-      "base_worker",
-      "farming"
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 1
+      }
     ]
   },
   {
@@ -6358,9 +7795,26 @@
       "Beautiful Flower"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "medicine",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -6386,8 +7840,18 @@
       "Tomato Seeds"
     ],
     "work_orders": [
-      "base_worker",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "medicine",
+        "level": 2
+      }
     ]
   },
   {
@@ -6411,9 +7875,14 @@
       "Electric Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -6442,10 +7911,10 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "lumbering"
+      {
+        "skill": "lumbering",
+        "level": 3
+      }
     ]
   },
   {
@@ -6475,11 +7944,14 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "lumbering",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 4
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      }
     ]
   },
   {
@@ -6506,11 +7978,14 @@
       "Gold Coin"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -6537,12 +8012,14 @@
       "Sapphire"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter",
-      "base_worker",
-      "transport",
-      "cooling"
+      {
+        "skill": "cooling",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -6567,8 +8044,10 @@
       "Small Pal Soul"
     ],
     "work_orders": [
-      "base_worker",
-      "medicine"
+      {
+        "skill": "medicine",
+        "level": 3
+      }
     ]
   },
   {
@@ -6594,10 +8073,30 @@
       "Onion Seeds"
     ],
     "work_orders": [
-      "base_worker",
-      "farming",
-      "transport",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "medicine",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      },
+      {
+        "skill": "farming",
+        "level": 2
+      }
     ]
   },
   {
@@ -6621,11 +8120,34 @@
       "Honey"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "farming",
-      "transport",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 2
+      },
+      {
+        "skill": "medicine",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      },
+      {
+        "skill": "farming",
+        "level": 3
+      }
     ]
   },
   {
@@ -6650,9 +8172,26 @@
       "Elizabee's Staff"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 4
+      },
+      {
+        "skill": "base_worker",
+        "level": 4
+      },
+      {
+        "skill": "gathering",
+        "level": 4
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "medicine",
+        "level": 4
+      }
     ]
   },
   {
@@ -6680,10 +8219,22 @@
       "Memory Wiping Medicine"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "mining",
+        "level": 2
+      },
+      {
+        "skill": "medicine",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -6707,9 +8258,14 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -6733,8 +8289,10 @@
       "High Quality Pal Oil"
     ],
     "work_orders": [
-      "mount",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 3
+      }
     ]
   },
   {
@@ -6759,10 +8317,22 @@
       "Venom Gland"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "medicine",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -6787,10 +8357,14 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "watering",
-      "cooling"
+      {
+        "skill": "watering",
+        "level": 3
+      },
+      {
+        "skill": "cooling",
+        "level": 4
+      }
     ]
   },
   {
@@ -6820,10 +8394,14 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining",
-      "cooling"
+      {
+        "skill": "mining",
+        "level": 4
+      },
+      {
+        "skill": "cooling",
+        "level": 4
+      }
     ]
   },
   {
@@ -6849,8 +8427,18 @@
       "Leezpunk Crest"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -6876,9 +8464,22 @@
       "Leezpunk Crest"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -6907,9 +8508,18 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -6938,9 +8548,18 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "mining",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -6964,11 +8583,14 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "mount",
-      "swimmer",
-      "base_worker",
-      "farming",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 3
+      },
+      {
+        "skill": "farming",
+        "level": 2
+      }
     ]
   },
   {
@@ -6993,8 +8615,10 @@
       "Ore"
     ],
     "work_orders": [
-      "mount",
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 3
+      }
     ]
   },
   {
@@ -7019,10 +8643,30 @@
       "Arrow"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "transport",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 2
+      },
+      {
+        "skill": "medicine",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7048,10 +8692,26 @@
       "Arrow"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 2
+      },
+      {
+        "skill": "medicine",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7076,9 +8736,26 @@
       "Lettuce Seeds"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "medicine",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -7103,9 +8780,18 @@
       "Advanced Technical Manual"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7131,9 +8817,18 @@
       "Advanced Technical Manual"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 4
+      },
+      {
+        "skill": "base_worker",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7159,9 +8854,18 @@
       "Advanced Technical Manual"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "medicine",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7188,10 +8892,22 @@
       "Advanced Technical Manual"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "kindling",
-      "medicine"
+      {
+        "skill": "kindling",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "medicine",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7216,10 +8932,18 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "electricity",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 1
+      },
+      {
+        "skill": "electricity",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -7243,8 +8967,14 @@
       "Wool"
     ],
     "work_orders": [
-      "base_worker",
-      "farming"
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "farming",
+        "level": 2
+      }
     ]
   },
   {
@@ -7273,11 +9003,10 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter",
-      "base_worker",
-      "transport"
+      {
+        "skill": "transport",
+        "level": 4
+      }
     ]
   },
   {
@@ -7307,12 +9036,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "fighter",
-      "base_worker",
-      "transport",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 5
+      }
     ]
   },
   {
@@ -7341,10 +9072,26 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "lumbering",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "mining",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -7373,11 +9120,22 @@
       "Decayed Ancient Relic"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "lumbering",
-      "transport",
-      "cooling"
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "mining",
+        "level": 3
+      },
+      {
+        "skill": "cooling",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -7401,8 +9159,18 @@
       "Paldium Fragment"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 4
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7431,9 +9199,10 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering"
+      {
+        "skill": "lumbering",
+        "level": 3
+      }
     ]
   },
   {
@@ -7462,10 +9231,14 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 5
+      },
+      {
+        "skill": "lumbering",
+        "level": 4
+      }
     ]
   },
   {
@@ -7491,9 +9264,14 @@
       "Lettuce Seeds"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      }
     ]
   },
   {
@@ -7519,10 +9297,14 @@
       "Carrot Seeds"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 3
+      },
+      {
+        "skill": "lumbering",
+        "level": 4
+      }
     ]
   },
   {
@@ -7547,11 +9329,26 @@
       "Ingot"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "lumbering",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7578,11 +9375,26 @@
       "Medium Pal Soul"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "lumbering",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 2
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "lumbering",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7609,10 +9421,18 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering",
-      "cooling"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "cooling",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -7642,10 +9462,18 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining",
-      "lumbering"
+      {
+        "skill": "planting",
+        "level": 4
+      },
+      {
+        "skill": "lumbering",
+        "level": 4
+      },
+      {
+        "skill": "mining",
+        "level": 4
+      }
     ]
   },
   {
@@ -7675,11 +9503,18 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "mining",
-      "lumbering",
-      "cooling"
+      {
+        "skill": "lumbering",
+        "level": 5
+      },
+      {
+        "skill": "mining",
+        "level": 4
+      },
+      {
+        "skill": "cooling",
+        "level": 5
+      }
     ]
   },
   {
@@ -7705,9 +9540,14 @@
       "Aquatic Pal Fluids"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -7734,10 +9574,18 @@
       "Flame Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "kindling",
-      "watering"
+      {
+        "skill": "kindling",
+        "level": 2
+      },
+      {
+        "skill": "watering",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -7762,9 +9610,26 @@
       "Potato Seeds"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "medicine"
+      {
+        "skill": "planting",
+        "level": 4
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "medicine",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7787,10 +9652,26 @@
     "price": 2357,
     "drops": [],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "kindling",
-      "medicine"
+      {
+        "skill": "kindling",
+        "level": 4
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "medicine",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7815,9 +9696,22 @@
       "Cloth"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 1
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -7841,8 +9735,22 @@
       "Leather"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "planting",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "gathering",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7868,11 +9776,22 @@
       "Leather"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "mining",
-      "transport",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "mining",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7897,10 +9816,18 @@
       "Leather"
     ],
     "work_orders": [
-      "fighter",
-      "base_worker",
-      "mining",
-      "transport"
+      {
+        "skill": "base_worker",
+        "level": 3
+      },
+      {
+        "skill": "mining",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -7925,9 +9852,18 @@
       "Dazzi Cloud"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 3
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7954,10 +9890,22 @@
       "Dark Fragment"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "electricity",
-      "medicine"
+      {
+        "skill": "electricity",
+        "level": 1
+      },
+      {
+        "skill": "base_worker",
+        "level": 1
+      },
+      {
+        "skill": "medicine",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -7986,10 +9934,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 4
+      },
+      {
+        "skill": "lumbering",
+        "level": 2
+      }
     ]
   },
   {
@@ -8019,10 +9971,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "lumbering",
-      "kindling"
+      {
+        "skill": "kindling",
+        "level": 4
+      },
+      {
+        "skill": "lumbering",
+        "level": 3
+      }
     ]
   },
   {
@@ -8052,10 +10008,14 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 3
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -8085,11 +10045,14 @@
       "Dormant Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "fighter",
-      "base_worker",
-      "transport",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 4
+      },
+      {
+        "skill": "transport",
+        "level": 3
+      }
     ]
   },
   {
@@ -8114,9 +10077,14 @@
       "Ice Organ"
     ],
     "work_orders": [
-      "base_worker",
-      "farming",
-      "cooling"
+      {
+        "skill": "cooling",
+        "level": 4
+      },
+      {
+        "skill": "farming",
+        "level": 3
+      }
     ]
   },
   {
@@ -8145,11 +10113,18 @@
       "Glowing Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "transport",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 4
+      },
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "transport",
+        "level": 5
+      }
     ]
   },
   {
@@ -8178,11 +10153,18 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "flyer",
-      "base_worker",
-      "transport",
-      "cooling"
+      {
+        "skill": "gathering",
+        "level": 2
+      },
+      {
+        "skill": "cooling",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 5
+      }
     ]
   },
   {
@@ -8208,12 +10190,14 @@
       "Venom Gland"
     ],
     "work_orders": [
-      "mount",
-      "swimmer",
-      "fighter",
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -8239,13 +10223,18 @@
       "Flame Organ"
     ],
     "work_orders": [
-      "mount",
-      "swimmer",
-      "fighter",
-      "base_worker",
-      "transport",
-      "kindling",
-      "watering"
+      {
+        "skill": "kindling",
+        "level": 5
+      },
+      {
+        "skill": "watering",
+        "level": 5
+      },
+      {
+        "skill": "transport",
+        "level": 2
+      }
     ]
   },
   {
@@ -8269,9 +10258,10 @@
       "Electric Organ"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "electricity"
+      {
+        "skill": "electricity",
+        "level": 4
+      }
     ]
   },
   {
@@ -8300,9 +10290,10 @@
       "Gorgeous Ancient Relic"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "cooling"
+      {
+        "skill": "cooling",
+        "level": 3
+      }
     ]
   },
   {
@@ -8328,9 +10319,14 @@
       "Venom Gland"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "lumbering"
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "mining",
+        "level": 5
+      }
     ]
   },
   {
@@ -8355,9 +10351,14 @@
       "Sapphire"
     ],
     "work_orders": [
-      "base_worker",
-      "mining",
-      "lumbering"
+      {
+        "skill": "lumbering",
+        "level": 3
+      },
+      {
+        "skill": "mining",
+        "level": 6
+      }
     ]
   },
   {
@@ -8384,9 +10385,22 @@
       "Venom Gland"
     ],
     "work_orders": [
-      "base_worker",
-      "transport",
-      "watering"
+      {
+        "skill": "watering",
+        "level": 1
+      },
+      {
+        "skill": "base_worker",
+        "level": 2
+      },
+      {
+        "skill": "gathering",
+        "level": 1
+      },
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -8410,9 +10424,10 @@
       "Hallowed Bar"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "transport"
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -8436,8 +10451,10 @@
       "Hallowed Bar"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -8461,9 +10478,10 @@
       "Hallowed Bar"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "transport"
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -8487,7 +10505,10 @@
       "Hallowed Bar"
     ],
     "work_orders": [
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 1
+      }
     ]
   },
   {
@@ -8511,9 +10532,10 @@
       "Hallowed Bar"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "transport"
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -8537,9 +10559,10 @@
       "Hallowed Bar"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "transport"
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -8563,9 +10586,10 @@
       "Hallowed Bar"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "transport"
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   },
   {
@@ -8589,8 +10613,10 @@
       "Hallowed Bar"
     ],
     "work_orders": [
-      "base_worker",
-      "lumbering"
+      {
+        "skill": "lumbering",
+        "level": 1
+      }
     ]
   },
   {
@@ -8614,8 +10640,10 @@
       "Hallowed Bar"
     ],
     "work_orders": [
-      "base_worker",
-      "transport"
+      {
+        "skill": "transport",
+        "level": 4
+      }
     ]
   },
   {
@@ -8639,7 +10667,10 @@
       "Hallowed Bar"
     ],
     "work_orders": [
-      "base_worker"
+      {
+        "skill": "gathering",
+        "level": 1
+      }
     ]
   },
   {
@@ -8663,9 +10694,10 @@
       "Hallowed Bar"
     ],
     "work_orders": [
-      "mount",
-      "base_worker",
-      "transport"
+      {
+        "skill": "transport",
+        "level": 1
+      }
     ]
   }
 ]

@@ -33,24 +33,41 @@
 
   /* ── 元素属性色 ── */
   --color-element-fire: oklch(65% 0.25 40);
-  --color-element-water: oklch(60% 0.18 240);
-  --color-element-grass: oklch(60% 0.22 140);
-  --color-element-electric: oklch(70% 0.2 95);
-  --color-element-ice: oklch(75% 0.1 200);
-  --color-element-ground: oklch(55% 0.12 80);
-  --color-element-dark: oklch(45% 0.15 300);
-  --color-element-dragon: oklch(60% 0.18 330);
-  --color-element-neutral: oklch(70% 0.02 280);
+  --color-element-water: oklch(62% 0.2 245);
+  --color-element-grass: oklch(62% 0.22 145);
+  --color-element-electric: oklch(78% 0.2 95);
+  --color-element-ice: oklch(78% 0.12 210);
+  --color-element-ground: oklch(58% 0.14 75);
+  --color-element-dark: oklch(48% 0.18 300);
+  --color-element-dragon: oklch(65% 0.2 330);
+  --color-element-neutral: oklch(72% 0.03 280);
 
   --color-element-fire-text: oklch(98% 0.01 40);
   --color-element-water-text: oklch(98% 0.01 240);
   --color-element-grass-text: oklch(98% 0.01 140);
-  --color-element-electric-text: oklch(10% 0.01 95);
-  --color-element-ice-text: oklch(10% 0.01 200);
+  --color-element-electric-text: oklch(18% 0.02 95);
+  --color-element-ice-text: oklch(18% 0.02 210);
   --color-element-ground-text: oklch(98% 0.01 80);
   --color-element-dark-text: oklch(98% 0.01 300);
   --color-element-dragon-text: oklch(98% 0.01 330);
-  --color-element-neutral-text: oklch(10% 0.01 280);
+  --color-element-neutral-text: oklch(18% 0.01 280);
+
+  /* ── 工作适性色（对齐 palworld.gg 分色图标） ── */
+  --color-work-kindling: oklch(65% 0.22 40);
+  --color-work-watering: oklch(62% 0.18 240);
+  --color-work-electricity: oklch(78% 0.18 95);
+  --color-work-mining: oklch(58% 0.12 70);
+  --color-work-lumbering: oklch(58% 0.16 130);
+  --color-work-cooling: oklch(75% 0.12 210);
+  --color-work-medicine: oklch(68% 0.2 350);
+  --color-work-transport: oklch(62% 0.1 250);
+  --color-work-farming: oklch(64% 0.18 140);
+  --color-work-base_worker: oklch(70% 0.14 55);
+  --color-work-fighter: oklch(60% 0.22 25);
+  --color-work-mount: oklch(58% 0.16 300);
+  --color-work-flyer: oklch(72% 0.12 230);
+  --color-work-swimmer: oklch(65% 0.16 200);
+  --color-work-fishing: oklch(58% 0.16 230);
 
   /* ── 稀有度色 ── */
   --color-rarity-1: oklch(60% 0.03 280);

@@ -1,7 +1,8 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { ElementBadge } from "@/components/element-badge";
 import { WorkBadge } from "@/components/work-badge";
@@ -17,47 +18,19 @@ import { cn } from "@/lib/utils";
 
 const springStiff = { type: "spring" as const, stiffness: 300, damping: 25 };
 
-const STAT_LABELS: Array<{ key: keyof PalCardData["stats"]; label: string }> = [
-  { key: "hp", label: "HP" },
-  { key: "melee_attack", label: "近战" },
-  { key: "shot_attack", label: "远程" },
-  { key: "defense", label: "防御" },
-  { key: "support", label: "支援" },
-  { key: "stamina", label: "耐力" },
-];
-
-const STAT_MAX = 200;
-
 function RarityStars({ rarity }: { rarity: number }): React.ReactElement {
+  const translate = useLocaleStore((state) => state.t);
   const stars = Math.max(1, Math.min(5, rarity));
   return (
     <span
       className="bg-gradient-to-r from-[var(--color-rarity-5)] to-[var(--color-warning)] bg-clip-text text-sm tracking-widest text-transparent"
-      aria-label={`rarity ${stars}`}
+      aria-label={translate("rarity.label", { n: stars })}
       style={{
         WebkitBackgroundClip: "text",
       }}
     >
       {"★".repeat(stars)}
     </span>
-  );
-}
-
-function StatBar({ label, value }: { label: string; value: number }): React.ReactElement {
-  const pct = Math.min(100, Math.round((value / STAT_MAX) * 100));
-  return (
-    <div className="grid grid-cols-[2.5rem_1fr_2rem] items-center gap-2 text-xs">
-      <span className="text-text-tertiary">{label}</span>
-      <div className="h-1.5 overflow-hidden rounded-full bg-bg-inset">
-        <motion.div
-          className="h-full rounded-full bg-accent"
-          initial={{ width: 0 }}
-          animate={{ width: `${pct}%` }}
-          transition={springStiff}
-        />
-      </div>
-      <span className="text-right text-text-secondary tabular-nums">{value}</span>
-    </div>
   );
 }
 
@@ -68,7 +41,6 @@ interface PalCardProps {
 
 export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
   const locale = useLocaleStore((state) => state.locale);
-  const translate = useLocaleStore((state) => state.t);
   const [hovered, setHovered] = useState(false);
   const [imgSrc, setImgSrc] = useState(getPalImageUrl(pal.name, "webp"));
   const works: PalWorkOrder[] = normalizeWorkOrders(pal.work_orders);
@@ -78,16 +50,25 @@ export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
   );
 
   return (
+    <Link
+      href={`/pals/${encodeURIComponent(pal.name)}`}
+      className={cn(
+        "block w-full max-w-[280px] rounded-2xl outline-none",
+        "focus-visible:ring-2 focus-visible:ring-accent",
+        className,
+      )}
+      aria-label={displayName}
+    >
     <motion.article
       className={cn(
-        "group relative flex w-full max-w-[280px] flex-col overflow-hidden rounded-2xl border border-border bg-bg-surface",
+        "group relative flex w-full flex-col overflow-hidden rounded-2xl border border-border bg-bg-surface",
         "shadow-md shadow-black/20",
-        className,
+        "transition-[border-color] duration-[var(--duration-fast)] hover:border-border-hover",
       )}
       initial={false}
       animate={
         hovered
-          ? { y: -8, boxShadow: "0 20px 25px oklch(0% 0 0 / 35%)" }
+          ? { y: -4, boxShadow: "0 12px 20px oklch(0% 0 0 / 28%)" }
           : { y: 0, boxShadow: "0 4px 6px oklch(0% 0 0 / 15%)" }
       }
       transition={springStiff}
@@ -98,7 +79,7 @@ export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
       <div className="relative aspect-square bg-bg-elevated">
         <Image
           src={imgSrc}
-          alt={pal.name}
+          alt={displayName}
           fill
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
           className="object-contain p-4 transition-transform duration-[var(--duration-normal)] group-hover:scale-105"
@@ -108,11 +89,21 @@ export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
             }
           }}
         />
-        {pal.deck_id ? (
-          <span className="absolute left-3 top-3 rounded-md bg-bg-base/80 px-2 py-0.5 text-xs text-text-secondary">
-            #{pal.deck_id}
-          </span>
-        ) : null}
+        <div className="absolute left-2.5 top-2.5 flex items-center gap-1">
+          {pal.elements.map((element) => (
+            <ElementBadge
+              key={element}
+              element={element}
+              compact
+              className="size-6 drop-shadow-sm [&_img]:size-6"
+            />
+          ))}
+          {pal.deck_id ? (
+            <span className="rounded-md bg-bg-base/80 px-1.5 py-0.5 text-xs text-text-secondary">
+              #{pal.deck_id}
+            </span>
+          ) : null}
+        </div>
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-4">
@@ -125,41 +116,18 @@ export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
           <RarityStars rarity={pal.rarity} />
         </header>
 
-        <div className="flex flex-wrap gap-1.5">
-          {pal.elements.map((element) => (
-            <ElementBadge key={element} element={element} />
-          ))}
-        </div>
-
-        <div className="flex flex-wrap gap-1.5">
-          {works.map((work) => (
-            <WorkBadge key={work.skill} work={work} />
-          ))}
-        </div>
-
-        <AnimatePresence initial={false}>
-          {hovered ? (
-            <motion.div
-              key="stats"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={springStiff}
-              className="overflow-hidden border-t border-border pt-3"
-              data-testid="pal-card-stats"
-            >
-              <p className="mb-2 text-xs font-medium text-text-tertiary">
-                {translate("stats.title")}
-              </p>
-              <div className="flex flex-col gap-1.5">
-                {STAT_LABELS.map(({ key, label }) => (
-                  <StatBar key={key} label={label} value={pal.stats[key]} />
-                ))}
-              </div>
-            </motion.div>
-          ) : null}
-        </AnimatePresence>
+        {works.length > 0 ? (
+          <div
+            className="mt-auto flex flex-wrap items-end gap-2.5 pt-0.5"
+            data-testid="pal-card-works"
+          >
+            {works.map((work) => (
+              <WorkBadge key={work.skill} work={work} compact />
+            ))}
+          </div>
+        ) : null}
       </div>
     </motion.article>
+    </Link>
   );
 }

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 """重新拉取元素/工作适性小图标到 frontend/public/images/ui/。
 
 产物已纳入 git（见 .gitignore 白名单）。日常开发不需要运行；
@@ -9,6 +10,12 @@ from __future__ import annotations
 
 import ssl
 import urllib.request
+=======
+"""下载元素图标和工作图标到 frontend/public/images/ui/"""
+
+import urllib.request
+import ssl
+>>>>>>> feat/ui-icons-work-levels
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent.parent / "frontend" / "public" / "images" / "ui"
@@ -42,6 +49,7 @@ WORKS = {
 }
 
 BASE = "https://palworld.gg/images/icons"
+<<<<<<< HEAD
 
 
 def main() -> None:
@@ -68,3 +76,26 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+=======
+OUT.mkdir(parents=True, exist_ok=True)
+
+ctx = ssl.create_default_context()
+ok = 0
+
+for name, filename in {**ELEMENTS, **WORKS}.items():
+    url = f"{BASE}/{filename}"
+    dest = OUT / f"{name}.png"
+    if dest.exists() and dest.stat().st_size > 500:
+        ok += 1
+        continue
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, context=ctx, timeout=15) as resp:
+            dest.write_bytes(resp.read())
+        print(f"  ✅ {name} ({dest.stat().st_size//1024}KB)")
+        ok += 1
+    except Exception as e:
+        print(f"  ❌ {name}: {e}")
+
+print(f"\n🎉 完成: {ok}/{len(ELEMENTS)+len(WORKS)}")
+>>>>>>> feat/ui-icons-work-levels
