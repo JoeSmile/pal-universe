@@ -1,29 +1,29 @@
 /* Pal Universe design tokens — source of truth: docs/design/TOKENS.md */
 :root {
   /* ── 背景层 ── */
-  --color-bg-base: oklch(10% 0.01 280);
-  --color-bg-surface: oklch(14% 0.015 280);
-  --color-bg-elevated: oklch(18% 0.02 280);
-  --color-bg-hover: oklch(22% 0.025 280);
-  --color-bg-inset: oklch(10% 0.01 280);
+  --color-bg-base: oklch(18% 0.015 270);
+  --color-bg-surface: oklch(22% 0.018 270);
+  --color-bg-elevated: oklch(26% 0.02 270);
+  --color-bg-hover: oklch(30% 0.025 270);
+  --color-bg-inset: oklch(15% 0.012 270);
 
   /* ── 文字 ── */
-  --color-text-primary: oklch(93% 0.01 280);
-  --color-text-secondary: oklch(60% 0.03 280);
-  --color-text-tertiary: oklch(45% 0.03 280);
-  --color-text-inverse: oklch(14% 0.015 280);
-  --color-text-link: oklch(65% 0.18 280);
+  --color-text-primary: oklch(92% 0.012 270);
+  --color-text-secondary: oklch(65% 0.025 270);
+  --color-text-tertiary: oklch(50% 0.02 270);
+  --color-text-inverse: oklch(20% 0.015 270);
+  --color-text-link: oklch(68% 0.18 270);
 
   /* ── 边框 ── */
-  --color-border: oklch(22% 0.02 280);
-  --color-border-hover: oklch(30% 0.03 280);
-  --color-border-active: oklch(60% 0.22 280);
+  --color-border: oklch(28% 0.02 270);
+  --color-border-hover: oklch(35% 0.03 270);
+  --color-border-active: oklch(65% 0.2 270);
 
   /* ── 强调色 ── */
-  --color-accent: oklch(60% 0.22 280);
-  --color-accent-hover: oklch(65% 0.22 280);
-  --color-accent-glow: oklch(60% 0.22 280 / 25%);
-  --color-accent-muted: oklch(30% 0.15 280);
+  --color-accent: oklch(65% 0.22 270);
+  --color-accent-hover: oklch(70% 0.22 270);
+  --color-accent-glow: oklch(65% 0.22 270 / 25%);
+  --color-accent-muted: oklch(35% 0.15 270);
 
   /* ── 语义色 ── */
   --color-success: oklch(60% 0.18 150);
