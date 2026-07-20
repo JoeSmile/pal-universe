@@ -1,24 +1,29 @@
 .POSIX:
-.PHONY: dev dev-db seed mock-data images validate lint type-check test build help
-
-# ⚠️ 前端开发标准方式: cd frontend && bun run dev
-# ⚠️ 后端开发标准方式: cd backend && .venv/bin/uvicorn app.main:app --reload
-# make 命令只是快捷方式，不是强制入口
+.PHONY: dev db backend frontend seed mock-data images validate lint type-check test build help
 
 # ─── 开发 ─────────────────────────────────────────────
 
-dev: dev-db  ## 启动全部服务（数据库 + 后端 API + 前端）
+dev: db  ## 启动全部服务（数据库 + 后端 API + 前端）
 	@echo "📦 启动后端 API (后台)..."
 	@cd backend && nohup .venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 > /tmp/paluniverse-backend.log 2>&1 &
 	@sleep 8
 	@echo "📦 启动前端 Next.js..."
 	@cd frontend && bun run dev
 
-dev-db:  ## 启动 PostgreSQL + pgvector
+db:  ## 启动 PostgreSQL + pgvector
 	cd backend && docker compose up db -d
 	@echo "⏳ 等待数据库就绪..."
 	@sleep 3
 	@echo "✅ 数据库: paluniverse-db (localhost:5432)"
+
+backend:  ## 启动后端 API
+	@echo "📦 启动后端 API..."
+	cd backend && .venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+frontend:  ## 启动前端
+	cd frontend && bun run dev
+
+# ─── 数据 ─────────────────────────────────────────────
 
 seed:  ## 导入数据到 pgvector
 	python3 scripts/seed_palworld_data.py --db
@@ -26,7 +31,7 @@ seed:  ## 导入数据到 pgvector
 mock-data:  ## 生成前端 Mock 数据（从 pgvector 导出 JSON）
 	python3 scripts/generate_mock_data.py
 
-images:  ## 下载帕鲁图片（不 commit 到 git，部署时自动拉取）
+images:  ## 下载帕鲁图片
 	python3 scripts/download_images.py
 
 process-spawns:  ## 处理位置数据
@@ -52,8 +57,6 @@ build:  ## 前端构建
 check: lint type-check validate build  ## 全量质量检查（基础）
 check-all: check ac-gate semgrep knip  ## 全量质量检查（含门禁）
 gate: ac-gate semgrep  ## 门禁专用
-
-# ─── 门禁 ─────────────────────────────────────────────
 
 semgrep:
 	@command -v semgrep >/dev/null 2>&1 || (echo "安装 Semgrep: pip install semgrep" && exit 1)
@@ -93,11 +96,9 @@ help:
 	@echo ""
 	@echo "  🔧 启动服务"
 	@echo "    make dev         启动全部（数据库 + 后端 API + 前端）"
-	@echo "    make dev-db      仅启动数据库"
-	@echo ""
-	@echo "  🖥️  手动启动（推荐）"
-	@echo "    cd frontend && bun run dev"
-	@echo "    cd backend && .venv/bin/uvicorn app.main:app --reload"
+	@echo "    make db          仅启动数据库"
+	@echo "    make backend     启动后端 API"
+	@echo "    make frontend    启动前端"
 	@echo ""
 	@echo "  📦 数据"
 	@echo "    make seed          导入数据到 pgvector"

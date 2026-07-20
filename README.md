@@ -87,15 +87,13 @@ cd frontend && bun install
 
 ```bash
 # 终端 1: 启动数据库（首次需要）
-make dev-db
+make db
 
 # 终端 2: 启动后端 API
-cd backend
-.venv/bin/python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+make backend
 
 # 终端 3: 启动前端
-cd frontend
-bun run dev --port 3000
+make frontend
 ```
 
 如果不习惯多终端，一键启动（后端 API 跑后台，前端占前台）：
