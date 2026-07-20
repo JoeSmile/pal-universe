@@ -1,9 +1,5 @@
 import { describe, expect, it } from "vitest";
-import {
-  getLocalPalDetail,
-  getLocalPalLocation,
-  mapRawPalToDetail,
-} from "@/lib/api/pal-detail";
+import { mapRawPalToDetail } from "@/lib/api/pal-detail-mapper";
 
 describe("mapRawPalToDetail", () => {
   it("maps flat API fields and notable_drops", () => {
@@ -41,19 +37,30 @@ describe("mapRawPalToDetail", () => {
     expect(pal.partner_skill?.name).toBe("Guardian");
     expect(pal.breeding_rank).toBe(480);
   });
-});
 
-describe("local fallbacks", () => {
-  it("loads Anubis from pals.json", () => {
-    const pal = getLocalPalDetail("Anubis");
-    expect(pal?.name).toBe("Anubis");
-    expect(pal?.deck_id).toBe("139");
-    expect(pal?.stats.hp).toBeGreaterThan(0);
+  it("returns null breeding_rank for invalid values", () => {
+    const pal = mapRawPalToDetail({ name: "X", breeding_rank: "n/a" });
+    expect(pal.breeding_rank).toBeNull();
   });
 
-  it("loads Anubis location from pal-locations.json", () => {
-    const loc = getLocalPalLocation("Anubis");
-    expect(loc?.spawn_count).toBe(36);
-    expect(loc?.region).toBe("palpagos");
+  it("summarizes location without spot arrays", () => {
+    const pal = mapRawPalToDetail({
+      name: "Anubis",
+      location: {
+        spawn_count: 36,
+        region: "palpagos",
+        center: [-576.1, -30.5],
+        level_range: [55, 72],
+        spots: [{ x: 1, y: 2 }],
+      },
+    });
+
+    expect(pal.location).toEqual({
+      spawn_count: 36,
+      region: "palpagos",
+      center: [-576.1, -30.5],
+      level_range: [55, 72],
+    });
+    expect(pal.location).not.toHaveProperty("spots");
   });
 });

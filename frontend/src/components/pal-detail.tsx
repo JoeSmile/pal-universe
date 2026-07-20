@@ -6,14 +6,12 @@ import { ArrowLeft, Moon, Sun } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ElementBadge } from "@/components/element-badge";
 import { SiteHeader } from "@/components/site-header";
 import { WorkBadge } from "@/components/work-badge";
 import {
   fetchPalDetail,
-  fetchPalLocations,
-  getLocalPalDetail,
   type PalDetailData,
   type PalDrop,
   type PalLocationInfo,
@@ -271,6 +269,13 @@ function AiAskBox({ palName }: { palName: string }): React.ReactElement {
   const prefix =
     locale === "zh" ? `关于 ${palName}: ` : `About ${palName}: `;
   const [text, setText] = useState(prefix);
+
+  useEffect(() => {
+    setText((current) => {
+      const stripped = current.replace(/^(About .+: |关于 .+: )/, "");
+      return prefix + stripped;
+    });
+  }, [prefix]);
 
   function onSubmit(event: React.FormEvent): void {
     event.preventDefault();
@@ -581,30 +586,10 @@ export function PalDetailPageClient({
 
   const detailQuery = useQuery({
     queryKey: ["pal", "detail", decoded],
-    queryFn: async ({ signal }) => {
-      try {
-        return await fetchPalDetail(decoded, { signal });
-      } catch (err) {
-        const local = getLocalPalDetail(decoded);
-        if (local) return local;
-        throw err;
-      }
-    },
+    queryFn: ({ signal }) => fetchPalDetail(decoded, { signal }),
   });
 
-  const locationQuery = useQuery({
-    queryKey: ["pal", "locations", decoded],
-    queryFn: ({ signal }) => fetchPalLocations(decoded, { signal }),
-    enabled: Boolean(detailQuery.data && !detailQuery.data.location),
-  });
-
-  const pal = detailQuery.data
-    ? {
-        ...detailQuery.data,
-        location:
-          detailQuery.data.location ?? locationQuery.data ?? null,
-      }
-    : null;
+  const pal = detailQuery.data ?? null;
 
   return (
     <div className="min-h-dvh bg-bg-base text-text-primary">

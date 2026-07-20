@@ -1,305 +1,118 @@
-import palLocations from "@/data/pal-locations.json";
-import palNames from "@/data/pal-names.json";
-import palsJson from "@/data/pals.json";
 import { apiUrl } from "@/lib/api/config";
 import { PalApiError } from "@/lib/api/pals";
 import {
-  normalizeWorkOrders,
-  type PalStats,
-  type PalWorkOrder,
-} from "@/lib/pal-types";
+  mapRawPalToDetail,
+  summarizeLocation,
+  type PalDetailData,
+  type PalLocationInfo,
+} from "@/lib/api/pal-detail-mapper";
 
-type PalNameRecord = { name: string; name_cn: string };
+export type {
+  PalActiveSkill,
+  PalDetailData,
+  PalDrop,
+  PalLocationInfo,
+  PalLocationSpot,
+  PalPartnerSkill,
+} from "@/lib/api/pal-detail-mapper";
 
-const nameCnByName = new Map(
-  (palNames as PalNameRecord[]).map((pal) => [pal.name, pal.name_cn]),
-);
+export { mapRawPalToDetail, summarizeLocation } from "@/lib/api/pal-detail-mapper";
 
-const RARITY_RANK: Record<string, number> = {
-  common: 1,
-  rare: 2,
-  epic: 3,
-  legendary: 4,
-};
-
-export interface PalPartnerSkill {
-  name: string;
-  effect: string;
+function localDetailUrl(name: string): string {
+  return `/api/pals/${encodeURIComponent(name)}`;
 }
 
-export interface PalActiveSkill {
-  name: string;
-  element?: string;
-  type?: string;
-  power?: number;
-  cooldown?: number;
-  effect?: string;
-  description?: string;
+function localLocationsUrl(name: string): string {
+  return `/api/pals/${encodeURIComponent(name)}/locations`;
 }
 
-export interface PalDrop {
-  name: string;
-  chance?: number | null;
-  use?: string;
+async function readJsonPayload<T>(res: Response): Promise<T> {
+  return (await res.json().catch(() => ({}))) as T;
 }
 
-export interface PalLocationSpot {
-  x?: number;
-  y?: number;
-  map_x?: number;
-  map_y?: number;
-  region?: string;
-  level_range?: [number, number] | number[];
-}
-
-export interface PalLocationInfo {
-  spawn_count?: number;
-  region?: string;
-  center?: [number, number] | number[];
-  bounds?: number[][];
-  level_range?: [number, number] | number[];
-  spots?: PalLocationSpot[];
-}
-
-export interface PalDetailData {
-  name: string;
-  name_cn: string;
-  deck_id: string;
-  elements: string[];
-  rarity: number;
-  rarity_label?: string;
-  size: string;
-  price: number;
-  nocturnal: boolean;
-  movement: { walk: number; run: number; sprint: number };
-  stats: PalStats;
-  work_orders: PalWorkOrder[];
-  partner_skill: PalPartnerSkill | null;
-  skills: PalActiveSkill[];
-  drops: PalDrop[];
-  breeding_rank: number | null;
-  location: PalLocationInfo | null;
-  image: string;
-}
-
-type RawLocationMap = Record<string, PalLocationInfo>;
-
-const locationMap = palLocations as RawLocationMap;
-
-function parseRarity(raw: unknown): { value: number; label?: string } {
-  if (typeof raw === "number" && Number.isFinite(raw)) {
-    return { value: Math.max(1, Math.min(5, raw)) };
-  }
-  if (typeof raw === "string") {
-    const trimmed = raw.trim();
-    if (/^\d+$/.test(trimmed)) {
-      return { value: Math.max(1, Math.min(5, Number(trimmed))) };
-    }
-    const ranked = RARITY_RANK[trimmed.toLowerCase()];
-    if (ranked) return { value: ranked, label: trimmed };
-  }
-  return { value: 1 };
-}
-
-function normalizeDrops(raw: unknown): PalDrop[] {
-  if (!Array.isArray(raw)) return [];
-  return raw.map((entry) => {
-    if (typeof entry === "string") {
-      return { name: entry, chance: null, use: "" };
-    }
-    if (entry && typeof entry === "object") {
-      const obj = entry as Record<string, unknown>;
-      const chanceRaw = obj.chance ?? obj.rate ?? obj.probability;
-      const chance =
-        typeof chanceRaw === "number"
-          ? chanceRaw
-          : typeof chanceRaw === "string" && chanceRaw.endsWith("%")
-            ? Number(chanceRaw.replace("%", ""))
-            : null;
-      return {
-        name: String(obj.name ?? obj.item ?? "Unknown"),
-        chance: Number.isFinite(chance) ? Number(chance) : null,
-        use: String(obj.use ?? obj.usage ?? obj.purpose ?? ""),
-      };
-    }
-    return { name: String(entry), chance: null, use: "" };
-  });
-}
-
-function normalizeSkills(raw: unknown): PalActiveSkill[] {
-  if (!Array.isArray(raw)) return [];
-  return raw.map((entry) => {
-    const obj = (entry ?? {}) as Record<string, unknown>;
-    return {
-      name: String(obj.name ?? obj.skill ?? "Unknown"),
-      element: obj.element ? String(obj.element) : obj.type ? String(obj.type) : undefined,
-      type: obj.type ? String(obj.type) : undefined,
-      power: typeof obj.power === "number" ? obj.power : undefined,
-      cooldown: typeof obj.cooldown === "number" ? obj.cooldown : undefined,
-      effect: obj.effect ? String(obj.effect) : obj.description ? String(obj.description) : undefined,
-      description: obj.description ? String(obj.description) : undefined,
-    };
-  });
-}
-
-function normalizePartner(raw: unknown): PalPartnerSkill | null {
-  if (!raw || typeof raw !== "object") return null;
-  const obj = raw as Record<string, unknown>;
-  const name = String(obj.name ?? "").trim();
-  if (!name) return null;
-  return {
-    name,
-    effect: String(obj.effect ?? obj.description ?? ""),
-  };
-}
-
-function normalizeLocation(raw: unknown): PalLocationInfo | null {
-  if (!raw || typeof raw !== "object") return null;
-  return raw as PalLocationInfo;
-}
-
-export function mapRawPalToDetail(raw: Record<string, unknown>): PalDetailData {
-  const name = String(raw.name ?? "");
-  const rarity = parseRarity(raw.rarity);
-  const statsObj =
-    raw.stats && typeof raw.stats === "object"
-      ? (raw.stats as Record<string, unknown>)
-      : {};
-
-  const workSource =
-    (Array.isArray(raw.work_orders) && raw.work_orders) ||
-    (Array.isArray(raw.role_tags) && raw.role_tags) ||
-    [];
-
-  const dropsSource = raw.drops ?? raw.notable_drops ?? [];
-  const skillsSource = raw.skills ?? raw.active_skills ?? [];
-
-  const movementRaw =
-    raw.movement && typeof raw.movement === "object"
-      ? (raw.movement as Record<string, unknown>)
-      : {};
-
-  const nameCn =
-    (typeof raw.name_cn === "string" &&
-    raw.name_cn &&
-    raw.name_cn !== name
-      ? raw.name_cn
-      : nameCnByName.get(name)) ?? name;
-
-  return {
-    name,
-    name_cn: nameCn,
-    deck_id: String(raw.deck_id ?? raw.paldeck_number ?? raw.id ?? ""),
-    elements: Array.isArray(raw.elements)
-      ? raw.elements.map(String)
-      : [],
-    rarity: rarity.value,
-    rarity_label: rarity.label,
-    size: String(raw.size ?? ""),
-    price: Number(raw.price) || 0,
-    nocturnal: Boolean(raw.nocturnal),
-    movement: {
-      walk: Number(movementRaw.walk) || 0,
-      run: Number(movementRaw.run) || 0,
-      sprint: Number(movementRaw.sprint) || 0,
-    },
-    stats: {
-      hp: Number(statsObj.hp ?? raw.hp) || 0,
-      melee_attack: Number(statsObj.melee_attack ?? raw.melee_attack) || 0,
-      shot_attack: Number(statsObj.shot_attack ?? raw.shot_attack) || 0,
-      defense: Number(statsObj.defense ?? raw.defense) || 0,
-      support: Number(statsObj.support ?? raw.support) || 0,
-      stamina: Number(statsObj.stamina ?? raw.stamina) || 0,
-    },
-    work_orders: normalizeWorkOrders(
-      workSource as Array<string | { skill: string; level: number }>,
-    ),
-    partner_skill: normalizePartner(raw.partner_skill),
-    skills: normalizeSkills(skillsSource),
-    drops: normalizeDrops(dropsSource),
-    breeding_rank:
-      raw.breeding_rank == null || raw.breeding_rank === ""
-        ? null
-        : Number(raw.breeding_rank),
-    location:
-      normalizeLocation(raw.location) ??
-      normalizeLocation(locationMap[name]) ??
-      null,
-    image:
-      typeof raw.image === "string" && raw.image
-        ? raw.image
-        : `/images/pals/${encodeURIComponent(name)}.webp`,
-  };
-}
-
-/** Local JSON fallback when API is unavailable. */
-export function getLocalPalDetail(name: string): PalDetailData | null {
-  const target = name.trim().toLowerCase();
-  const raw = (palsJson as Array<Record<string, unknown>>).find(
-    (pal) => String(pal.name).toLowerCase() === target,
-  );
-  if (!raw) return null;
-  return mapRawPalToDetail(raw);
-}
-
-export function getLocalPalLocation(name: string): PalLocationInfo | null {
-  return normalizeLocation(locationMap[name]) ?? null;
-}
-
-/** GET /api/v1/pals/{name} */
+/** GET backend, then same-origin Route Handler fallback. */
 export async function fetchPalDetail(
   name: string,
   init?: RequestInit,
 ): Promise<PalDetailData> {
-  const res = await fetch(
-    apiUrl(`/api/v1/pals/${encodeURIComponent(name)}`),
-    {
+  const headers = { Accept: "application/json", ...init?.headers };
+
+  try {
+    const res = await fetch(apiUrl(`/api/v1/pals/${encodeURIComponent(name)}`), {
       ...init,
-      headers: { Accept: "application/json", ...init?.headers },
-    },
-  );
-  const payload = (await res.json().catch(() => ({}))) as {
-    data?: Record<string, unknown>;
+      headers,
+    });
+    const payload = await readJsonPayload<{
+      data?: Record<string, unknown>;
+      detail?: { code?: string; message?: string };
+      error?: { code?: string; message?: string };
+    }>(res);
+
+    if (res.ok) {
+      const mapped = mapRawPalToDetail(payload.data ?? {});
+      if (!mapped.location) {
+        mapped.location = await fetchPalLocations(name, init);
+      }
+      return mapped;
+    }
+
+    if (res.status !== 404 && res.status < 500) {
+      const detail = payload.detail ?? payload.error;
+      throw new PalApiError(
+        detail?.message || `Pal detail failed (${res.status})`,
+        res.status,
+        detail?.code,
+      );
+    }
+  } catch (err) {
+    if (err instanceof PalApiError && err.status !== 404 && err.status < 500) {
+      throw err;
+    }
+  }
+
+  const localRes = await fetch(localDetailUrl(name), { ...init, headers });
+  const localPayload = await readJsonPayload<{
+    data?: PalDetailData;
     detail?: { code?: string; message?: string };
     error?: { code?: string; message?: string };
-  };
+  }>(localRes);
 
-  if (!res.ok) {
-    const detail = payload.detail ?? payload.error;
+  if (!localRes.ok) {
+    const detail = localPayload.detail ?? localPayload.error;
     throw new PalApiError(
-      detail?.message || `Pal detail failed (${res.status})`,
-      res.status,
+      detail?.message || `Pal detail failed (${localRes.status})`,
+      localRes.status,
       detail?.code,
     );
   }
 
-  const mapped = mapRawPalToDetail(payload.data ?? {});
-  if (!mapped.location) {
-    mapped.location = getLocalPalLocation(mapped.name);
-  }
-  return mapped;
+  return localPayload.data as PalDetailData;
 }
 
-/** GET /api/v1/pals/{name}/locations — optional enrichment. */
+/** GET backend locations, then same-origin Route Handler fallback. */
 export async function fetchPalLocations(
   name: string,
   init?: RequestInit,
 ): Promise<PalLocationInfo | null> {
-  const res = await fetch(
-    apiUrl(`/api/v1/pals/${encodeURIComponent(name)}/locations`),
-    {
-      ...init,
-      headers: { Accept: "application/json", ...init?.headers },
-    },
-  );
-  if (res.status === 404) {
-    return getLocalPalLocation(name);
+  const headers = { Accept: "application/json", ...init?.headers };
+
+  try {
+    const res = await fetch(
+      apiUrl(`/api/v1/pals/${encodeURIComponent(name)}/locations`),
+      { ...init, headers },
+    );
+
+    if (res.ok) {
+      const payload = await readJsonPayload<{ data?: PalLocationInfo }>(res);
+      return summarizeLocation(payload.data) ?? null;
+    }
+  } catch {
+    // fall through to local route
   }
-  if (!res.ok) {
-    return getLocalPalLocation(name);
-  }
-  const payload = (await res.json().catch(() => ({}))) as {
-    data?: PalLocationInfo;
-  };
-  return normalizeLocation(payload.data) ?? getLocalPalLocation(name);
+
+  const localRes = await fetch(localLocationsUrl(name), { ...init, headers });
+  if (!localRes.ok) return null;
+
+  const payload = await readJsonPayload<{ data?: PalLocationInfo }>(localRes);
+  return summarizeLocation(payload.data) ?? null;
 }

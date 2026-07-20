@@ -52,7 +52,11 @@ export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
   return (
     <Link
       href={`/pals/${encodeURIComponent(pal.name)}`}
-      className={cn("block w-full max-w-[280px] outline-none", className)}
+      className={cn(
+        "block w-full max-w-[280px] rounded-2xl outline-none",
+        "focus-visible:ring-2 focus-visible:ring-accent",
+        className,
+      )}
       aria-label={displayName}
     >
     <motion.article
@@ -60,7 +64,6 @@ export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
         "group relative flex w-full flex-col overflow-hidden rounded-2xl border border-border bg-bg-surface",
         "shadow-md shadow-black/20",
         "transition-[border-color] duration-[var(--duration-fast)] hover:border-border-hover",
-        "focus-visible:ring-2 focus-visible:ring-accent",
       )}
       initial={false}
       animate={

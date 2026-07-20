@@ -1,7 +1,7 @@
 import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { PalDetail, statBarColor } from "@/components/pal-detail";
-import type { PalDetailData } from "@/lib/api/pal-detail";
+import type { PalDetailData } from "@/lib/api/pal-detail-mapper";
 import { useLocaleStore } from "@/lib/i18n/store";
 
 const push = vi.fn();
@@ -151,5 +151,17 @@ describe("PalDetail", () => {
     render(<PalDetail pal={samplePal} />);
     const input = screen.getByLabelText(/输入攻略问题/i) as HTMLInputElement;
     expect(input.value).toBe("关于 Anubis: ");
+  });
+
+  it("updates AI prefix when locale changes", () => {
+    const { rerender } = render(<PalDetail pal={samplePal} />);
+    const input = screen.getByLabelText(/Ask a guide question/i) as HTMLInputElement;
+    expect(input.value).toBe("About Anubis: ");
+
+    useLocaleStore.setState({ locale: "zh", hydrated: true });
+    rerender(<PalDetail pal={samplePal} />);
+    expect((screen.getByLabelText(/输入攻略问题/i) as HTMLInputElement).value).toBe(
+      "关于 Anubis: ",
+    );
   });
 });
