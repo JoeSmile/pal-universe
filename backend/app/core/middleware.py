@@ -126,8 +126,11 @@ class CircuitBreakerMiddleware(BaseHTTPMiddleware):
             try:
                 token = auth_header.split(" ")[1]
                 payload = jwt.decode(token, settings.JWT_SECRET_KEY, algorithms=[settings.JWT_ALGORITHM])
-                user_id = payload.get("user_id")
-            except JWTError:
+                # create_access_token stores user id in "sub"
+                raw_id = payload.get("user_id") or payload.get("sub")
+                if raw_id is not None:
+                    user_id = int(raw_id)
+            except (JWTError, TypeError, ValueError):
                 pass
 
         # Check rate limits

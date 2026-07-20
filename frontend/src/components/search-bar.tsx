@@ -209,81 +209,76 @@ export function SearchBar({
     results.length === 0;
 
   return (
-    <div className={cn("flex w-full max-w-xl flex-col-reverse md:flex-col", className)}>
-      <div>
-        <label htmlFor={inputId} className="sr-only">
-          {translate("home.searchLabel")}
-        </label>
-        <div
+    <div className={cn("relative w-full max-w-xl", className)}>
+      <label htmlFor={inputId} className="sr-only">
+        {translate("home.searchLabel")}
+      </label>
+      <div
+        className={cn(
+          "flex items-center gap-3 rounded-xl border border-border bg-bg-elevated px-4 py-3",
+          "shadow-lg shadow-black/20 transition-[border-color,box-shadow] duration-[var(--duration-fast)]",
+          "focus-within:border-accent focus-within:shadow-[var(--shadow-glow-accent)]",
+        )}
+      >
+        <Search className="size-5 shrink-0 text-text-tertiary" aria-hidden="true" />
+        <input
+          id={inputId}
+          type="text"
+          inputMode="search"
+          enterKeyHint={chatIntent ? "go" : "search"}
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          onKeyDown={handleInputKeyDown}
+          placeholder={translate("home.searchPlaceholder")}
+          autoComplete="off"
+          spellCheck={false}
+          role="combobox"
+          aria-expanded={showResults}
+          aria-controls={listId}
+          aria-autocomplete="list"
+          aria-activedescendant={activeOptionId}
           className={cn(
-            "flex items-center gap-3 rounded-xl border border-border bg-bg-elevated px-4 py-3",
-            "shadow-lg shadow-black/20 transition-[border-color,box-shadow] duration-[var(--duration-fast)]",
-            "focus-within:border-accent focus-within:shadow-[var(--shadow-glow-accent)]",
+            "min-w-0 flex-1 bg-transparent text-base text-text-primary outline-none",
+            "placeholder:text-text-tertiary",
           )}
-        >
-          <Search className="size-5 shrink-0 text-text-tertiary" aria-hidden="true" />
-          <input
-            id={inputId}
-            type="text"
-            inputMode="search"
-            enterKeyHint={chatIntent ? "go" : "search"}
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            onKeyDown={handleInputKeyDown}
-            placeholder={translate("home.searchPlaceholder")}
-            autoComplete="off"
-            spellCheck={false}
-            role="combobox"
-            aria-expanded={showResults}
-            aria-controls={listId}
-            aria-autocomplete="list"
-            aria-activedescendant={activeOptionId}
-            className={cn(
-              "min-w-0 flex-1 bg-transparent text-base text-text-primary outline-none",
-              "placeholder:text-text-tertiary",
-            )}
+        />
+        {isLoading ? (
+          <Loader2
+            className="size-4 shrink-0 animate-spin text-accent"
+            aria-label={translate("home.searching")}
           />
-          {isLoading ? (
-            <Loader2
-              className="size-4 shrink-0 animate-spin text-accent"
-              aria-label={translate("home.searching")}
-            />
-          ) : null}
-          {query.length > 0 && !isLoading ? (
-            <button
-              type="button"
-              onClick={handleClear}
-              className="rounded-md p-1 text-text-tertiary transition-colors hover:bg-bg-hover hover:text-text-primary"
-              aria-label={translate("home.clearSearch")}
-            >
-              <X className="size-4" />
-            </button>
-          ) : null}
-        </div>
-
-        {showEmpty ? (
-          <p className="mt-3 text-center text-sm text-text-secondary">
-            {translate("home.noResults")}
-          </p>
         ) : null}
-
-        {chatIntent && query.trim().length > 0 ? (
-          <p className="mt-3 text-center text-sm text-text-secondary">
-            {translate("home.chatHint")}
-          </p>
+        {query.length > 0 && !isLoading ? (
+          <button
+            type="button"
+            onClick={handleClear}
+            className="rounded-md p-1 text-text-tertiary transition-colors hover:bg-bg-hover hover:text-text-primary"
+            aria-label={translate("home.clearSearch")}
+          >
+            <X className="size-4" />
+          </button>
         ) : null}
       </div>
 
+      {/* Reserved height so hint text does not shove ChatUsage / links. */}
+      <div className="mt-2 flex min-h-5 items-center justify-center text-sm text-text-secondary">
+        {showEmpty ? <p>{translate("home.noResults")}</p> : null}
+        {!showEmpty && chatIntent && query.trim().length > 0 ? (
+          <p>{translate("home.chatHint")}</p>
+        ) : null}
+      </div>
+
+      {/* Overlay dropdown — does not push page content. */}
       <AnimatePresence>
         {showResults ? (
           <motion.div
-            initial={{ opacity: 0, y: 8 }}
+            initial={{ opacity: 0, y: 6 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 4 }}
             transition={springGentle}
             className={cn(
-              "mb-3 overflow-hidden rounded-xl border border-border bg-bg-surface shadow-lg",
-              "md:mb-0 md:mt-3",
+              "absolute left-0 right-0 top-full z-30 mt-1 overflow-hidden rounded-xl",
+              "border border-border bg-bg-surface shadow-xl shadow-black/30",
             )}
           >
             {suggestionOnly ? (
