@@ -311,22 +311,22 @@ export function SearchBar({
                     onClick={() => selectPal(pal)}
                   >
                     <span className="flex items-center justify-between gap-3">
-                      <span className="block text-sm font-medium text-text-primary">
-                        {pal.label}
+                      <span className="min-w-0">
+                        <span className="block text-sm font-medium text-text-primary">
+                          {pal.label}
+                        </span>
+                        <span className="mt-0.5 block font-mono text-xs text-text-tertiary">
+                          #{pal.id}
+                          {pal.elements && pal.elements.length > 0
+                            ? ` · ${pal.elements.join(" · ")}`
+                            : ""}
+                        </span>
                       </span>
                       <RarityStars
                         rarity={pal.rarity}
                         label={translate("rarity.label", { n: pal.rarity ?? 0 })}
                       />
                     </span>
-                    {pal.elements && pal.elements.length > 0 ? (
-                      <span className="mt-1 block text-xs text-text-secondary">
-                        {pal.elements.join(" · ")}
-                        {pal.id ? ` · #${pal.id}` : ""}
-                      </span>
-                    ) : pal.id ? (
-                      <span className="mt-0.5 block text-xs text-text-secondary">#{pal.id}</span>
-                    ) : null}
                   </button>
                 </li>
               ))}

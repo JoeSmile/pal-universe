@@ -71,6 +71,25 @@ describe("searchPals spell correction", () => {
   it("returns empty when distance is greater than 2", () => {
     expect(searchPals(samplePals, "zzzzz")).toEqual([]);
   });
+
+  it("matches deck id exactly and by prefix", () => {
+    expect(searchPals(samplePals, "139")[0]?.name).toBe("Anubis");
+    expect(searchPals(samplePals, "#139")[0]?.name).toBe("Anubis");
+    expect(searchPals(samplePals, "13").some((p) => p.name === "Anubis")).toBe(
+      true,
+    );
+  });
+
+  it("matches single CJK character in Chinese names", () => {
+    const withJi: PalName[] = [
+      ...samplePals,
+      { id: "103", name: "Chillet", name_cn: "疾旋鼬" },
+      { id: "101", name: "Reindrix", name_cn: "严冬鹿" },
+    ];
+    const results = searchPals(withJi, "疾", 12, "zh");
+    expect(results.map((p) => p.name)).toContain("Chillet");
+    expect(results.map((p) => p.name)).not.toContain("Reindrix");
+  });
 });
 
 describe("formatPalLabel", () => {
