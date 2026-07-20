@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { PalCardGrid } from "@/components/pal-card-grid";
 import { PalFilter } from "@/components/pal-filter";
 import { SiteHeader } from "@/components/site-header";
@@ -17,6 +17,13 @@ export function PalsPageClient(): React.ReactElement {
   const elements = usePalFilterStore((state) => state.elements);
   const works = usePalFilterStore((state) => state.works);
   const clearFilters = usePalFilterStore((state) => state.clearFilters);
+
+  // Don't leak list filters into the next visit.
+  useEffect(() => {
+    return () => {
+      usePalFilterStore.getState().clearFilters();
+    };
+  }, []);
 
   const filtered = useMemo(
     () => filterPals(catalog, { query, elements, works, locale }),

@@ -1,23 +1,55 @@
 "use client";
 
 import { LayoutGroup, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { PalCard } from "@/components/pal-card";
 import type { PalCardData } from "@/lib/pal-types";
 import { useLocaleStore } from "@/lib/i18n/store";
 import { cn } from "@/lib/utils";
 
+/** Initial viewport batch — keeps mobile paint cheap for ~300 pals. */
+export const PAL_GRID_PAGE_SIZE = 36;
+
 interface PalCardGridProps {
   pals: PalCardData[];
   className?: string;
   onClearFilters?: () => void;
+  /** Override page size (tests). */
+  pageSize?: number;
 }
 
 export function PalCardGrid({
   pals,
   className,
   onClearFilters,
+  pageSize = PAL_GRID_PAGE_SIZE,
 }: PalCardGridProps): React.ReactElement {
   const translate = useLocaleStore((state) => state.t);
+  const [visibleCount, setVisibleCount] = useState(pageSize);
+  const sentinelRef = useRef<HTMLLIElement | null>(null);
+
+  // Reset window when the filtered set changes.
+  useEffect(() => {
+    setVisibleCount(pageSize);
+  }, [pals, pageSize]);
+
+  useEffect(() => {
+    const node = sentinelRef.current;
+    if (!node || visibleCount >= pals.length) return;
+    if (typeof IntersectionObserver === "undefined") return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setVisibleCount((n) => Math.min(n + pageSize, pals.length));
+        }
+      },
+      { rootMargin: "200px 0px" },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [visibleCount, pals.length, pageSize]);
 
   if (pals.length === 0) {
     return (
@@ -42,6 +74,9 @@ export function PalCardGrid({
     );
   }
 
+  const visible = pals.slice(0, visibleCount);
+  const hasMore = visibleCount < pals.length;
+
   return (
     <LayoutGroup>
       <motion.ul
@@ -52,16 +87,24 @@ export function PalCardGrid({
         )}
         data-testid="pal-card-grid"
       >
-        {pals.map((pal) => (
+        {visible.map((pal) => (
           <motion.li
-            key={pal.deck_id}
+            key={pal.name}
             layout
             transition={{ type: "spring", stiffness: 350, damping: 30 }}
-            className="min-w-0"
+            className="min-w-0 [content-visibility:auto] [contain-intrinsic-size:auto_320px]"
           >
             <PalCard pal={pal} className="max-w-none" />
           </motion.li>
         ))}
+        {hasMore ? (
+          <li
+            ref={sentinelRef}
+            className="col-span-full h-4 list-none"
+            data-testid="pal-grid-sentinel"
+            aria-hidden
+          />
+        ) : null}
       </motion.ul>
     </LayoutGroup>
   );

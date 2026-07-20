@@ -40,6 +40,7 @@ export function getPalCatalog(): PalCardData[] {
     }))
     .sort(
       (a, b) =>
-        Number(a.deck_id) - Number(b.deck_id) || a.name.localeCompare(b.name),
+        a.deck_id.localeCompare(b.deck_id, undefined, { numeric: true }) ||
+        a.name.localeCompare(b.name),
     );
 }

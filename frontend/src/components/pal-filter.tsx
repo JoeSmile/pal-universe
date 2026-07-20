@@ -33,7 +33,7 @@ function Chip({
         "touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
         active
           ? "border-accent bg-accent/15 text-accent"
-          : "border-border bg-bg-surface text-text-secondary hover:border-border-strong hover:text-text-primary",
+          : "border-border bg-bg-surface text-text-secondary hover:border-border-hover hover:text-text-primary",
         className,
       )}
     >
@@ -59,8 +59,12 @@ export function PalFilter({
   const toggleElement = usePalFilterStore((state) => state.toggleElement);
   const toggleWork = usePalFilterStore((state) => state.toggleWork);
   const clearFilters = usePalFilterStore((state) => state.clearFilters);
-  const hasActive =
-    query.trim().length > 0 || elements.length > 0 || works.length > 0;
+  const hasActive = usePalFilterStore(
+    (state) =>
+      state.query.trim().length > 0 ||
+      state.elements.length > 0 ||
+      state.works.length > 0,
+  );
 
   return (
     <section

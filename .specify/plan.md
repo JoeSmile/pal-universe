@@ -1,97 +1,55 @@
 # Pal Universe 技术方案
 
-> 来源: docs/decisions/ADR-001-TECH-STACK.md + docs/architecture/DATA-BACKEND-ARCHITECTURE.md  
-> 本文件是 spec-kit 的 plan.md，供 AI Agent 理解技术架构。
+> 来源: docs/decisions/ADR-001-TECH-STACK.md + docs/architecture/ARCHITECTURE.html  
+> 本文件是 spec-kit 的 plan.md，只放"不会每周变"的架构决策。
 
 ---
 
-## 1. 系统架构
+## 1. 系统架构（6 层）
 
 ```
-          用户浏览器
-              │
-         ┌────▼────┐
-         │  Vercel  │  ← 前端 CDN + Edge
-         │  Next.js │
-         └────┬────┘
-              │
-    ┌─────────┼─────────┐
-    │         │         │
-    │    ┌────▼────┐    │
-    │    │ 后端 API │    │  ← FastAPI + LangGraph
-    │    │ :8000    │    │
-    │    └────┬────┘    │
-    │         │         │
-    │    ┌────▼────┐    │
-    │    │PostgreSQL│    │  ← pgvector 向量存储
-    │    │:5432    │    │
-    │    └─────────┘    │
-    │                   │
-    └───────────────────┘
-        Docker Compose (本地/服务器)
+接入层     PC Web / Mobile Web
+API 网关   Nginx → FastAPI → Schema校验 → 审计日志 → 成本追踪 → Rate Limit → 熔断
+Agent 层   LangGraph → 工具链(6) → RAG(pgvector) → LLM(DeepSeek)
+缓存层     Redis Stack(语义缓存) + 本地 LRU
+数据层     pgvector(主数据) + 图片(CDN) + 审计日志(JSONL轮转)
+基础设施   Docker Compose + GitHub Actions + 腾讯云 4G
 ```
 
-## 2. 渲染策略
+**不变原则：**
+- 前端 Vercel / 后端 Docker — 不混合部署
+- AI Chat 用 conversation_id 增量协议 — 不传全量历史
+- 数据库只用 pgvector — 不额外引入 Pinecone/Chroma
 
-| 页面 | 策略 | 原因 |
-|------|------|------|
-| 首页 | SSG（静态生成） | 内容固定，build 时生成 |
-| 帕鲁列表 | SSG | 数据变更频率低 |
-| 帕鲁详情 | SSG + ISR（revalidate: 1周） | 游戏更新后自动再生 |
-| 繁殖计算器 | CSR | 交互密集型 |
-| AI Chat | SSR + Streaming | 需要服务端 LLM 调用 |
-| 地图 | SSR 壳 + CSR 地图数据 | 地图引擎需浏览器 API |
+## 2. 技术栈
 
-## 3. 数据流程
+| 层 | 技术 | 选型理由 |
+|----|------|---------|
+| 前端框架 | Next.js 15 (App Router) | SSG/SSR/Streaming 三合一 |
+| 样式 | Tailwind v4 + Radix UI | 设计 Token 驱动 |
+| 动画 | Framer Motion | React 生态最强 |
+| 后端 | FastAPI + Uvicorn | Python 异步天花板 |
+| AI 编排 | LangGraph StateGraph | 多步推理 + 状态持久化 |
+| 数据库 | PostgreSQL 16 + pgvector | 向量+关系一体 |
+| 缓存 | Redis Stack (RediSearch) | 语义缓存需要向量索引 |
+| LLM | DeepSeek | 国产，国内直连，成本低 |
 
-```
-palworld-kb/*.json ──→ scripts/seed_palworld_data.py ──→ pgvector
-                    │                                      │
-                    │                                      ├─ pals 表 (含 embedding)
-                    │                                      ├─ breeding 表
-                    │                                      ├─ items 表
-                    │                                      └─ skills 表
-                    │
-palworld-atlas-data ──→ scripts/process_map_data.py ──→ frontend/data/maps.json
-                                                         (静态文件，直接引用)
-```
+## 3. 数据库 Schema（真实结构）
 
-### RAG 检索流程（AI Chat）
-
-```
-用户问题
-  → 意图分类（LLM）
-    ├─ 帕鲁查询 → 直接 SQL（pals 表）
-    ├─ 繁殖查询 → 直接 SQL（breeding 表）
-    ├─ 综合问题 → pgvector 向量检索（pals.embedding）
-    └─ 攻略问题 → mem0 语义检索
-  → 拼接 context → LLM → 流式响应
-```
-
-## 4. 数据库 Schema
-
-### pals 表
 ```sql
 CREATE TABLE pals (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    name_cn VARCHAR(100),
-    types VARCHAR(50)[],
-    deck_id INTEGER,
+    name VARCHAR(100) UNIQUE NOT NULL,
+    elements JSONB,
+    deck_id VARCHAR(10),
     rarity INTEGER,
     size VARCHAR(10),
-    drops TEXT[],
-    combat_stats JSONB,
+    drops JSONB,
     work_orders JSONB,
     skills JSONB,
-    embedding vector(1536),
-    created_at TIMESTAMP DEFAULT NOW(),
-    data_version VARCHAR(20)
+    data JSONB  -- 完整帕鲁数据（含 breeding_rank, stats 等）
 );
-```
 
-### breeding 表
-```sql
 CREATE TABLE breeding (
     id SERIAL PRIMARY KEY,
     parent1 VARCHAR(100) NOT NULL,
@@ -101,70 +59,25 @@ CREATE TABLE breeding (
 );
 ```
 
-## 5. API 契约
+## 4. 不变的安全策略
 
-### 聊天 API
+- CSP 严格策略（见 PRD-007 配置）
+- 无用户系统（不做 JWT auth）
+- Rate Limiting: /pals 60/min, /breeding 30/min, /chat 5/min（slowapi）
+- 成本熔断: IP 日 5w tokens → 429, 全局日 50w → 降级
+- 审计日志: 全量 API 记录，按天 JSONL 轮转
+
+## 5. 部署
+
 ```
-POST /api/v1/chat/stream
-Authorization: Bearer <jwt>
+Stage 1 (现在): 腾讯云 Lighthouse 4GB + Docker Compose
+  前端: Nginx 反代 Next.js
+  后端: FastAPI 容器
+  数据库: pgvector 容器
+  缓存: Redis Stack 容器
 
-Request:
-{
-  messages: [{ role: "user", content: "..." }],
-  conversationId?: string
-}
-
-Response: SSE Stream
-event: token
-data: {"type": "text", "content": "..."}
-
-event: token
-data: {"type": "pal_ref", "content": {"id": 1, "name": "Anubis"}}
-
-event: done
-data: {"conversationId": "xxx"}
+Stage 2 (未来): 读写分离 + CDN
+Stage 3 (遥见): K8s + 微服务
 ```
 
-## 6. 工具清单
-
-### Hermes 工具（后端扩展）
-- `pal_search(query, filters)` — 查询帕鲁数据
-- `breeding_calc(p1, p2)` — 繁殖计算结果
-- `breeding_reverse(target)` — 查询所有父代组合
-- `map_search(pal_name)` — 查询帕鲁位置
-
-### Cursor 工具（前端开发）
-- PalCard 组件系列
-- 繁殖树可视化组件
-- 聊天 UI 组件
-- 地图组件
-
-## 7. 部署
-
-```yaml
-前端: Vercel (pal-universe.vercel.app)
-后端: Docker Compose (自己的服务器或云主机)
-  - db: pgvector/pgvector:pg16
-  - valkey: valkey/valkey:8.1.6-alpine (可选)
-  - app: FastAPI (自动构建)
-  - prometheus + grafana (监控，可选)
-```
-
-## 8. 安全
-
-- CSP 严格策略（见 PRD-007 的配置）
-- JWT 认证（后端已有）
-- Rate Limiting（slowapi，后端已有）
-- CORS 白名单（仅前端域名）
-- 依赖 CVE 扫描（Dependabot）
-
-## 9. 性能目标
-
-| 指标 | 目标 |
-|------|------|
-| FCP | < 0.5s |
-| LCP | < 1.0s |
-| Lighthouse | 100/100/100 |
-| AI Chat 首 token | < 500ms (P95) |
-| 筛选/搜索 | < 500ms |
-| 繁殖计算 | < 100ms |
+成本红线: ¥100-200/月（4G → 8G 服务器）

@@ -100,7 +100,7 @@ export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
           src={imgSrc}
           alt={pal.name}
           fill
-          sizes="280px"
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
           className="object-contain p-4 transition-transform duration-[var(--duration-normal)] group-hover:scale-105"
           onError={() => {
             if (imgSrc.endsWith(".webp")) {
