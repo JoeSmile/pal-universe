@@ -61,9 +61,13 @@ export type MessageKey =
   | "work.farming"
   | "work.base_worker"
   | "work.fishing"
-  | "work.fighter";
+  | "work.fighter"
+  | "chat.title"
+  | "chat.empty";
 
 const en: Record<MessageKey, string> = {
+  "chat.title": "AI Chat",
+  "chat.empty": "Ask anything about Palworld guides.",
   "nav.home": "Home",
   "home.tagline": "Smart search · AI guides · Pal encyclopedia",
   "home.searchLabel": "Search pals or ask AI",
@@ -128,6 +132,8 @@ const en: Record<MessageKey, string> = {
 };
 
 const zh: Record<MessageKey, string> = {
+  "chat.title": "AI 对话",
+  "chat.empty": "可以问任何帕鲁攻略问题。",
   "nav.home": "首页",
   "home.tagline": "智能搜索 · AI 攻略 · 帕鲁百科",
   "home.searchLabel": "搜索帕鲁或提问 AI",
