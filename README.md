@@ -67,7 +67,79 @@ pal-universe/
 | AI 引擎 | DeepSeek / OpenAI API + RAG |
 | CI/CD | GitHub Actions + Vercel |
 | 安全 | Semgrep + CodeQL + Dependabot |
-| 质量 | Vitest + Playwright + ESLint + Prettier |
+| 质量 | Vitest + ESLint + Prettier |
+|
+|## 🚀 本地开发
+
+### 前置条件
+
+```bash
+# PostgreSQL 16 + pgvector (Docker)
+make dev-backend
+
+# 安装前端依赖
+cd frontend && bun install
+```
+
+### 启动服务
+
+```bash
+# 一键启动全部
+make dev              # 后端 API + 前端 Next.js 同时启动
+
+# 或分别启动
+make dev-backend      # 后端: uvicorn app.main:app --port 8000
+make dev-frontend     # 前端: bun run dev --port 3000
+
+# 后端单独启动 (详细)
+cd backend
+.venv/bin/python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+# 前端单独启动 (详细)
+cd frontend
+bun run dev --port 3000
+```
+
+### 数据初始化
+
+```bash
+make seed             # 导入帕鲁/繁殖/物品数据到 pgvector
+make images           # 下载 299 张帕鲁图标 (不 commit)
+make mock-data        # 生成前端 Mock JSON
+make process-spawns   # 处理地图位置数据
+```
+
+### 验证
+
+```bash
+make validate         # 数据完整性验证
+make lint             # 前端 lint + 后端 ruff
+make type-check       # TypeScript type-check
+```
+
+### 访问
+
+| 服务 | 地址 |
+|------|------|
+| 前端 | http://localhost:3000 |
+| 后端 API | http://localhost:8000 |
+| API 文档 | http://localhost:8000/docs |
+| 健康检查 | http://localhost:8000/health |
+
+### API 测试
+
+```bash
+# 搜索帕鲁
+curl "http://localhost:8000/api/v1/pals/search?q=Anubis"
+
+# 繁殖计算
+curl "http://localhost:8000/api/v1/breeding/calculate?parent1=Penking&parent2=Vanwyrm%20Cryst"
+
+# AI 聊天 (SSE 流式)
+curl -X POST "http://localhost:8000/api/v1/chat/stream" \
+  -H "Content-Type: application/json" \
+  -d '{"message": "Anubis 在哪里抓？"}'
+```
 
 ## 📦 数据来源
 
