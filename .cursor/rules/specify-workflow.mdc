@@ -15,7 +15,8 @@ globs: .specify/tasks/*
 
 1. **读取 `CONTRIBUTING.md`** — 了解项目协作规范、角色分工、代码标准
 2. **读取 `PROJECT_CONTEXT.md`** — 了解项目全景、技术栈、进度
-3. 然后开始处理任务
+3. **读取 `.specify/BRANCH-RULES.md`** — 分支管理规则（禁止直接提交 main）
+4. 然后开始处理任务
 
 ---
 
