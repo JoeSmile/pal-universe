@@ -9,10 +9,10 @@
 
 dev: dev-db  ## 启动全部服务（数据库 + 后端 API + 前端）
 	@echo "📦 启动后端 API (后台)..."
-	cd backend && .venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 &
+	@cd backend && nohup .venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 > /tmp/paluniverse-backend.log 2>&1 &
 	@sleep 8
 	@echo "📦 启动前端 Next.js..."
-	cd frontend && bun run dev
+	@cd frontend && bun run dev
 
 dev-db:  ## 启动 PostgreSQL + pgvector
 	cd backend && docker compose up db -d
