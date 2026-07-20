@@ -54,8 +54,10 @@ data/
 !frontend/src/data/
 !frontend/src/data/**
 
-# Images (downloaded at build time)
-frontend/public/images/
+# Images (downloaded at build time) — keep UI icons tracked (~88KB)
+frontend/public/images/*
+!frontend/public/images/ui/
+!frontend/public/images/ui/**
 
 # Backend is a separate repo
 backend/.git/

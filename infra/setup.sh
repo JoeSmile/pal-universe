@@ -81,6 +81,7 @@ cp /etc/letsencrypt/live/$DOMAIN/privkey.pem  /opt/pal-universe/infra/ssl/
 echo "🖼️  下载帕鲁图片..."
 cd /opt/pal-universe
 python3 scripts/download_images.py
+# UI 元素/工作适性小图标已入库：frontend/public/images/ui/
 
 # ─── 8. 启动 ────────────────────────────────────
 echo "🐳 启动 Docker 服务..."
