@@ -83,21 +83,25 @@ cd frontend && bun install
 
 ### 启动服务
 
+前后端**建议分别启动**，终端窗口分开：
+
 ```bash
-# 一键启动全部
-make dev              # 后端 API + 前端 Next.js 同时启动
+# 终端 1: 启动数据库（首次需要）
+make dev-db
 
-# 或分别启动
-make dev-backend      # 后端: uvicorn app.main:app --port 8000
-make dev-frontend     # 前端: bun run dev --port 3000
-
-# 后端单独启动 (详细)
+# 终端 2: 启动后端 API
 cd backend
 .venv/bin/python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
-# 前端单独启动 (详细)
+# 终端 3: 启动前端
 cd frontend
 bun run dev --port 3000
+```
+
+如果不习惯多终端，一键启动（后端 API 跑后台，前端占前台）：
+
+```bash
+make dev
 ```
 
 ### 数据初始化
