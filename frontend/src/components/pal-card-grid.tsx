@@ -1,55 +1,45 @@
 "use client";
 
 import { LayoutGroup, motion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
 import { PalCard } from "@/components/pal-card";
 import type { PalCardData } from "@/lib/pal-types";
 import { useLocaleStore } from "@/lib/i18n/store";
 import { cn } from "@/lib/utils";
 
-/** Initial viewport batch — keeps mobile paint cheap for ~300 pals. */
-export const PAL_GRID_PAGE_SIZE = 36;
-
 interface PalCardGridProps {
   pals: PalCardData[];
   className?: string;
   onClearFilters?: () => void;
-  /** Override page size (tests). */
-  pageSize?: number;
+  loading?: boolean;
 }
 
 export function PalCardGrid({
   pals,
   className,
   onClearFilters,
-  pageSize = PAL_GRID_PAGE_SIZE,
+  loading = false,
 }: PalCardGridProps): React.ReactElement {
   const translate = useLocaleStore((state) => state.t);
-  const [visibleCount, setVisibleCount] = useState(pageSize);
-  const sentinelRef = useRef<HTMLLIElement | null>(null);
 
-  // Reset window when the filtered set changes.
-  useEffect(() => {
-    setVisibleCount(pageSize);
-  }, [pals, pageSize]);
-
-  useEffect(() => {
-    const node = sentinelRef.current;
-    if (!node || visibleCount >= pals.length) return;
-    if (typeof IntersectionObserver === "undefined") return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          setVisibleCount((n) => Math.min(n + pageSize, pals.length));
-        }
-      },
-      { rootMargin: "200px 0px" },
+  if (loading) {
+    return (
+      <div
+        className={cn(
+          "grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6",
+          className,
+        )}
+        data-testid="pal-card-grid-loading"
+        aria-busy
+      >
+        {Array.from({ length: 12 }).map((_, i) => (
+          <div
+            key={i}
+            className="aspect-[3/4] animate-pulse rounded-2xl bg-bg-elevated"
+          />
+        ))}
+      </div>
     );
-
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, [visibleCount, pals.length, pageSize]);
+  }
 
   if (pals.length === 0) {
     return (
@@ -65,7 +55,12 @@ export function PalCardGrid({
           <button
             type="button"
             onClick={onClearFilters}
-            className="text-sm text-accent hover:text-accent-hover"
+            className={cn(
+              "cursor-pointer text-sm text-accent underline-offset-4",
+              "transition-[color,opacity,transform] duration-[var(--duration-fast)]",
+              "hover:text-accent-hover hover:underline active:scale-[0.98]",
+              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:rounded-sm",
+            )}
           >
             {translate("list.clearFilters")}
           </button>
@@ -73,9 +68,6 @@ export function PalCardGrid({
       </div>
     );
   }
-
-  const visible = pals.slice(0, visibleCount);
-  const hasMore = visibleCount < pals.length;
 
   return (
     <LayoutGroup>
@@ -87,24 +79,16 @@ export function PalCardGrid({
         )}
         data-testid="pal-card-grid"
       >
-        {visible.map((pal) => (
+        {pals.map((pal) => (
           <motion.li
             key={pal.name}
             layout
             transition={{ type: "spring", stiffness: 350, damping: 30 }}
-            className="min-w-0 [content-visibility:auto] [contain-intrinsic-size:auto_320px]"
+            className="min-w-0"
           >
             <PalCard pal={pal} className="max-w-none" />
           </motion.li>
         ))}
-        {hasMore ? (
-          <li
-            ref={sentinelRef}
-            className="col-span-full h-4 list-none"
-            data-testid="pal-grid-sentinel"
-            aria-hidden
-          />
-        ) : null}
       </motion.ul>
     </LayoutGroup>
   );

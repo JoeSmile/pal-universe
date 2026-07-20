@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Circle,
   Droplet,
@@ -10,63 +12,65 @@ import {
   Zap,
   type LucideIcon,
 } from "lucide-react";
+import { useLocaleStore } from "@/lib/i18n/store";
+import type { MessageKey } from "@/lib/i18n/messages";
 import { cn } from "@/lib/utils";
 import type { PalElement } from "@/lib/pal-types";
 
 const ELEMENT_META: Record<
   string,
-  { label: string; icon: LucideIcon; bg: string; text: string }
+  { messageKey: MessageKey; icon: LucideIcon; bg: string; text: string }
 > = {
   Fire: {
-    label: "火",
+    messageKey: "element.Fire",
     icon: Flame,
     bg: "bg-[var(--color-element-fire)]",
     text: "text-[var(--color-element-fire-text)]",
   },
   Water: {
-    label: "水",
+    messageKey: "element.Water",
     icon: Droplet,
     bg: "bg-[var(--color-element-water)]",
     text: "text-[var(--color-element-water-text)]",
   },
   Grass: {
-    label: "草",
+    messageKey: "element.Grass",
     icon: Leaf,
     bg: "bg-[var(--color-element-grass)]",
     text: "text-[var(--color-element-grass-text)]",
   },
   Electric: {
-    label: "电",
+    messageKey: "element.Electric",
     icon: Zap,
     bg: "bg-[var(--color-element-electric)]",
     text: "text-[var(--color-element-electric-text)]",
   },
   Ice: {
-    label: "冰",
+    messageKey: "element.Ice",
     icon: Snowflake,
     bg: "bg-[var(--color-element-ice)]",
     text: "text-[var(--color-element-ice-text)]",
   },
   Ground: {
-    label: "地",
+    messageKey: "element.Ground",
     icon: Mountain,
     bg: "bg-[var(--color-element-ground)]",
     text: "text-[var(--color-element-ground-text)]",
   },
   Dark: {
-    label: "暗",
+    messageKey: "element.Dark",
     icon: Moon,
     bg: "bg-[var(--color-element-dark)]",
     text: "text-[var(--color-element-dark-text)]",
   },
   Dragon: {
-    label: "龙",
+    messageKey: "element.Dragon",
     icon: Gem,
     bg: "bg-[var(--color-element-dragon)]",
     text: "text-[var(--color-element-dragon-text)]",
   },
   Neutral: {
-    label: "无",
+    messageKey: "element.Neutral",
     icon: Circle,
     bg: "bg-[var(--color-element-neutral)]",
     text: "text-[var(--color-element-neutral-text)]",
@@ -79,7 +83,9 @@ interface ElementBadgeProps {
 }
 
 export function ElementBadge({ element, className }: ElementBadgeProps): React.ReactElement {
-  const meta = ELEMENT_META[element] ?? ELEMENT_META.Neutral!;
+  const translate = useLocaleStore((state) => state.t);
+  const key = element in ELEMENT_META ? element : "Neutral";
+  const meta = ELEMENT_META[key]!;
   const Icon = meta.icon;
 
   return (
@@ -93,7 +99,7 @@ export function ElementBadge({ element, className }: ElementBadgeProps): React.R
       data-element={element as PalElement}
     >
       <Icon className="size-3.5" aria-hidden="true" />
-      {meta.label}
+      {translate(meta.messageKey)}
     </span>
   );
 }

@@ -4,6 +4,7 @@ import palsData from "@/data/pals.json";
 import palNames from "@/data/pal-names.json";
 import { formatPalLabel } from "@/lib/search-pals";
 import { useLocaleStore } from "@/lib/i18n/store";
+import type { MessageKey } from "@/lib/i18n/messages";
 import { cn } from "@/lib/utils";
 
 interface HotPal {
@@ -116,7 +117,7 @@ export function HotPals({ className, limit = 8 }: HotPalsProps): React.ReactElem
                       ELEMENT_CLASS[element] ?? "text-text-secondary",
                     )}
                   >
-                    {element}
+                    {translate(`element.${element}` as MessageKey)}
                   </span>
                 ))}
               </p>

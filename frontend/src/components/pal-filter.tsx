@@ -26,14 +26,20 @@ function Chip({
   return (
     <button
       type="button"
-      onClick={onClick}
+      onClick={(event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        onClick();
+      }}
       aria-pressed={active}
       className={cn(
-        "rounded-lg border px-2.5 py-1.5 text-xs transition-colors",
-        "touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+        "cursor-pointer rounded-lg border px-2.5 py-1.5 text-xs font-medium",
+        "transition-[border-color,background-color,transform,box-shadow] duration-[var(--duration-fast)]",
+        "touch-manipulation select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-base",
+        "active:scale-[0.96]",
         active
-          ? "border-accent bg-accent/15 text-accent"
-          : "border-border bg-bg-surface text-text-secondary hover:border-border-hover hover:text-text-primary",
+          ? "border-accent bg-accent/20 text-accent shadow-sm"
+          : "border-border bg-bg-surface text-text-secondary hover:border-border-hover hover:bg-bg-hover hover:text-text-primary",
         className,
       )}
     >
@@ -59,17 +65,14 @@ export function PalFilter({
   const toggleElement = usePalFilterStore((state) => state.toggleElement);
   const toggleWork = usePalFilterStore((state) => state.toggleWork);
   const clearFilters = usePalFilterStore((state) => state.clearFilters);
-  const hasActive = usePalFilterStore(
-    (state) =>
-      state.query.trim().length > 0 ||
-      state.elements.length > 0 ||
-      state.works.length > 0,
-  );
+  const hasActive =
+    query.trim().length > 0 || elements.length > 0 || works.length > 0;
 
   return (
     <section
       className={cn("flex flex-col gap-4", className)}
       aria-label={translate("list.searchLabel")}
+      data-testid="pal-filter"
     >
       <div className="relative">
         <Search
@@ -85,14 +88,20 @@ export function PalFilter({
           className={cn(
             "w-full rounded-xl border border-border bg-bg-surface py-2.5 pl-10 pr-10",
             "text-sm text-text-primary placeholder:text-text-tertiary",
-            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+            "transition-[border-color,box-shadow] duration-[var(--duration-fast)]",
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:border-accent/50",
           )}
         />
         {query ? (
           <button
             type="button"
             onClick={() => setQuery("")}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-text-tertiary hover:text-text-primary"
+            className={cn(
+              "absolute right-3 top-1/2 -translate-y-1/2 rounded-md p-0.5",
+              "cursor-pointer text-text-tertiary transition-colors duration-[var(--duration-fast)]",
+              "hover:bg-bg-hover hover:text-text-primary active:scale-90",
+              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent",
+            )}
             aria-label={translate("home.clearSearch")}
           >
             <X className="size-4" />
@@ -104,7 +113,12 @@ export function PalFilter({
         <p className="text-xs font-medium uppercase tracking-wide text-text-tertiary">
           {translate("list.elements")}
         </p>
-        <div className="flex flex-wrap gap-2">
+        <div
+          className="flex flex-wrap gap-2"
+          role="group"
+          aria-label={translate("list.elements")}
+          data-testid="pal-filter-elements"
+        >
           {FILTER_ELEMENTS.map((element) => (
             <Chip
               key={element}
@@ -121,7 +135,12 @@ export function PalFilter({
         <p className="text-xs font-medium uppercase tracking-wide text-text-tertiary">
           {translate("list.works")}
         </p>
-        <div className="flex flex-wrap gap-2">
+        <div
+          className="flex flex-wrap gap-2"
+          role="group"
+          aria-label={translate("list.works")}
+          data-testid="pal-filter-works"
+        >
           {FILTER_WORKS.map((work) => (
             <Chip
               key={work}
@@ -145,7 +164,12 @@ export function PalFilter({
           <button
             type="button"
             onClick={clearFilters}
-            className="text-sm text-accent hover:text-accent-hover"
+            className={cn(
+              "cursor-pointer text-sm text-accent underline-offset-4",
+              "transition-[color,opacity,transform] duration-[var(--duration-fast)]",
+              "hover:text-accent-hover hover:underline active:scale-[0.98]",
+              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:rounded-sm",
+            )}
             data-testid="pal-clear-filters"
           >
             {translate("list.clearFilters")}

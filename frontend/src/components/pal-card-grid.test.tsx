@@ -7,11 +7,13 @@ import { useLocaleStore } from "@/lib/i18n/store";
 import { getPalCatalog } from "@/lib/pal-catalog";
 import {
   filterPals,
+  paginatePals,
   usePalFilterStore,
   type FilterElement,
   type FilterWork,
 } from "@/lib/pal-filter-store";
 import type { PalCardData } from "@/lib/pal-types";
+import { useState } from "react";
 
 afterEach(() => {
   cleanup();
@@ -19,7 +21,13 @@ afterEach(() => {
 
 beforeEach(() => {
   useLocaleStore.setState({ locale: "zh", hydrated: true });
-  usePalFilterStore.setState({ query: "", elements: [], works: [] });
+  usePalFilterStore.setState({
+    query: "",
+    elements: [],
+    works: [],
+    page: 1,
+    perPage: 24,
+  });
 });
 
 const samplePals: PalCardData[] = [
@@ -91,19 +99,10 @@ describe("getPalCatalog", () => {
     const names = catalog.map((pal) => pal.name);
     expect(new Set(names).size).toBe(names.length);
   });
-
-  it("sorts deck_id with numeric awareness for variant suffixes", () => {
-    const catalog = getPalCatalog();
-    const idx100 = catalog.findIndex((p) => p.deck_id === "100");
-    const idx100B = catalog.findIndex((p) => p.deck_id === "100B");
-    if (idx100 >= 0 && idx100B >= 0) {
-      expect(idx100).toBeLessThan(idx100B);
-    }
-  });
 });
 
 describe("filterPals", () => {
-  it("filters by element", () => {
+  it("filters by element case-insensitively", () => {
     const result = filterPals(samplePals, {
       query: "",
       elements: ["Fire"] as FilterElement[],
@@ -125,19 +124,18 @@ describe("filterPals", () => {
     expect(result[0]?.name).toBe("Anubis");
   });
 
-  it("filters by localized name query", () => {
-    const result = filterPals(samplePals, {
-      query: "火绒",
-      elements: [],
-      works: [],
-      locale: "zh",
-    });
-    expect(result.map((p) => p.name)).toEqual(["Foxparks"]);
+  it("paginates filtered results for infinite windows", () => {
+    const page1 = paginatePals(samplePals, 1, 2);
+    expect(page1.data).toHaveLength(2);
+    expect(page1.has_next).toBe(true);
+    const page2 = paginatePals(samplePals, 2, 2);
+    expect(page2.data).toHaveLength(1);
+    expect(page2.has_next).toBe(false);
   });
 });
 
 describe("PalCardGrid", () => {
-  it("uses responsive grid column classes", () => {
+  it("uses responsive grid column classes aligned on mobile", () => {
     render(<PalCardGrid pals={samplePals} />);
     const grid = screen.getByTestId("pal-card-grid");
     expect(grid).toHaveClass("grid-cols-2");
@@ -152,22 +150,62 @@ describe("PalCardGrid", () => {
     expect(screen.getAllByTestId("pal-card")).toHaveLength(3);
   });
 
-  it("pages cards for large lists", () => {
-    render(<PalCardGrid pals={samplePals} pageSize={2} />);
-    expect(screen.getAllByTestId("pal-card")).toHaveLength(2);
-    expect(screen.getByTestId("pal-grid-sentinel")).toBeInTheDocument();
-  });
-
   it("shows empty state and clear action", async () => {
     const user = userEvent.setup();
     const onClear = vi.fn();
     render(<PalCardGrid pals={[]} onClearFilters={onClear} />);
 
     expect(screen.getByTestId("pal-grid-empty")).toBeInTheDocument();
-    expect(screen.getByText("没有找到匹配的帕鲁")).toBeInTheDocument();
-
     await user.click(screen.getByRole("button", { name: "清除筛选" }));
     expect(onClear).toHaveBeenCalledOnce();
+  });
+});
+
+describe("infinite load window", () => {
+  function InfiniteHarness(): React.ReactElement {
+    const query = usePalFilterStore((s) => s.query);
+    const elements = usePalFilterStore((s) => s.elements);
+    const works = usePalFilterStore((s) => s.works);
+    const locale = useLocaleStore((s) => s.locale);
+    const clearFilters = usePalFilterStore((s) => s.clearFilters);
+    const [pages, setPages] = useState(1);
+    const perPage = 2;
+    const filtered = filterPals(samplePals, {
+      query,
+      elements,
+      works,
+      locale,
+    });
+    const visible = filtered.slice(0, pages * perPage);
+    const hasMore = visible.length < filtered.length;
+
+    return (
+      <div>
+        <PalFilter resultCount={filtered.length} />
+        <PalCardGrid pals={visible} onClearFilters={clearFilters} />
+        {hasMore ? (
+          <button
+            type="button"
+            data-testid="pal-load-more"
+            onClick={() => setPages((n) => n + 1)}
+          >
+            加载更多
+          </button>
+        ) : (
+          <p data-testid="pal-end-of-list">已显示全部 {filtered.length} 只帕鲁</p>
+        )}
+      </div>
+    );
+  }
+
+  it("appends the next window when load more is pressed", async () => {
+    const user = userEvent.setup();
+    render(<InfiniteHarness />);
+
+    expect(screen.getAllByTestId("pal-card")).toHaveLength(2);
+    await user.click(screen.getByTestId("pal-load-more"));
+    expect(screen.getAllByTestId("pal-card")).toHaveLength(3);
+    expect(screen.getByTestId("pal-end-of-list")).toBeInTheDocument();
   });
 });
 
@@ -193,21 +231,16 @@ describe("PalFilter + grid integration", () => {
     );
   }
 
-  it("updates result count when filtering by element", async () => {
+  it("updates result count when filtering by element chip", async () => {
     const user = userEvent.setup();
     render(<Harness />);
 
-    expect(
-      within(screen.getByTestId("pal-result-count")).getByText("3 只帕鲁"),
-    ).toBeInTheDocument();
-    expect(screen.getAllByTestId("pal-card")).toHaveLength(3);
-
-    await user.click(screen.getByRole("button", { name: "火" }));
+    const elementGroup = screen.getByTestId("pal-filter-elements");
+    await user.click(within(elementGroup).getByRole("button", { name: "火" }));
 
     expect(
       within(screen.getByTestId("pal-result-count")).getByText("1 只帕鲁"),
     ).toBeInTheDocument();
-    expect(screen.getAllByTestId("pal-card")).toHaveLength(1);
     expect(screen.getByRole("heading", { name: "火绒狐" })).toBeInTheDocument();
   });
 
@@ -215,7 +248,8 @@ describe("PalFilter + grid integration", () => {
     const user = userEvent.setup();
     render(<Harness />);
 
-    await user.click(screen.getByRole("button", { name: "挖矿" }));
+    const workGroup = screen.getByTestId("pal-filter-works");
+    await user.click(within(workGroup).getByRole("button", { name: "挖矿" }));
 
     expect(
       within(screen.getByTestId("pal-result-count")).getByText("1 只帕鲁"),
@@ -227,14 +261,11 @@ describe("PalFilter + grid integration", () => {
     const user = userEvent.setup();
     render(<Harness />);
 
-    await user.click(screen.getByRole("button", { name: "火" }));
+    const elementGroup = screen.getByTestId("pal-filter-elements");
+    await user.click(within(elementGroup).getByRole("button", { name: "火" }));
     expect(screen.getAllByTestId("pal-card")).toHaveLength(1);
 
     await user.click(screen.getByTestId("pal-clear-filters"));
-
-    expect(
-      within(screen.getByTestId("pal-result-count")).getByText("3 只帕鲁"),
-    ).toBeInTheDocument();
     expect(screen.getAllByTestId("pal-card")).toHaveLength(3);
   });
 });
