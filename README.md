@@ -20,7 +20,7 @@ pal-universe/
 │   │   └── map/              # 互动地图
 │   ├── data/                 # JSON 数据缓存
 │   ├── lib/                  # 工具库
-│   └── public/images/        # 图片资源
+│   └── public/images/        # 帕鲁图下载；ui/ 小图标已入库
 ├── docs/                     # 项目文档
 │   ├── epics/                # Epic PRD 拆分
 │   ├── architecture/         # 架构文档
