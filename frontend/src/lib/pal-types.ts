@@ -38,7 +38,7 @@ export function getPalImageUrl(name: string, ext: "webp" | "svg" = "webp"): stri
   return `/images/pals/${encodeURIComponent(name)}.${ext}`;
 }
 
-/** Normalize mock JSON work_orders (string[]) into leveled work entries. */
+/** Normalize work_orders into leveled entries. Palworld levels go up to ~10. */
 export function normalizeWorkOrders(
   workOrders: Array<string | PalWorkOrder>,
 ): PalWorkOrder[] {
@@ -46,9 +46,10 @@ export function normalizeWorkOrders(
     if (typeof entry === "string") {
       return { skill: entry, level: 1 };
     }
+    const level = Number(entry.level);
     return {
       skill: entry.skill,
-      level: Math.min(4, Math.max(1, entry.level || 1)),
+      level: Number.isFinite(level) ? Math.max(1, Math.min(10, level)) : 1,
     };
   });
 }

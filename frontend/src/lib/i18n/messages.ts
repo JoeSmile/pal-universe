@@ -64,6 +64,8 @@ export type MessageKey =
   | "work.medicine"
   | "work.transport"
   | "work.farming"
+  | "work.planting"
+  | "work.gathering"
   | "work.base_worker"
   | "work.fishing"
   | "work.fighter"
@@ -186,6 +188,8 @@ const en: Record<MessageKey, string> = {
   "work.medicine": "Medicine",
   "work.transport": "Transport",
   "work.farming": "Farming",
+  "work.planting": "Planting",
+  "work.gathering": "Gathering",
   "work.base_worker": "Handiwork",
   "work.fishing": "Fishing",
   "work.fighter": "Combat Specialist",
@@ -309,6 +313,8 @@ const zh: Record<MessageKey, string> = {
   "work.medicine": "制药",
   "work.transport": "运输",
   "work.farming": "耕作",
+  "work.planting": "种植",
+  "work.gathering": "采集",
   "work.base_worker": "手工",
   "work.fishing": "钓鱼",
   "work.fighter": "战斗特化",

@@ -54,12 +54,12 @@ data/
 !frontend/src/data/
 !frontend/src/data/**
 
-# Images (downloaded at build time)
-frontend/public/images/
-
-# Backend is a separate repo
-backend/.git/
+# Images (downloaded at build time) — keep UI icons tracked (~88KB)
+# Images — pal icons downloaded at build time (not committed)
+frontend/public/images/*
+# But keep UI icons tracked (~88KB)
+!frontend/public/images/ui/
+!frontend/public/images/ui/**
 
 # Backend subdirectory (separate repo)
-backend/
 frontend/src/data/pal-locations.json

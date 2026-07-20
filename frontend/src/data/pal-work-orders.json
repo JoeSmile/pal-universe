@@ -1,0 +1,3632 @@
+{
+  "Aegidron": [
+    {
+      "skill": "mining",
+      "level": 8
+    }
+  ],
+  "Amione": [
+    {
+      "skill": "watering",
+      "level": 1
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Anubis": [
+    {
+      "skill": "base_worker",
+      "level": 6
+    },
+    {
+      "skill": "mining",
+      "level": 6
+    },
+    {
+      "skill": "transport",
+      "level": 4
+    }
+  ],
+  "Arsox": [
+    {
+      "skill": "kindling",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 2
+    }
+  ],
+  "Astegon": [
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "mining",
+      "level": 7
+    }
+  ],
+  "Azurmane": [
+    {
+      "skill": "electricity",
+      "level": 5
+    }
+  ],
+  "Azurobe": [
+    {
+      "skill": "watering",
+      "level": 4
+    }
+  ],
+  "Azurobe Cryst": [
+    {
+      "skill": "cooling",
+      "level": 4
+    }
+  ],
+  "Bakemi": [
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "medicine",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Bastigor": [
+    {
+      "skill": "lumbering",
+      "level": 6
+    },
+    {
+      "skill": "mining",
+      "level": 5
+    },
+    {
+      "skill": "cooling",
+      "level": 8
+    }
+  ],
+  "Beakon": [
+    {
+      "skill": "electricity",
+      "level": 4
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 5
+    }
+  ],
+  "Beakon Cryst": [
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "cooling",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 5
+    }
+  ],
+  "Beegarde": [
+    {
+      "skill": "planting",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 2
+    },
+    {
+      "skill": "medicine",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    },
+    {
+      "skill": "farming",
+      "level": 3
+    }
+  ],
+  "Bellanoir": [
+    {
+      "skill": "base_worker",
+      "level": 5
+    },
+    {
+      "skill": "medicine",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 4
+    }
+  ],
+  "Bellanoir Libero": [
+    {
+      "skill": "base_worker",
+      "level": 6
+    },
+    {
+      "skill": "medicine",
+      "level": 7
+    },
+    {
+      "skill": "transport",
+      "level": 4
+    }
+  ],
+  "Blazamut": [
+    {
+      "skill": "kindling",
+      "level": 6
+    },
+    {
+      "skill": "mining",
+      "level": 7
+    }
+  ],
+  "Blazamut Ryu": [
+    {
+      "skill": "kindling",
+      "level": 6
+    },
+    {
+      "skill": "mining",
+      "level": 7
+    }
+  ],
+  "Blazehowl": [
+    {
+      "skill": "kindling",
+      "level": 5
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    }
+  ],
+  "Blazehowl Noct": [
+    {
+      "skill": "kindling",
+      "level": 5
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    }
+  ],
+  "Blue Slime": [
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Braloha": [
+    {
+      "skill": "planting",
+      "level": 5
+    },
+    {
+      "skill": "gathering",
+      "level": 5
+    },
+    {
+      "skill": "mining",
+      "level": 3
+    }
+  ],
+  "Bristla": [
+    {
+      "skill": "planting",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "medicine",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Broncherry": [
+    {
+      "skill": "planting",
+      "level": 5
+    }
+  ],
+  "Broncherry Aqua": [
+    {
+      "skill": "watering",
+      "level": 5
+    }
+  ],
+  "Bulldosu": [
+    {
+      "skill": "mining",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Bushi": [
+    {
+      "skill": "kindling",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Bushi Noct": [
+    {
+      "skill": "kindling",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "lumbering",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Caprity": [
+    {
+      "skill": "planting",
+      "level": 2
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Caprity Noct": [
+    {
+      "skill": "planting",
+      "level": 2
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Carnibora": [
+    {
+      "skill": "planting",
+      "level": 6
+    },
+    {
+      "skill": "base_worker",
+      "level": 4
+    },
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Cattiva": [
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "mining",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Cave Bat": [
+    {
+      "skill": "gathering",
+      "level": 1
+    }
+  ],
+  "Cawgnito": [
+    {
+      "skill": "lumbering",
+      "level": 2
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Celaray": [
+    {
+      "skill": "watering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Celaray Lux": [
+    {
+      "skill": "watering",
+      "level": 1
+    },
+    {
+      "skill": "electricity",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Celesdir": [
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "lumbering",
+      "level": 7
+    }
+  ],
+  "Celesdir Noct": [
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "lumbering",
+      "level": 8
+    }
+  ],
+  "Chikipi": [
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Chillet": [
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "cooling",
+      "level": 2
+    }
+  ],
+  "Chillet Ignis": [
+    {
+      "skill": "kindling",
+      "level": 4
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    }
+  ],
+  "Cinnamoth": [
+    {
+      "skill": "planting",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "medicine",
+      "level": 2
+    }
+  ],
+  "Clovee": [
+    {
+      "skill": "planting",
+      "level": 1
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    }
+  ],
+  "Cremis": [
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 2
+    }
+  ],
+  "Croajiro": [
+    {
+      "skill": "watering",
+      "level": 1
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Croajiro Noct": [
+    {
+      "skill": "watering",
+      "level": 1
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Cryolinx": [
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 4
+    },
+    {
+      "skill": "cooling",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 4
+    }
+  ],
+  "Cryolinx Terra": [
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "lumbering",
+      "level": 6
+    },
+    {
+      "skill": "mining",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 4
+    }
+  ],
+  "Daedream": [
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Dandilord": [
+    {
+      "skill": "planting",
+      "level": 8
+    },
+    {
+      "skill": "base_worker",
+      "level": 6
+    },
+    {
+      "skill": "gathering",
+      "level": 5
+    },
+    {
+      "skill": "medicine",
+      "level": 6
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Dazemu": [
+    {
+      "skill": "gathering",
+      "level": 2
+    }
+  ],
+  "Dazzi": [
+    {
+      "skill": "electricity",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Dazzi Noct": [
+    {
+      "skill": "electricity",
+      "level": 1
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "medicine",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Demon Eye": [
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Depresso": [
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "mining",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Digtoise": [
+    {
+      "skill": "mining",
+      "level": 4
+    }
+  ],
+  "Dinossom": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    }
+  ],
+  "Dinossom Lux": [
+    {
+      "skill": "electricity",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 4
+    }
+  ],
+  "Direhowl": [
+    {
+      "skill": "gathering",
+      "level": 1
+    }
+  ],
+  "Dogen": [
+    {
+      "skill": "base_worker",
+      "level": 4
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "medicine",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Dualith": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 5
+    },
+    {
+      "skill": "mining",
+      "level": 6
+    },
+    {
+      "skill": "transport",
+      "level": 6
+    }
+  ],
+  "Dualith Noct": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 5
+    },
+    {
+      "skill": "mining",
+      "level": 6
+    },
+    {
+      "skill": "transport",
+      "level": 6
+    }
+  ],
+  "Dumud": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "mining",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Dumud Gild": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "mining",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 4
+    }
+  ],
+  "Dupin": [
+    {
+      "skill": "kindling",
+      "level": 7
+    },
+    {
+      "skill": "base_worker",
+      "level": 5
+    },
+    {
+      "skill": "medicine",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Dynamoff": [
+    {
+      "skill": "electricity",
+      "level": 6
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Eidrolon": [
+    {
+      "skill": "transport",
+      "level": 6
+    }
+  ],
+  "Eidrolon Ignis": [
+    {
+      "skill": "kindling",
+      "level": 6
+    },
+    {
+      "skill": "transport",
+      "level": 6
+    }
+  ],
+  "Eikthyrdeer": [
+    {
+      "skill": "lumbering",
+      "level": 2
+    }
+  ],
+  "Eikthyrdeer Terra": [
+    {
+      "skill": "lumbering",
+      "level": 2
+    }
+  ],
+  "Elgrove": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "mining",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Elgrove Cryst": [
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "mining",
+      "level": 3
+    },
+    {
+      "skill": "cooling",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Elizabee": [
+    {
+      "skill": "planting",
+      "level": 4
+    },
+    {
+      "skill": "base_worker",
+      "level": 4
+    },
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "medicine",
+      "level": 4
+    }
+  ],
+  "Elphidran": [
+    {
+      "skill": "lumbering",
+      "level": 3
+    }
+  ],
+  "Elphidran Aqua": [
+    {
+      "skill": "watering",
+      "level": 4
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    }
+  ],
+  "Enchanted Sword": [
+    {
+      "skill": "lumbering",
+      "level": 1
+    }
+  ],
+  "Eye of Cthulhu": [
+    {
+      "skill": "transport",
+      "level": 4
+    }
+  ],
+  "Faleris": [
+    {
+      "skill": "kindling",
+      "level": 6
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Faleris Aqua": [
+    {
+      "skill": "watering",
+      "level": 6
+    },
+    {
+      "skill": "transport",
+      "level": 5
+    }
+  ],
+  "Felbat": [
+    {
+      "skill": "medicine",
+      "level": 3
+    }
+  ],
+  "Fenglope": [
+    {
+      "skill": "lumbering",
+      "level": 3
+    }
+  ],
+  "Fenglope Lux": [
+    {
+      "skill": "electricity",
+      "level": 5
+    },
+    {
+      "skill": "lumbering",
+      "level": 4
+    }
+  ],
+  "Finsider": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Finsider Ignis": [
+    {
+      "skill": "kindling",
+      "level": 2
+    },
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Flambelle": [
+    {
+      "skill": "kindling",
+      "level": 1
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Flaracle": [
+    {
+      "skill": "kindling",
+      "level": 7
+    },
+    {
+      "skill": "base_worker",
+      "level": 6
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Flopie": [
+    {
+      "skill": "planting",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "medicine",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Foxcicle": [
+    {
+      "skill": "cooling",
+      "level": 4
+    },
+    {
+      "skill": "farming",
+      "level": 3
+    }
+  ],
+  "Foxparks": [
+    {
+      "skill": "kindling",
+      "level": 1
+    }
+  ],
+  "Foxparks Cryst": [
+    {
+      "skill": "cooling",
+      "level": 2
+    }
+  ],
+  "Frostallion": [
+    {
+      "skill": "cooling",
+      "level": 7
+    }
+  ],
+  "Frostallion Noct": [
+    {
+      "skill": "gathering",
+      "level": 7
+    }
+  ],
+  "Frostplume": [
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "cooling",
+      "level": 4
+    }
+  ],
+  "Fuack": [
+    {
+      "skill": "watering",
+      "level": 1
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Fuack Ignis": [
+    {
+      "skill": "kindling",
+      "level": 2
+    },
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Fuddler": [
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "mining",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Galeclaw": [
+    {
+      "skill": "gathering",
+      "level": 2
+    }
+  ],
+  "Ghangler": [
+    {
+      "skill": "watering",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Ghangler Ignis": [
+    {
+      "skill": "kindling",
+      "level": 5
+    },
+    {
+      "skill": "watering",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Gildane": [
+    {
+      "skill": "gathering",
+      "level": 5
+    }
+  ],
+  "Gildra": [
+    {
+      "skill": "base_worker",
+      "level": 5
+    },
+    {
+      "skill": "medicine",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Gloopie": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Gloopie Primo": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Gobfin": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Gobfin Ignis": [
+    {
+      "skill": "kindling",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Gorirat": [
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Gorirat Terra": [
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "mining",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Green Slime": [
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Grintale": [
+    {
+      "skill": "gathering",
+      "level": 3
+    }
+  ],
+  "Grizzbolt": [
+    {
+      "skill": "electricity",
+      "level": 5
+    },
+    {
+      "skill": "base_worker",
+      "level": 4
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 5
+    }
+  ],
+  "Gumoss": [
+    {
+      "skill": "planting",
+      "level": 1
+    }
+  ],
+  "Hangyu": [
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Hangyu Cryst": [
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "cooling",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Hartalis": [
+    {
+      "skill": "gathering",
+      "level": 7
+    },
+    {
+      "skill": "lumbering",
+      "level": 7
+    }
+  ],
+  "Helzephyr": [
+    {
+      "skill": "transport",
+      "level": 4
+    }
+  ],
+  "Helzephyr Lux": [
+    {
+      "skill": "electricity",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 5
+    }
+  ],
+  "Herbil": [
+    {
+      "skill": "planting",
+      "level": 1
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Hoocrates": [
+    {
+      "skill": "gathering",
+      "level": 1
+    }
+  ],
+  "Hoodle": [
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Icelyn": [
+    {
+      "skill": "base_worker",
+      "level": 5
+    },
+    {
+      "skill": "medicine",
+      "level": 4
+    },
+    {
+      "skill": "cooling",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Illuminant Bat": [
+    {
+      "skill": "gathering",
+      "level": 1
+    }
+  ],
+  "Illuminant Slime": [
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Incineram": [
+    {
+      "skill": "kindling",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "mining",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Incineram Noct": [
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "mining",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Jelliette": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Jellroy": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "medicine",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Jetragon": [
+    {
+      "skill": "gathering",
+      "level": 8
+    }
+  ],
+  "Jolthog": [
+    {
+      "skill": "electricity",
+      "level": 1
+    }
+  ],
+  "Jolthog Cryst": [
+    {
+      "skill": "cooling",
+      "level": 1
+    }
+  ],
+  "Jormuntide": [
+    {
+      "skill": "watering",
+      "level": 7
+    }
+  ],
+  "Jormuntide Ignis": [
+    {
+      "skill": "kindling",
+      "level": 7
+    }
+  ],
+  "Katress": [
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "medicine",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Katress Ignis": [
+    {
+      "skill": "kindling",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "medicine",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Kelpsea": [
+    {
+      "skill": "watering",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Kelpsea Ignis": [
+    {
+      "skill": "kindling",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Kikit": [
+    {
+      "skill": "mining",
+      "level": 1
+    }
+  ],
+  "Killamari": [
+    {
+      "skill": "watering",
+      "level": 1
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Killamari Primo": [
+    {
+      "skill": "watering",
+      "level": 1
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Kingpaca": [
+    {
+      "skill": "gathering",
+      "level": 2
+    }
+  ],
+  "Kingpaca Cryst": [
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "cooling",
+      "level": 4
+    }
+  ],
+  "Kitsun": [
+    {
+      "skill": "kindling",
+      "level": 3
+    }
+  ],
+  "Kitsun Noct": [
+    {
+      "skill": "kindling",
+      "level": 4
+    }
+  ],
+  "Knocklem": [
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "mining",
+      "level": 7
+    },
+    {
+      "skill": "transport",
+      "level": 7
+    }
+  ],
+  "Knocklem Ignis": [
+    {
+      "skill": "kindling",
+      "level": 5
+    },
+    {
+      "skill": "mining",
+      "level": 7
+    },
+    {
+      "skill": "transport",
+      "level": 7
+    }
+  ],
+  "Lamball": [
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Lapiron": [
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "mining",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Lapure": [
+    {
+      "skill": "base_worker",
+      "level": 6
+    },
+    {
+      "skill": "gathering",
+      "level": 5
+    }
+  ],
+  "Leafan": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Leezpunk": [
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Leezpunk Ignis": [
+    {
+      "skill": "kindling",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Lifmunk": [
+    {
+      "skill": "planting",
+      "level": 1
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "lumbering",
+      "level": 1
+    },
+    {
+      "skill": "medicine",
+      "level": 1
+    }
+  ],
+  "Loomen": [
+    {
+      "skill": "kindling",
+      "level": 4
+    },
+    {
+      "skill": "base_worker",
+      "level": 4
+    },
+    {
+      "skill": "medicine",
+      "level": 4
+    }
+  ],
+  "Loupmoon": [
+    {
+      "skill": "base_worker",
+      "level": 2
+    }
+  ],
+  "Loupmoon Cryst": [
+    {
+      "skill": "base_worker",
+      "level": 4
+    },
+    {
+      "skill": "cooling",
+      "level": 4
+    }
+  ],
+  "Lovander": [
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "mining",
+      "level": 2
+    },
+    {
+      "skill": "medicine",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Lullu": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "medicine",
+      "level": 3
+    }
+  ],
+  "Lunaris": [
+    {
+      "skill": "base_worker",
+      "level": 4
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Lyleen": [
+    {
+      "skill": "planting",
+      "level": 7
+    },
+    {
+      "skill": "base_worker",
+      "level": 5
+    },
+    {
+      "skill": "gathering",
+      "level": 6
+    },
+    {
+      "skill": "medicine",
+      "level": 5
+    }
+  ],
+  "Lyleen Noct": [
+    {
+      "skill": "base_worker",
+      "level": 5
+    },
+    {
+      "skill": "gathering",
+      "level": 6
+    },
+    {
+      "skill": "medicine",
+      "level": 7
+    }
+  ],
+  "Majex": [
+    {
+      "skill": "kindling",
+      "level": 4
+    },
+    {
+      "skill": "base_worker",
+      "level": 5
+    },
+    {
+      "skill": "medicine",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Mammorest": [
+    {
+      "skill": "planting",
+      "level": 4
+    },
+    {
+      "skill": "lumbering",
+      "level": 4
+    },
+    {
+      "skill": "mining",
+      "level": 4
+    }
+  ],
+  "Mammorest Cryst": [
+    {
+      "skill": "lumbering",
+      "level": 5
+    },
+    {
+      "skill": "mining",
+      "level": 4
+    },
+    {
+      "skill": "cooling",
+      "level": 5
+    }
+  ],
+  "Maraith": [
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "mining",
+      "level": 4
+    }
+  ],
+  "Mau": [
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Mau Cryst": [
+    {
+      "skill": "cooling",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Melpaca": [
+    {
+      "skill": "farming",
+      "level": 2
+    }
+  ],
+  "Menasting": [
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "mining",
+      "level": 5
+    }
+  ],
+  "Menasting Terra": [
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "mining",
+      "level": 6
+    }
+  ],
+  "Mimog": [
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Moldron": [
+    {
+      "skill": "kindling",
+      "level": 5
+    },
+    {
+      "skill": "mining",
+      "level": 5
+    }
+  ],
+  "Moldron Cryst": [
+    {
+      "skill": "mining",
+      "level": 5
+    },
+    {
+      "skill": "cooling",
+      "level": 5
+    }
+  ],
+  "Mossanda": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "lumbering",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 4
+    }
+  ],
+  "Mossanda Lux": [
+    {
+      "skill": "electricity",
+      "level": 4
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 4
+    }
+  ],
+  "Mozzarina": [
+    {
+      "skill": "farming",
+      "level": 2
+    }
+  ],
+  "Muffly": [
+    {
+      "skill": "cooling",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Munchill": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "cooling",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Mycora": [
+    {
+      "skill": "planting",
+      "level": 6
+    },
+    {
+      "skill": "base_worker",
+      "level": 4
+    },
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "medicine",
+      "level": 6
+    }
+  ],
+  "Necromus": [
+    {
+      "skill": "lumbering",
+      "level": 6
+    },
+    {
+      "skill": "mining",
+      "level": 6
+    }
+  ],
+  "Needoll": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Needoll Noct": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Neptilius": [
+    {
+      "skill": "watering",
+      "level": 7
+    }
+  ],
+  "Nitemary": [
+    {
+      "skill": "base_worker",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Nitemary Botan": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Nitewing": [
+    {
+      "skill": "gathering",
+      "level": 2
+    }
+  ],
+  "Nox": [
+    {
+      "skill": "gathering",
+      "level": 1
+    }
+  ],
+  "Nyafia": [
+    {
+      "skill": "base_worker",
+      "level": 4
+    },
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "lumbering",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Omascul": [
+    {
+      "skill": "gathering",
+      "level": 5
+    }
+  ],
+  "Ophydia": [
+    {
+      "skill": "watering",
+      "level": 5
+    },
+    {
+      "skill": "planting",
+      "level": 7
+    }
+  ],
+  "Orserk": [
+    {
+      "skill": "electricity",
+      "level": 8
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 4
+    }
+  ],
+  "Paladius": [
+    {
+      "skill": "lumbering",
+      "level": 6
+    },
+    {
+      "skill": "mining",
+      "level": 6
+    }
+  ],
+  "Palumba": [
+    {
+      "skill": "planting",
+      "level": 4
+    },
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "mining",
+      "level": 5
+    }
+  ],
+  "Pengullet": [
+    {
+      "skill": "watering",
+      "level": 1
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "cooling",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Pengullet Lux": [
+    {
+      "skill": "watering",
+      "level": 1
+    },
+    {
+      "skill": "electricity",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Penking": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "mining",
+      "level": 3
+    },
+    {
+      "skill": "cooling",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Penking Lux": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "electricity",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "mining",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Petallia": [
+    {
+      "skill": "planting",
+      "level": 4
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "medicine",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Petallia Ignis": [
+    {
+      "skill": "kindling",
+      "level": 4
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "medicine",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Pierdon": [
+    {
+      "skill": "mining",
+      "level": 5
+    }
+  ],
+  "Pierdon Cryst": [
+    {
+      "skill": "mining",
+      "level": 5
+    },
+    {
+      "skill": "cooling",
+      "level": 6
+    }
+  ],
+  "Polapup": [
+    {
+      "skill": "watering",
+      "level": 3
+    },
+    {
+      "skill": "cooling",
+      "level": 4
+    }
+  ],
+  "Polapup Terra": [
+    {
+      "skill": "mining",
+      "level": 4
+    },
+    {
+      "skill": "cooling",
+      "level": 4
+    }
+  ],
+  "Prixter": [
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "lumbering",
+      "level": 4
+    },
+    {
+      "skill": "medicine",
+      "level": 2
+    }
+  ],
+  "Prixter Lux": [
+    {
+      "skill": "electricity",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "lumbering",
+      "level": 4
+    },
+    {
+      "skill": "medicine",
+      "level": 2
+    }
+  ],
+  "Prunelia": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "medicine",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Puffolt": [
+    {
+      "skill": "electricity",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Pupperai": [
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "lumbering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Purple Slime": [
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Pyrin": [
+    {
+      "skill": "kindling",
+      "level": 4
+    },
+    {
+      "skill": "lumbering",
+      "level": 2
+    }
+  ],
+  "Pyrin Noct": [
+    {
+      "skill": "kindling",
+      "level": 4
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    }
+  ],
+  "Quivern": [
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "mining",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 5
+    }
+  ],
+  "Quivern Botan": [
+    {
+      "skill": "planting",
+      "level": 5
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "mining",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 4
+    }
+  ],
+  "Ragnahawk": [
+    {
+      "skill": "kindling",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 5
+    }
+  ],
+  "Rainbow Slime": [
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Rayhound": [
+    {
+      "skill": "electricity",
+      "level": 4
+    }
+  ],
+  "Rayhound Cryst": [
+    {
+      "skill": "cooling",
+      "level": 3
+    }
+  ],
+  "Red Slime": [
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Reindrix": [
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "cooling",
+      "level": 3
+    }
+  ],
+  "Relaxaurus": [
+    {
+      "skill": "watering",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Relaxaurus Lux": [
+    {
+      "skill": "electricity",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Renjishi": [
+    {
+      "skill": "kindling",
+      "level": 8
+    },
+    {
+      "skill": "base_worker",
+      "level": 6
+    },
+    {
+      "skill": "gathering",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 5
+    }
+  ],
+  "Reptyro": [
+    {
+      "skill": "kindling",
+      "level": 5
+    },
+    {
+      "skill": "mining",
+      "level": 5
+    }
+  ],
+  "Reptyro Cryst": [
+    {
+      "skill": "mining",
+      "level": 5
+    },
+    {
+      "skill": "cooling",
+      "level": 5
+    }
+  ],
+  "Ribbuny": [
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Ribbuny Botan": [
+    {
+      "skill": "planting",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Robinquill": [
+    {
+      "skill": "planting",
+      "level": 2
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 2
+    },
+    {
+      "skill": "medicine",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Robinquill Terra": [
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 2
+    },
+    {
+      "skill": "medicine",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Rooby": [
+    {
+      "skill": "kindling",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Roujay": [
+    {
+      "skill": "gathering",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 5
+    }
+  ],
+  "Rushoar": [
+    {
+      "skill": "mining",
+      "level": 1
+    }
+  ],
+  "Sekhmet": [
+    {
+      "skill": "base_worker",
+      "level": 6
+    },
+    {
+      "skill": "mining",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Selyne": [
+    {
+      "skill": "base_worker",
+      "level": 7
+    },
+    {
+      "skill": "medicine",
+      "level": 6
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Shadowbeak": [
+    {
+      "skill": "gathering",
+      "level": 2
+    }
+  ],
+  "Shaolong": [
+    {
+      "skill": "watering",
+      "level": 8
+    },
+    {
+      "skill": "gathering",
+      "level": 5
+    }
+  ],
+  "Shroomer": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 2
+    },
+    {
+      "skill": "farming",
+      "level": 3
+    }
+  ],
+  "Shroomer Noct": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 2
+    }
+  ],
+  "Sibelyx": [
+    {
+      "skill": "medicine",
+      "level": 3
+    },
+    {
+      "skill": "cooling",
+      "level": 3
+    },
+    {
+      "skill": "farming",
+      "level": 3
+    }
+  ],
+  "Sibelyx Primo": [
+    {
+      "skill": "medicine",
+      "level": 3
+    },
+    {
+      "skill": "farming",
+      "level": 4
+    }
+  ],
+  "Silvance": [
+    {
+      "skill": "planting",
+      "level": 6
+    },
+    {
+      "skill": "base_worker",
+      "level": 6
+    },
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "medicine",
+      "level": 8
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Silvegis": [
+    {
+      "skill": "lumbering",
+      "level": 6
+    }
+  ],
+  "Skutlass": [
+    {
+      "skill": "watering",
+      "level": 4
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "lumbering",
+      "level": 4
+    }
+  ],
+  "Skutlass Ignis": [
+    {
+      "skill": "kindling",
+      "level": 3
+    },
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    }
+  ],
+  "Slowatt": [
+    {
+      "skill": "electricity",
+      "level": 3
+    }
+  ],
+  "Smokie": [
+    {
+      "skill": "gathering",
+      "level": 2
+    }
+  ],
+  "Smokie Cryst": [
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "cooling",
+      "level": 2
+    }
+  ],
+  "Snock": [
+    {
+      "skill": "electricity",
+      "level": 4
+    }
+  ],
+  "Snock Lux": [
+    {
+      "skill": "electricity",
+      "level": 4
+    }
+  ],
+  "Snugloo": [
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "mining",
+      "level": 3
+    },
+    {
+      "skill": "cooling",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Solenne": [
+    {
+      "skill": "base_worker",
+      "level": 8
+    },
+    {
+      "skill": "gathering",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Solmora": [
+    {
+      "skill": "watering",
+      "level": 4
+    }
+  ],
+  "Solmora Lux": [
+    {
+      "skill": "watering",
+      "level": 4
+    },
+    {
+      "skill": "electricity",
+      "level": 6
+    }
+  ],
+  "Sootseer": [
+    {
+      "skill": "kindling",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "mining",
+      "level": 3
+    },
+    {
+      "skill": "farming",
+      "level": 2
+    }
+  ],
+  "Souffline": [
+    {
+      "skill": "planting",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Sparkit": [
+    {
+      "skill": "electricity",
+      "level": 1
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Splatterina": [
+    {
+      "skill": "base_worker",
+      "level": 6
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "medicine",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Starryon": [
+    {
+      "skill": "gathering",
+      "level": 5
+    }
+  ],
+  "Starryon Primo": [
+    {
+      "skill": "gathering",
+      "level": 7
+    }
+  ],
+  "Surfent": [
+    {
+      "skill": "watering",
+      "level": 3
+    },
+    {
+      "skill": "farming",
+      "level": 2
+    }
+  ],
+  "Surfent Terra": [
+    {
+      "skill": "gathering",
+      "level": 3
+    }
+  ],
+  "Suzaku": [
+    {
+      "skill": "kindling",
+      "level": 5
+    }
+  ],
+  "Suzaku Aqua": [
+    {
+      "skill": "watering",
+      "level": 6
+    }
+  ],
+  "Swee": [
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "cooling",
+      "level": 1
+    }
+  ],
+  "Sweepa": [
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "cooling",
+      "level": 3
+    }
+  ],
+  "Tanzee": [
+    {
+      "skill": "planting",
+      "level": 1
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "lumbering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Tanzee Ignis": [
+    {
+      "skill": "kindling",
+      "level": 1
+    },
+    {
+      "skill": "base_worker",
+      "level": 1
+    },
+    {
+      "skill": "lumbering",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Tarantriss": [
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "medicine",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Teafant": [
+    {
+      "skill": "watering",
+      "level": 1
+    }
+  ],
+  "Tetroise": [
+    {
+      "skill": "mining",
+      "level": 4
+    }
+  ],
+  "Tetroise Primo": [
+    {
+      "skill": "mining",
+      "level": 6
+    }
+  ],
+  "Tocotoco": [
+    {
+      "skill": "gathering",
+      "level": 1
+    }
+  ],
+  "Tombat": [
+    {
+      "skill": "gathering",
+      "level": 2
+    },
+    {
+      "skill": "mining",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Tropicaw": [
+    {
+      "skill": "planting",
+      "level": 5
+    },
+    {
+      "skill": "gathering",
+      "level": 5
+    }
+  ],
+  "Turtacle": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "mining",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Turtacle Terra": [
+    {
+      "skill": "watering",
+      "level": 2
+    },
+    {
+      "skill": "mining",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Univolt": [
+    {
+      "skill": "electricity",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 1
+    }
+  ],
+  "Univolt Cryst": [
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "cooling",
+      "level": 6
+    }
+  ],
+  "Vaelet": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "gathering",
+      "level": 3
+    },
+    {
+      "skill": "medicine",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    },
+    {
+      "skill": "farming",
+      "level": 2
+    }
+  ],
+  "Valentail": [
+    {
+      "skill": "gathering",
+      "level": 2
+    }
+  ],
+  "Vanwyrm": [
+    {
+      "skill": "kindling",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Vanwyrm Cryst": [
+    {
+      "skill": "cooling",
+      "level": 2
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Venusa": [
+    {
+      "skill": "base_worker",
+      "level": 6
+    },
+    {
+      "skill": "gathering",
+      "level": 6
+    },
+    {
+      "skill": "medicine",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Verdash": [
+    {
+      "skill": "planting",
+      "level": 4
+    },
+    {
+      "skill": "base_worker",
+      "level": 5
+    },
+    {
+      "skill": "gathering",
+      "level": 5
+    },
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 3
+    }
+  ],
+  "Vixy": [
+    {
+      "skill": "gathering",
+      "level": 1
+    },
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Warsect": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 5
+    }
+  ],
+  "Warsect Terra": [
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "mining",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 5
+    }
+  ],
+  "Whalaska": [
+    {
+      "skill": "watering",
+      "level": 5
+    },
+    {
+      "skill": "cooling",
+      "level": 6
+    }
+  ],
+  "Whalaska Ignis": [
+    {
+      "skill": "kindling",
+      "level": 5
+    },
+    {
+      "skill": "cooling",
+      "level": 6
+    }
+  ],
+  "Wispaw": [
+    {
+      "skill": "base_worker",
+      "level": 2
+    },
+    {
+      "skill": "lumbering",
+      "level": 1
+    },
+    {
+      "skill": "medicine",
+      "level": 1
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Wistella": [
+    {
+      "skill": "base_worker",
+      "level": 6
+    },
+    {
+      "skill": "medicine",
+      "level": 6
+    },
+    {
+      "skill": "transport",
+      "level": 1
+    }
+  ],
+  "Wixen": [
+    {
+      "skill": "kindling",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Wixen Noct": [
+    {
+      "skill": "kindling",
+      "level": 4
+    },
+    {
+      "skill": "base_worker",
+      "level": 4
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Woolipop": [
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Woolipop Terra": [
+    {
+      "skill": "farming",
+      "level": 1
+    }
+  ],
+  "Wumpo": [
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 5
+    },
+    {
+      "skill": "cooling",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 6
+    }
+  ],
+  "Wumpo Botan": [
+    {
+      "skill": "planting",
+      "level": 3
+    },
+    {
+      "skill": "base_worker",
+      "level": 3
+    },
+    {
+      "skill": "lumbering",
+      "level": 5
+    },
+    {
+      "skill": "transport",
+      "level": 6
+    }
+  ],
+  "Xenogard": [
+    {
+      "skill": "mining",
+      "level": 4
+    }
+  ],
+  "Xenolord": [
+    {
+      "skill": "gathering",
+      "level": 2
+    }
+  ],
+  "Xenovader": [
+    {
+      "skill": "lumbering",
+      "level": 3
+    },
+    {
+      "skill": "transport",
+      "level": 2
+    }
+  ],
+  "Yakumo": [
+    {
+      "skill": "gathering",
+      "level": 2
+    }
+  ]
+}

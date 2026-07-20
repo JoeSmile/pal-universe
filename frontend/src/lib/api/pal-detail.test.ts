@@ -29,13 +29,25 @@ describe("mapRawPalToDetail", () => {
     expect(pal.rarity_label).toBe("Epic");
     expect(pal.stats.hp).toBe(120);
     expect(pal.work_orders).toEqual([
-      { skill: "mining", level: 1 },
-      { skill: "transport", level: 2 },
+      { skill: "base_worker", level: 6 },
+      { skill: "mining", level: 6 },
+      { skill: "transport", level: 4 },
     ]);
     expect(pal.drops[0]).toEqual({ name: "Bone", chance: null, use: "" });
     expect(pal.drops[1]?.chance).toBe(100);
     expect(pal.partner_skill?.name).toBe("Guardian");
     expect(pal.breeding_rank).toBe(480);
+  });
+
+  it("uses role_tags levels when no overlay exists", () => {
+    const pal = mapRawPalToDetail({
+      name: "NotARealPalXYZ",
+      role_tags: ["mining", { skill: "transport", level: 2 }],
+    });
+    expect(pal.work_orders).toEqual([
+      { skill: "mining", level: 1 },
+      { skill: "transport", level: 2 },
+    ]);
   });
 
   it("returns null breeding_rank for invalid values", () => {

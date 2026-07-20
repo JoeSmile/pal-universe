@@ -1,8 +1,8 @@
 import {
-  normalizeWorkOrders,
   type PalStats,
   type PalWorkOrder,
 } from "@/lib/pal-types";
+import { resolveWorkOrders } from "@/lib/pal-work-orders";
 
 const RARITY_RANK: Record<string, number> = {
   common: 1,
@@ -219,7 +219,8 @@ export function mapRawPalToDetail(
       support: Number(statsObj.support ?? raw.support) || 0,
       stamina: Number(statsObj.stamina ?? raw.stamina) || 0,
     },
-    work_orders: normalizeWorkOrders(
+    work_orders: resolveWorkOrders(
+      name,
       workSource as Array<string | { skill: string; level: number }>,
     ),
     partner_skill: normalizePartner(raw.partner_skill),

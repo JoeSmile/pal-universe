@@ -1,5 +1,6 @@
 import { apiUrl } from "@/lib/api/config";
-import { normalizeWorkOrders, type PalCardData, type PalStats } from "@/lib/pal-types";
+import { type PalCardData, type PalStats } from "@/lib/pal-types";
+import { resolveWorkOrders } from "@/lib/pal-work-orders";
 import palNames from "@/data/pal-names.json";
 
 type PalNameRecord = { name: string; name_cn: string };
@@ -81,7 +82,8 @@ export function mapApiPalToCard(pal: ApiPal): PalCardData {
       support: Number(stats.support) || 0,
       stamina: Number(stats.stamina) || 0,
     },
-    work_orders: normalizeWorkOrders(
+    work_orders: resolveWorkOrders(
+      pal.name,
       (pal.work_orders ?? []).map((entry) =>
         typeof entry === "string"
           ? entry

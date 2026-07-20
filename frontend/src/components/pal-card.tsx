@@ -89,11 +89,21 @@ export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
             }
           }}
         />
-        {pal.deck_id ? (
-          <span className="absolute left-3 top-3 rounded-md bg-bg-base/80 px-2 py-0.5 text-xs text-text-secondary">
-            #{pal.deck_id}
-          </span>
-        ) : null}
+        <div className="absolute left-2.5 top-2.5 flex items-center gap-1">
+          {pal.elements.map((element) => (
+            <ElementBadge
+              key={element}
+              element={element}
+              compact
+              className="size-6 drop-shadow-sm [&_img]:size-6"
+            />
+          ))}
+          {pal.deck_id ? (
+            <span className="rounded-md bg-bg-base/80 px-1.5 py-0.5 text-xs text-text-secondary">
+              #{pal.deck_id}
+            </span>
+          ) : null}
+        </div>
       </div>
 
       <div className="flex flex-1 flex-col gap-3 p-4">
@@ -106,17 +116,16 @@ export function PalCard({ pal, className }: PalCardProps): React.ReactElement {
           <RarityStars rarity={pal.rarity} />
         </header>
 
-        <div className="flex flex-wrap gap-1.5">
-          {pal.elements.map((element) => (
-            <ElementBadge key={element} element={element} />
-          ))}
-        </div>
-
-        <div className="flex flex-wrap gap-1.5">
-          {works.map((work) => (
-            <WorkBadge key={work.skill} work={work} />
-          ))}
-        </div>
+        {works.length > 0 ? (
+          <div
+            className="mt-auto flex flex-wrap items-end gap-2.5 pt-0.5"
+            data-testid="pal-card-works"
+          >
+            {works.map((work) => (
+              <WorkBadge key={work.skill} work={work} compact />
+            ))}
+          </div>
+        ) : null}
       </div>
     </motion.article>
     </Link>

@@ -36,10 +36,14 @@ const samplePal: PalCardData = {
 };
 
 describe("ElementBadge", () => {
-  it("renders localized element label with token styling", () => {
+  it("renders localized element label with UI icon", () => {
     const { container } = render(<ElementBadge element="Fire" />);
     expect(screen.getByText("火")).toBeInTheDocument();
-    expect(container.firstChild).toHaveClass("bg-[var(--color-element-fire)]");
+    const root = container.firstChild as HTMLElement;
+    expect(root).toHaveAttribute("data-element", "Fire");
+    expect(root.querySelector("img")?.getAttribute("src")).toContain(
+      "images%2Fui%2Ffire.png",
+    );
   });
 
   it("switches element label with locale", () => {
@@ -47,35 +51,67 @@ describe("ElementBadge", () => {
     render(<ElementBadge element="Fire" />);
     expect(screen.getByText("Fire")).toBeInTheDocument();
   });
+
+  it("hides label in compact mode", () => {
+    render(<ElementBadge element="Fire" compact />);
+    expect(screen.queryByText("火")).not.toBeInTheDocument();
+    expect(screen.getByLabelText("火")).toBeInTheDocument();
+  });
 });
 
 describe("WorkBadge", () => {
-  it("shows localized work label and level dots", () => {
-    render(<WorkBadge work={{ skill: "mining", level: 3 }} />);
+  it("shows localized work label and level number", () => {
+    const { container } = render(<WorkBadge work={{ skill: "mining", level: 3 }} />);
     expect(screen.getByText("挖矿")).toBeInTheDocument();
-    expect(screen.getByLabelText("等级 3")).toBeInTheDocument();
-    const dots = screen.getByLabelText("等级 3").querySelectorAll("span");
-    expect(dots).toHaveLength(4);
+    expect(screen.getByLabelText("等级 3")).toHaveTextContent("3");
+    expect(container.firstChild).toHaveAttribute("data-work", "mining");
+    expect(container.querySelector("img")?.getAttribute("src")).toContain(
+      "images%2Fui%2Fmining.png",
+    );
   });
 
   it("switches work label with locale", () => {
     useLocaleStore.setState({ locale: "en", hydrated: true });
     render(<WorkBadge work={{ skill: "mining", level: 3 }} />);
     expect(screen.getByText("Mining")).toBeInTheDocument();
-    expect(screen.getByLabelText("Level 3")).toBeInTheDocument();
+    expect(screen.getByLabelText("Level 3")).toHaveTextContent("3");
+  });
+
+  it("shows icon and level only in compact mode", () => {
+    render(<WorkBadge work={{ skill: "mining", level: 3 }} compact />);
+    expect(screen.queryByText("挖矿")).not.toBeInTheDocument();
+    expect(screen.getByText("3")).toBeInTheDocument();
   });
 });
 
 describe("PalCard", () => {
-  it("renders English name and English badges in en locale", () => {
+  it("places element icons before deck id on the image", () => {
     useLocaleStore.setState({ locale: "en", hydrated: true });
-    render(<PalCard pal={samplePal} />);
+    const { container } = render(<PalCard pal={samplePal} />);
+
+    expect(screen.getByRole("heading", { name: "Anubis" })).toBeInTheDocument();
+    expect(screen.queryByText("Ground")).not.toBeInTheDocument();
+    const badge = container.querySelector('[data-element="Ground"]');
+    const deck = screen.getByText("#139");
+    expect(badge).toBeTruthy();
+    expect(deck).toBeInTheDocument();
+    const row = badge?.parentElement;
+    expect(row?.contains(deck)).toBe(true);
+    expect(
+      Array.from(row?.children ?? []).indexOf(badge as Element),
+    ).toBeLessThan(Array.from(row?.children ?? []).indexOf(deck));
+  });
+
+  it("renders name with icon-only element and work badges", () => {
+    useLocaleStore.setState({ locale: "en", hydrated: true });
+    const { container } = render(<PalCard pal={samplePal} />);
 
     expect(screen.getByRole("heading", { name: "Anubis" })).toBeInTheDocument();
     expect(screen.queryByText("阿努比斯")).not.toBeInTheDocument();
-    expect(screen.getByText("Ground")).toBeInTheDocument();
-    expect(screen.getByText("Mining")).toBeInTheDocument();
-    expect(screen.getByText("Transport")).toBeInTheDocument();
+    expect(screen.queryByText("Mining")).not.toBeInTheDocument();
+    expect(screen.queryByText("Transport")).not.toBeInTheDocument();
+    expect(container.querySelector('[data-element="Ground"]')).toBeTruthy();
+    expect(container.querySelector('[data-work="mining"]')).toBeTruthy();
     expect(screen.getByLabelText("Rarity 4")).toBeInTheDocument();
   });
 

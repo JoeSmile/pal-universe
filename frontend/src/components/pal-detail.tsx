@@ -486,7 +486,7 @@ export function PalDetail({ pal, className }: PalDetailProps): React.ReactElemen
             <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               {pal.work_orders.map((work) => (
                 <li key={work.skill}>
-                  <WorkBadge work={work} className="w-full justify-start" />
+                  <WorkBadge work={work} className="w-full" />
                 </li>
               ))}
             </ul>
