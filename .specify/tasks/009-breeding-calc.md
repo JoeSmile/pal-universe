@@ -26,8 +26,10 @@
 - [ ] 测试通过
 
 ## Implementation Hints
-- 繁殖计算核心逻辑放在前端（不依赖后端 API），数据从静态 JSON 加载
-- 算法实现：父代→子代用组合表查找，子代→父代用反向索引
-- 特殊组合 28 组硬编码（参考 PRD-003 的表格）
-- 树图可视化用 React Flow 或纯 CSS + Framer Motion（不引入 D3.js 减少依赖）
-- 繁殖力公式显示清晰：`⌊(570 + 1460 + 1) / 2⌋ = 1015 → Robinquill`
+- 繁殖计算走后端 API（已实现），前调用:
+  - `GET /api/v1/breeding/calculate?parent1=X&parent2=Y`
+  - `GET /api/v1/breeding/reverse?target=X`
+- 首次加载时从 `src/data/breeding.json` 读取组合数据做本地缓存加速
+- 帕鲁选择器用 `<SearchBar>` 组件的选择模式（只选不搜）
+- 结果展示复用 `<PalCard>` 组件放子代
+- 树图可视化 Phase 2 用 React Flow，Phase 1 只用列表展示路径
